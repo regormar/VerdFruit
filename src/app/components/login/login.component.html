@@ -1,0 +1,35 @@
+<div class="panel">
+    <div class="panel-content">
+        <div class="titulo"><h1>{{ 'LOGIN' | translate }}</h1></div>
+        <form #formLoginUsuario="ngForm" (ngSubmit)="checkLogin();" >
+            <div class="form-panel">
+                <div class="flex-col">
+                    <div>
+                        <p>{{ 'USERNAME' | translate }} / {{ 'EMAIL' | translate }}</p>
+                    </div>
+                    <div>
+                        <input #inputUsername="ngModel" type="text" [(ngModel)]="username" name="username" placeholder="{{ 'PHUSER' | translate}}" required/>
+                    </div>
+                </div>
+                <div class="flex-col">
+                    <div>
+                        <p>{{ 'PASSWORD' | translate }}</p>
+                    </div>
+                    <div>
+                        <input #inputPass="ngModel" type="password" [(ngModel)]="pass" name="pass" placeholder="{{ 'PHPASS' | translate}}" required/>
+                    </div>
+                </div>     
+            </div>
+            <div class="logInf">
+                <div class="remember">
+                </div>  
+                <a href="reset-password"><div class="forgorPass">{{ 'FORGOTPASS' | translate }}</div>  </a>  
+            </div> 
+            <div class="errorButton">
+                <div class="mensaje">{{mensaje}}</div> 
+                <div class="boton"><button class="send" type="submit" [disabled]="!formLoginUsuario.form.valid">{{ 'ENTER' | translate }}</button> </div>   
+            </div>              
+        </form>
+    </div>
+</div>
+                                    

@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: textile;
+    src: url(assets/fonts/Textile.ttf) format("truetype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4{
+    font-family: textile;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    
+    color: #00471F;
+}
+
+.send{
+    color:#00471F;
+    font-family: textile;
+    background-color: #FFB400;
+    border-radius: 10px; 
+    padding:0 10px 0 10px;
+}
+
+.ng-invalid .send{
+    color:#3c7555;
+    background-color: #b89544;
+}
+
+input.ng-dirty.ng-invalid{
+    border:solid 1px red;
+}

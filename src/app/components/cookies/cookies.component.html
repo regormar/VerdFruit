@@ -1,0 +1,47 @@
+<div class="cookies-box" id="cookies">
+    <div class="backgr"></div>
+    <div class="container-cookies">
+        <div class="texto">
+            <p>Utilizamos cookies propias y de terceros para el correcto funcionamiento del sitio web, y si nos da su consentimiento, también utilizaremos cookies para recopilar datos de sus visitas para obtener estadísticas agregadas para mejorar nuestros servicios y mostrar publicidad relacionada con sus preferencias a partir de sus hábitos de navegación. Más información en nuestra política de cookies.</p>
+        </div>
+        <div class="botones">
+            <button type="button" class="cookienator-button cookienator-button--clear" (click)="seeConfig()">
+                Configura les cookies
+            </button>
+            <button type="button" class="cookienator-button cookienator-button--filled" (click)="acceptCookies()">
+                Accepta totes les cookies
+            </button>
+        </div>
+    </div>
+    <div class="container-cookies-conf" id="cookies-conf">
+        <a class="cookienator-dialog-close" (click)="closeConf()">×</a>
+        <h2>Configuración de cookies</h2>
+        <p>Cuando visitas un sitio web, este puede obtener o guardar información de tu navegación mediante el uso de cookies y esta información se usa principalmente para que el sitio web funcione tal como se espera. Generalmente, la información se guarda de manera anónima, pero puede que ésta se guarde para proporcionarte una experiencia web más personalizada. Con el objetivo de que estés adecuadamente informado sobre cómo y por qué usamos las cookies, ponemos a tu disposición un listado con cada una de las categorías de cookies que usamos para que puedas saber más sobre cada una de ellas y cambiar su configuración. El bloqueo de algunos tipos de cookies puede afectar tu experiencia en nuestra web.</p>
+        <div class="title-switch">
+            <h3>Cookies técnicas (requeridas)</h3>					
+            <div class="lever">
+                <input type="checkbox" checked disabled>
+            </div>									
+        </div>		
+        <p>					
+            Las cookies técnicas o necesarias son esenciales para que nuestro web pueda funcionar correctamente e incluye funcionalidades básicas como identificar la sesión o dar acceso a los usuarios registrados en zonas de acceso restringido. Por estos motivos, las cookies técnicas no se pueden desactivar.
+        </p>
+        <div class="title-switch">
+            <h3>Cookies de terceros</h3>					
+            <div class="lever">
+                <input id="checkboxTerceros" type="checkbox" checked #inputUsername="ngModel" [(ngModel)]="checks" name="checks">
+            </div>									
+        </div>
+        <p>
+            Las cookies de terceros son aquellas creadas por dominios diferentes a las que está visitando en ese momento, y se utilizan para diversos fines (funcionamiento del sitio, seguimiento y publicidad en línea, etc.). También permiten a los propietarios de sitios web proporcionar ciertos servicios, tales como: incorporación de vídeos o de otros contenidos multimedia, incorporación de contenido de redes sociales, chats en vivo, ...
+        </p>
+        <div class="botones">
+            <button type="button" class="cookienator-button cookienator-button--clear" (click)="customCookies()">
+                Desa la meva sel·lecció
+            </button>
+            <button type="button" class="cookienator-button cookienator-button--filled" (click)="acceptCookies()">
+                Permet totes les cookies
+            </button>
+        </div>
+    </div>
+</div>

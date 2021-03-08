@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "VerdFruit"
+    }
+  },
+  "defaultProject": "VerdFruit",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,42 @@
+footer{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 260px;
+    background-color: #00471F;
+    bottom: 0;
+    margin-top:50px;
+}
+
+.enlaces{
+    margin-top:55px;
+    width: 250px;
+    padding-left: 20px;
+}
+
+.info{
+    margin-top:55px;
+    width: 250px;
+    padding-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+h4{
+    color:#FFB400;
+    margin-bottom:5px;
+    margin-top:0;
+} 
+
+.title{
+    color:#FFB400; 
+}
+
+p,span{
+    color:white;
+}
