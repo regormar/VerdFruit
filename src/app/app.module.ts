@@ -18,6 +18,7 @@ import { RegistroUsuarioComponent } from './components/registroUsuario/registro.
 import { LoginComponent } from './components/login/login.component';
 import { RegistroParticularComponent } from './components/registroParticular/registroParticular.component';
 import { RegistroEmpresaComponent } from './components/registroEmpresa/registroEmpresa.component';
+import { QuestionsComponent } from './components/questions/questions.component';
 
 export function createTranslateLoader(http: HttpClient){
   return new TranslateHttpLoader(http, 'assets/translations/', '.json');
@@ -36,6 +37,7 @@ export function createTranslateLoader(http: HttpClient){
     ResetPasswordComponent,
     RegistroParticularComponent,
     RegistroEmpresaComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
