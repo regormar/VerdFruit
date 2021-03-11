@@ -1,9 +1,9 @@
 import { Inject, Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { TokenServiceController } from "./token.service";
-import { Usuario } from "../model/usuario";
 import { Particular } from "../model/particular";
+import { Empresa } from "../model/empresa";
 
 @Injectable()
 export class UserServiceController{
@@ -19,6 +19,10 @@ export class UserServiceController{
 
     postParticular(usuario:Particular):Observable<any>{
         return this.conexHttp.post(this.ruta + "/particular", usuario, this._tokenService.generateHeaders());      
+    }
+
+    postEmpresa(usuario:Empresa):Observable<any>{
+        return this.conexHttp.post(this.ruta + "/empresa", usuario, this._tokenService.generateHeaders());      
     }
 
     checkLoginUsername(username:string, pass:string):Observable<any>{

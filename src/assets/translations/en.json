@@ -28,5 +28,7 @@
     "BUSINESS":"Business",
     "ACCEPTTHEPRIVACYPOLICY":"I have read and accept the privacy policy",
     "USERADDED":"User added successfully",
-    "PASSREQUIREMENTS":"It must contain an uppercase, lowercase, number or special character and be 8 or more characters long."
+    "PASSREQUIREMENTS":"It must contain an uppercase, lowercase, number or special character and be 8 or more characters long.",
+    "NOMBREFISCAL":"Tax name",
+    "NOMBRECOMERCIAL":"Trade name"
 }

@@ -1,0 +1,71 @@
+<form #formRegistroUsuario="ngForm" (ngSubmit)="registrarUsuario();formRegistroUsuario.reset()">
+    <div class="form-panel">
+        <div class="flex-col">           
+            <p>{{ 'USERNAME' | translate }}: </p>           
+            <input #inputUsername="ngModel" type="text" [(ngModel)]="username" name="username" required/>
+            <span class="text-danger"></span>
+        </div>
+        <div class="flex-col">           
+            <p>{{ 'NAME' | translate }}:</p>            
+            <input #inputNombre="ngModel" type="text" [(ngModel)]="nombre" name="nombre" required/>
+            <span class="text-danger"></span>
+        </div>  
+        <div class="flex-col">         
+            <p>{{ 'SURNAMES' | translate }}:</p>
+            <input #inputApellidos="ngModel" type="text" [(ngModel)]="apellidos" name="apellidos" required/>
+            <span class="text-danger"></span>
+        </div>  
+        <div class="flex-col">
+            <p>{{ 'EMAIL' | translate }}:</p>
+            <input #inputEmail="ngModel" type="email" [(ngModel)]="email" name="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required/>
+            <span class="text-danger"></span>
+        </div>
+        <div class="flex-col">
+            <p>{{ 'PASSWORD' | translate }}:</p>
+            <input #inputPass="ngModel" type="password" [(ngModel)]="pass" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="{{'PASSREQUIREMENTS'|translate}}" required/>
+            <span class="text-danger"></span>
+        </div>   
+        <div class="flex-col">
+            <p>{{ 'VERIFICATION' | translate }}:</p>
+            <input #inputPass="ngModel" type="password" [(ngModel)]="verification" name="verification" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+            <span class="text-danger"></span>
+        </div>  
+        <div class="flex-col">
+            <p>{{ 'ADDRESS' | translate }}:</p>
+            <input #inputDireccion="ngModel" type="text" [(ngModel)]="direccion" name="direccion" pattern="" required/>
+            <span class="text-danger"></span>
+        </div>  
+        <div class="flex-col">
+            <p>{{ 'PHONE' | translate }}:</p>
+            <input #inputTelefono="ngModel" type="text" [(ngModel)]="telefono" name="telefono" pattern="[0-9]{9}" required/>
+            <span class="text-danger"></span>            
+        </div>  
+        <div class="flex-col">
+            <p>CIF:</p>
+            <input #inputDni="ngModel" type="text" [(ngModel)]="cif" name="cif" pattern="[A-Za-z]{1}[0-9]{8}" required/>
+            <span class="text-danger"></span>
+        </div> 
+        <div class="flex-col">
+            <p>{{'NOMBREFISCAL'|translate}}:</p>
+            <input #inputDni="ngModel" type="text" [(ngModel)]="nombre_fiscal" name="nombre_fiscal" required/>
+            <span class="text-danger"></span>
+        </div> 
+        <div class="flex-col">
+            <p>{{'NOMBRECOMERCIAL'|translate}}:</p>
+            <input #inputDni="ngModel" type="text" [(ngModel)]="nombre_comercial" name="nombre_comercial" required/>
+            <span class="text-danger"></span>
+        </div> 
+    </div>
+    <div class="policyButton">
+        <div class="flex-row">
+            <div>
+                <input #inputPrivacy="ngModel" [(ngModel)]="privacy" type="checkbox" name="privacy" required>
+            </div>
+            <div class="texto">
+                <p> {{'ACCEPTTHEPRIVACYPOLICY'|translate}}</p>
+            </div>
+        </div>
+        <button class="send" type="submit" [disabled]="!formRegistroUsuario.form.valid">Enviar</button>
+    </div> 
+    <div class="added">{{resultado}}</div>                       
+</form>

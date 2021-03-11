@@ -37,3 +37,98 @@ h1{
 input.ng-dirty.ng-invalid{
     border:solid 1px red;
 }
+
+/* REGISTRO USUARIOS */
+/*-----------------------------------------------------------------------------------------*/
+.panel{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 240px;
+}
+
+.panel-content{
+    display: flex;
+    width:70%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom:solid 3px #00471F;
+} 
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#FFB400;
+    width: 100%;
+    height: 70px;
+    padding-top: 5px;
+}
+
+.form-panel{
+    width:600px;
+    margin-top: 30px;
+}
+
+.flex-col{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+input[type=text],input[type=password]{
+    width: 100%;
+    padding-left: 10px;
+}
+
+p{
+    font-family: textile;
+    font-size: 13px;
+}
+
+.forgorPass{
+    color:#FFB400;
+    font-family: textile;
+}
+
+.logInf{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.policyButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left:5px;
+}
+
+.added{
+    color:green;
+    margin-bottom: 20px;
+    font-size: 20px;
+}

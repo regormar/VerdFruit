@@ -28,6 +28,8 @@
     "BUSINESS":"Empresa",
     "ACCEPTTHEPRIVACYPOLICY":"He leído y acepto la política de privacidad",
     "USERADDED":"Usuario añadido correctamente",
-    "PASSREQUIREMENTS":"Debe contener una mayúscula, una minúscula, un número o un caracter especial y tener una longitud de 8 o más caracteres."
+    "PASSREQUIREMENTS":"Debe contener una mayúscula, una minúscula, un número o un caracter especial y tener una longitud de 8 o más caracteres.",
+    "NOMBREFISCAL":"Nombre fiscal",
+    "NOMBRECOMERCIAL":"Nombre comercial"
 
 }

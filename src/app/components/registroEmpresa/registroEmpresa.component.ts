@@ -1,16 +1,16 @@
 import { Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
-import { Particular } from "src/app/model/particular";
+import { Empresa } from "src/app/model/empresa";
 import { UserServiceController } from "src/app/services/user.service";
 
 @Component({
-    selector:'registroParticular-component',
-    templateUrl:'./registroParticular.component.html',
-    styleUrls:['./registroParticular.component.css'],
+    selector:'registroEmpresa-component',
+    templateUrl:'./registroEmpresa.component.html',
+    styleUrls:['./registroEmpresa.component.css'],
     providers:[UserServiceController],
 })
 
-export class RegistroParticularComponent implements OnInit{
+export class RegistroEmpresaComponent implements OnInit{
     
     username!: string;
     pass!:string;
@@ -20,8 +20,10 @@ export class RegistroParticularComponent implements OnInit{
     apellidos!:string;
     direccion!:string;
     telefono!:string;
-    tipo!:number;
-    dni!:string;
+    tipo!:number;   
+    cif!:string;
+    nombre_fiscal!:string;
+    nombre_comercial!:string;
     privacy!:boolean;
     resultado:string = "";
 
@@ -32,8 +34,8 @@ export class RegistroParticularComponent implements OnInit{
 
     registrarUsuario(){
         //Dvuelve que se ha insertado correctamente por el insert
-        this._service.postParticular(new Particular(0,this.username,this.pass,this.email,this.nombre,
-            this.apellidos,this.direccion,this.telefono,this.tipo,this.dni))
+        this._service.postEmpresa(new Empresa(0,this.username,this.pass,this.email,this.nombre,
+            this.apellidos,this.direccion,this.telefono,this.tipo,this.cif,this.nombre_fiscal,this.nombre_comercial))
         .subscribe(
             (result) => {  
                 this.translate.get('USERADDED')
