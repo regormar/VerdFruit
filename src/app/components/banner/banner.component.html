@@ -1,19 +1,24 @@
 <div class="content">
     <div class="banner">
         <div class="banner-right">
-            <div><a routerLink="/login"><img class="logo" src="assets/img/logoVF.png" alt=""></a></div>
+            <div class="divLogo"><a routerLink="/login"><img class="logo" src="assets/img/logoVF.png" alt=""></a></div>
             <div class="banner-options">
                 <div class="lang">
                     <select #langSelect  [(ngModel)]="lg" (change)="changeLang(langSelect.value)">
                         <option *ngFor="let lang of langs" [value]="lang">{{lang}}</option>
                     </select>
                 </div>
-                <div class="menu">
-                    <div class="espaciado"><a routerLink="/home" routerLinkActive="activo">{{ 'HOME' | translate }}</a></div>
-                    <div class="espaciado"><a routerLink="/questions" routerLinkActive="activo">{{ 'QUESTIONS' | translate }}</a></div>
-                    <div class="espaciado"><a routerLink="/login" routerLinkActive="activo">{{ 'LOGIN' | translate }}</a></div>
-                    <div class="espaciado"><a routerLink="/registro" routerLinkActive="activo">{{ 'SIGN IN' | translate }}</a></div>
-                </div>
+                <div class="responsiveMenu">
+                    <div class="menuIcon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="menu">               
+                        <div class="espaciado"><a routerLink="/home" routerLinkActive="activo">{{ 'HOME' | translate }}</a></div>
+                        <div class="espaciado"><a routerLink="/questions" routerLinkActive="activo">{{ 'QUESTIONS' | translate }}</a></div>
+                        <div class="espaciado"><a routerLink="/login" routerLinkActive="activo">{{ 'LOGIN' | translate }}</a></div>
+                        <div class="espaciado"><a routerLink="/registro" routerLinkActive="activo">{{ 'SIGN IN' | translate }}</a></div>
+                    </div>  
+                </div>               
             </div>
         </div>
     </div>
