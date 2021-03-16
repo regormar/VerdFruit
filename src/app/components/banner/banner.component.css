@@ -32,7 +32,9 @@
 }
 
 .espaciado{
-    padding-left:30px;
+    list-style:none; 
+    margin-left:30px;
+    display: flex;
 }
 
 a{
@@ -105,6 +107,9 @@ a:hover{
     color: #00471F;
     font-size: 30px;
 }
+.fa-bars:hover{
+    color: #FFB400;
+}
 
 .menuIcon{
     visibility: hidden;
@@ -112,17 +117,24 @@ a:hover{
     height: 30px;
 }
 
-@media (max-width:1150px){
+@media (max-width:1236px){
     
     .menu{        
         display: none;
+        flex-direction: column;
+        justify-content: center;
         position: absolute;
-        background-color: #ffffff;
+        background-color: #385830;
         width: 200px;
         height: 170px;
         padding-top: 20px;
         margin-top: 45px;
         margin-left: 30.3%;
+        align-items: center;
+        padding: 0;
+    }
+    .menu a{
+        margin:0;
     }
 
     .menuIcon{
@@ -134,4 +146,19 @@ a:hover{
         height: 30px;
     }
     
+    .espaciado{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin:0;
+    }
+    
+}
+
+@media (min-width:1236px) and (max-width:1400px){
+
+    .menu{
+        display: flex;
+    }
+
 }

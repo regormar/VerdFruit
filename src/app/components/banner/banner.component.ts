@@ -13,6 +13,7 @@ import { UserServiceController } from "../../services/user.service";
 export class BannerComponent implements OnInit{
 
     lg:string = "es";
+    show:boolean = false;
     
     ngOnInit(): void {
     }
@@ -41,6 +42,18 @@ export class BannerComponent implements OnInit{
       this._cookiesService.setCookie("lang", lang);
       //Actualizo la página para eliminar posibles textos ya traducidos mostrados a través del typescript.
       window.location.reload();
+    }
+
+    chargeMenu(){
+      let element = document.getElementById("menu");
+      let value = "flex";
+      if(this.show){
+        value = "none"; 
+        this.show = false;
+      }else{
+        this.show = true;
+      }
+      element.style.display=value;
     }
 
 }

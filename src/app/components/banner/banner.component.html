@@ -9,15 +9,15 @@
                     </select>
                 </div>
                 <div class="responsiveMenu">
-                    <div class="menuIcon">
+                    <div class="menuIcon" (click)="chargeMenu()">
                         <i class="fas fa-bars"></i>
                     </div>
-                    <div class="menu">               
-                        <div class="espaciado"><a routerLink="/home" routerLinkActive="activo">{{ 'HOME' | translate }}</a></div>
-                        <div class="espaciado"><a routerLink="/questions" routerLinkActive="activo">{{ 'QUESTIONS' | translate }}</a></div>
-                        <div class="espaciado"><a routerLink="/login" routerLinkActive="activo">{{ 'LOGIN' | translate }}</a></div>
-                        <div class="espaciado"><a routerLink="/registro" routerLinkActive="activo">{{ 'SIGN IN' | translate }}</a></div>
-                    </div>  
+                    <ul class="menu" id="menu">               
+                        <li class="espaciado"><a routerLink="/home" routerLinkActive="activo">{{ 'HOME' | translate }}</a></li>
+                        <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo">{{ 'QUESTIONS' | translate }}</a></li>
+                        <li class="espaciado"><a routerLink="/login" routerLinkActive="activo">{{ 'LOGIN' | translate }}</a></li>
+                        <li class="espaciado"><a routerLink="/registro" routerLinkActive="activo">{{ 'SIGN IN' | translate }}</a></li>
+                    </ul>  
                 </div>               
             </div>
         </div>
