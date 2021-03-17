@@ -6,10 +6,10 @@
             <a class="tipoRegistro" id="business" (click)="changeRegister('business')">{{ 'BUSINESS' | translate }}</a>
             <!-- <button (click)="changeRegister('particular')">{{ 'PARTICULAR' | translate }}</button>             -->
         </div>
-        <div *ngIf="opcion=='particular'">
+        <div *ngIf="opcion=='particular'" class="userType">
             <registroParticular-component></registroParticular-component>
         </div>
-        <div *ngIf="opcion=='business'">
+        <div *ngIf="opcion=='business'" class="userType">
             <registroEmpresa-component></registroEmpresa-component>
         </div>
     </div>

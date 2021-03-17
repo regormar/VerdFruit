@@ -35,3 +35,11 @@ a{
     background-color: #4e8064;
     border-bottom:solid 3px #00471F;
 }
+
+.userType{
+    width: 70%;
+}
+
+form{
+    width:100%;
+}

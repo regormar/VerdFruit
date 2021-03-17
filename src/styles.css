@@ -16,6 +16,10 @@ a{
     text-decoration: none;
 }
 
+form{
+    width:70%;
+}
+
 h1{
     
     color: #00471F;
@@ -69,7 +73,7 @@ input.ng-dirty.ng-invalid{
 }
 
 .form-panel{
-    width:600px;
+    width:100%;
     margin-top: 30px;
 }
 
@@ -84,6 +88,7 @@ input.ng-dirty.ng-invalid{
 input[type=text],input[type=password]{
     width: 100%;
     padding-left: 10px;
+
 }
 
 p{

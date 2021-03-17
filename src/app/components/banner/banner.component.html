@@ -12,11 +12,12 @@
                     <div class="menuIcon" (click)="chargeMenu()">
                         <i class="fas fa-bars"></i>
                     </div>
-                    <ul class="menu" id="menu">               
-                        <li class="espaciado"><a routerLink="/home" routerLinkActive="activo">{{ 'HOME' | translate }}</a></li>
-                        <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo">{{ 'QUESTIONS' | translate }}</a></li>
-                        <li class="espaciado"><a routerLink="/login" routerLinkActive="activo">{{ 'LOGIN' | translate }}</a></li>
-                        <li class="espaciado"><a routerLink="/registro" routerLinkActive="activo">{{ 'SIGN IN' | translate }}</a></li>
+                    <ul class="menu" id="menu">  
+                        <div class="borderMenu"><h4>{{'MENU'|translate}}</h4></div>             
+                        <li class="espaciado"><a routerLink="/home" routerLinkActive="activo" (click)="closeMenu()">{{ 'HOME' | translate }}</a></li>
+                        <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo" (click)="closeMenu()">{{ 'QUESTIONS' | translate }}</a></li>
+                        <li class="espaciado"><a routerLink="/login" routerLinkActive="activo" (click)="closeMenu()">{{ 'LOGIN' | translate }}</a></li>
+                        <li class="espaciado"><a routerLink="/registro" routerLinkActive="activo" (click)="closeMenu()">{{ 'SIGN IN' | translate }}</a></li>
                     </ul>  
                 </div>               
             </div>

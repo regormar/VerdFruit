@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { CookiesServiceController } from "../../services/cookies.service";
 import { UserServiceController } from "../../services/user.service";
@@ -14,11 +14,26 @@ export class BannerComponent implements OnInit{
 
     lg:string = "es";
     show:boolean = false;
+    innerWidth:number;
     
     ngOnInit(): void {
     }
 
     langs:string[]=[];
+
+    //Evento que comprueba el tamaño de la ventana y oculta o muestra el menú.
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      this.innerWidth = window.innerWidth;
+      if(this.innerWidth > 1236){
+        this.show = false;
+        this.chargeMenu();
+      }
+      if(this.innerWidth<=1236){
+        this.show = true;
+        this.chargeMenu();
+      }
+    }
 
     constructor(private translate: TranslateService,
         private _service:UserServiceController, 
@@ -33,6 +48,8 @@ export class BannerComponent implements OnInit{
       this.translate.use(this.lg);
       this.translate.addLangs(['es','cat','en']);
       this.langs = this.translate.getLangs();
+      //Guardo el tamaño inicial de la ventana.
+      this.innerWidth = window.innerWidth;
     }
   
     changeLang(lang:string){
@@ -44,6 +61,7 @@ export class BannerComponent implements OnInit{
       window.location.reload();
     }
 
+    //Función para mostrar el menú u ocultarlo.
     chargeMenu(){
       let element = document.getElementById("menu");
       let value = "flex";
@@ -54,6 +72,13 @@ export class BannerComponent implements OnInit{
         this.show = true;
       }
       element.style.display=value;
+    }
+
+    closeMenu(){
+      //Si la ventana tine el tamaño en el que aparece el menú, lo oculta.
+      if(this.innerWidth < 1236){
+        this.chargeMenu();
+      }
     }
 
 }

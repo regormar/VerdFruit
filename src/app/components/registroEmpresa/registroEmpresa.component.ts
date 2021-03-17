@@ -6,7 +6,7 @@ import { UserServiceController } from "src/app/services/user.service";
 @Component({
     selector:'registroEmpresa-component',
     templateUrl:'./registroEmpresa.component.html',
-    styleUrls:['./registroEmpresa.component.css'],
+    styleUrls:['../registrousuario/registro.component.css'],
     providers:[UserServiceController],
 })
 

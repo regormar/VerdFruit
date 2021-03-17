@@ -9,6 +9,10 @@
     width: 250px;
 }
 
+h4{
+    color: white;
+}
+
 .divLogo{
     display: flex;
     align-items: center;
@@ -29,6 +33,18 @@
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
+    z-index:5;
+}
+
+.borderMenu{
+    width:0;
+    height:0;
+    background-color: #00471F;
+    margin:0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .espaciado{
@@ -122,16 +138,20 @@ a:hover{
     .menu{        
         display: none;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         position: absolute;
-        background-color: #385830;
-        width: 200px;
-        height: 170px;
+        background-color:white;
+        width: 250px;
+        height: 300px;
         padding-top: 20px;
         margin-top: 45px;
         margin-left: 30.3%;
         align-items: center;
         padding: 0;
+        border-bottom: 20px solid #00471F;
+        border-left: 1px solid #00471F;
+        border-right: 1px solid #00471F;
+        padding-bottom: 20px;
     }
     .menu a{
         margin:0;
@@ -147,12 +167,33 @@ a:hover{
     }
     
     .espaciado{
-        width: 100%;
+        width: 80%;
+        height: 35px;
         display: flex;
         justify-content: center;
+        align-items: center;
         margin:0;
+        background-color: #FFB400;
+        margin-top: 5px;
     }
-    
+
+    a{
+        color:#00471F;
+    }
+
+    a:hover{
+        color:black;
+    }
+
+    .activo{
+        color: black;
+    }
+
+    .borderMenu{
+        width:101%;
+        height:50px;
+        visibility: visible;
+    }
 }
 
 @media (min-width:1236px) and (max-width:1400px){
