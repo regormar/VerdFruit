@@ -5,6 +5,25 @@
     height: 100px;
 }
 
+.centrar{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 70%;
+    position:absolute;
+    height: 216px;
+    margin-top:366px;
+    z-index: 4;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+li{
+    list-style:none; 
+}
+
 .logo{
     width: 250px;
 }
@@ -26,6 +45,41 @@ h4{
     justify-content: center;
 }
 
+.allMenu{
+    display: flex;
+    flex-direction: row;
+    margin-top:15px;
+    z-index: 5;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.usuario{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    background-color:white;
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+    margin-top: 13px;
+    align-items: center;
+    padding: 0;
+    border-bottom: 20px solid #00471F;
+    border-left: 1px solid #00471F;
+    border-right: 1px solid #00471F;
+    padding-bottom: 20px;
+    margin-left: 98px;
+    margin-top: 45px;
+    margin-left: 222px;
+    z-index: 4;
+}
+
 .menu{
     height: 45px;
     display: flex;
@@ -33,7 +87,11 @@ h4{
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
-    z-index:5;
+}
+
+.menuUsuario{
+    padding-left: 25px;
+    padding-right: 15px;
 }
 
 .borderMenu{
@@ -47,16 +105,43 @@ h4{
     justify-content: center;
 }
 
+.menuOpen{
+    width:100%;
+    height: 50px;
+    visibility: visible;
+}
+
+
 .espaciado{
-    list-style:none; 
     margin-left:30px;
     display: flex;
+}
+
+.espaciadoActivo{
+    width: 80%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    background-color: #FFB400;
+    margin-top: 5px;
 }
 
 a{
     text-decoration: none;
     color: #00471F;
     font-family: textile;
+}
+
+a.identA{
+    color:black;
+}
+a.identA:hover{
+    color:#00471F;
+}
+a.active{
+    color:#00471F;
 }
 
 h1{
@@ -112,11 +197,6 @@ a:hover{
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    margin-top: 15px;
-}
-/* NO VA------------------------------------------------------------------------------------ */
-.menuIcon:hover .menu{
-    display: block;
 }
 
 .fa-bars{
@@ -133,8 +213,21 @@ a:hover{
     height: 30px;
 }
 
+.fa-user{
+    font-size:28px;
+    color:#00471F;
+    padding-top:10px;
+}
+.fa-user:hover{
+    color:#FFB400;
+}
+
 @media (max-width:1236px){
     
+    .fa-user{
+        padding-top:0;
+    }
+
     .menu{        
         display: none;
         flex-direction: column;
@@ -142,7 +235,7 @@ a:hover{
         position: absolute;
         background-color:white;
         width: 250px;
-        height: 300px;
+        height: 250px;
         padding-top: 20px;
         margin-top: 45px;
         margin-left: 30.3%;
@@ -178,15 +271,15 @@ a:hover{
     }
 
     a{
-        color:#00471F;
-    }
-
-    a:hover{
         color:black;
     }
 
+    a:hover{
+        color:#00471F;
+    }
+
     .activo{
-        color: black;
+        color:#00471F;
     }
 
     .borderMenu{
@@ -194,12 +287,4 @@ a:hover{
         height:50px;
         visibility: visible;
     }
-}
-
-@media (min-width:1236px) and (max-width:1400px){
-
-    .menu{
-        display: flex;
-    }
-
 }

@@ -15,6 +15,7 @@ export class BannerComponent implements OnInit{
     lg:string = "es";
     show:boolean = false;
     innerWidth:number;
+    displayMenuReg:boolean = false;
     
     ngOnInit(): void {
     }
@@ -63,6 +64,9 @@ export class BannerComponent implements OnInit{
 
     //Función para mostrar el menú u ocultarlo.
     chargeMenu(){
+      if(this.displayMenuReg === true){
+        this.userMenu("none", false, "4");
+      }
       let element = document.getElementById("menu");
       let value = "flex";
       if(this.show){
@@ -77,7 +81,26 @@ export class BannerComponent implements OnInit{
     closeMenu(){
       //Si la ventana tine el tamaño en el que aparece el menú, lo oculta.
       if(this.innerWidth < 1236){
+        this.show = true;
         this.chargeMenu();
+      }
+    }
+
+    userMenu(display:string, state:boolean, z:string){
+      let element = document.getElementById("usuario");     
+      element.style.display = display;
+      element.style.zIndex = z;
+      this.displayMenuReg = state;
+    }
+
+    closeMenuOnOpen(){
+      if(this.show === true){
+        this.closeMenu();
+      }
+      if(this.displayMenuReg === true){
+        this.userMenu("none", false, "4");
+      }else{
+        this.userMenu("flex", true, "5");
       }
     }
 

@@ -8,19 +8,31 @@
                         <option *ngFor="let lang of langs" [value]="lang">{{lang}}</option>
                     </select>
                 </div>
-                <div class="responsiveMenu">
-                    <div class="menuIcon" (click)="chargeMenu()">
-                        <i class="fas fa-bars"></i>
+                <div class="allMenu">
+                    <div class="responsiveMenu">
+                        <div class="menuIcon" (click)="chargeMenu()">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <ul class="menu" id="menu">  
+                            <div class="borderMenu"><h4>{{'MENU'|translate}}</h4></div>             
+                            <li class="espaciado"><a routerLink="/home" routerLinkActive="activo" (click)="closeMenu()">{{ 'HOME' | translate }}</a></li>
+                            <li class="espaciado"><a routerLink="/productos" routerLinkActive="activo" (click)="closeMenu()">{{ 'PRODUCTS' | translate }}</a></li>
+                            <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo" (click)="closeMenu()">{{ 'QUESTIONS' | translate }}</a></li>
+                        </ul>  
+                    </div>  
+                    <div class="menuUsuario">
+                        <i class="fas fa-user" (click)="closeMenuOnOpen()"></i>                      
                     </div>
-                    <ul class="menu" id="menu">  
-                        <div class="borderMenu"><h4>{{'MENU'|translate}}</h4></div>             
-                        <li class="espaciado"><a routerLink="/home" routerLinkActive="activo" (click)="closeMenu()">{{ 'HOME' | translate }}</a></li>
-                        <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo" (click)="closeMenu()">{{ 'QUESTIONS' | translate }}</a></li>
-                        <li class="espaciado"><a routerLink="/login" routerLinkActive="activo" (click)="closeMenu()">{{ 'LOGIN' | translate }}</a></li>
-                        <li class="espaciado"><a routerLink="/registro" routerLinkActive="activo" (click)="closeMenu()">{{ 'SIGN IN' | translate }}</a></li>
-                    </ul>  
-                </div>               
+                </div>             
             </div>
         </div>
     </div>
+    <div class="centrar">
+        <ul class="usuario" id="usuario"> 
+            <div class="borderMenu menuOpen"><h4>{{'IDENTIFY'|translate}}</h4></div> 
+            <li class="espaciadoActivo"><a class="identA" routerLink="/login" routerLinkActive="active" (click)="userMenu('none',false)">{{ 'LOGIN' | translate }}</a></li>
+            <li class="espaciadoActivo"><a class="identA" routerLink="/registro" routerLinkActive="active" (click)="userMenu('none',false)">{{ 'SIGN IN' | translate }}</a></li>
+        </ul>
+    </div>
 </div> 
+
