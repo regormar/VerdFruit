@@ -65,7 +65,7 @@ export class BannerComponent implements OnInit{
     //Función para mostrar el menú u ocultarlo.
     chargeMenu(){
       if(this.displayMenuReg === true){
-        this.userMenu("none", false, "4");
+        this.userMenu("none", false, "-1");
       }
       let element = document.getElementById("menu");
       let value = "flex";
@@ -87,8 +87,9 @@ export class BannerComponent implements OnInit{
     }
 
     userMenu(display:string, state:boolean, z:string){
-      let element = document.getElementById("usuario");     
-      element.style.display = display;
+      let menuElement = document.getElementById("usuario");  
+      let element = document.getElementById("centrar");    
+      menuElement.style.display = display;
       element.style.zIndex = z;
       this.displayMenuReg = state;
     }
@@ -98,7 +99,7 @@ export class BannerComponent implements OnInit{
         this.closeMenu();
       }
       if(this.displayMenuReg === true){
-        this.userMenu("none", false, "4");
+        this.userMenu("none", false, "-1");
       }else{
         this.userMenu("flex", true, "5");
       }

@@ -13,7 +13,7 @@
     position:absolute;
     height: 216px;
     margin-top:366px;
-    z-index: 0;
+    z-index: -1;
 }
 
 ul{
@@ -77,7 +77,6 @@ h4{
     margin-left: 98px;
     margin-top: 45px;
     margin-left: 222px;
-    z-index: 4;
 }
 
 .menu{
