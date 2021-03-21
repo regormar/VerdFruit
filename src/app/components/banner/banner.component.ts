@@ -94,6 +94,7 @@ export class BannerComponent implements OnInit{
       this.displayMenuReg = state;
     }
 
+    //Función que cierra o abre el menú de identificación y cierra el de navegación si esta abierto.
     closeMenuOnOpen(){
       if(this.show === true){
         this.closeMenu();
