@@ -2,7 +2,7 @@
     <div class="form-panel">
         <div class="flex-col">           
             <p>{{ 'USERNAME' | translate }}: </p>           
-            <input #inputUsername="ngModel" type="text" [(ngModel)]="username" name="username" required/>
+            <input #inputUsername="ngModel" type="text" [(ngModel)]="username" name="username" pattern="^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$" required/>
             <span class="text-danger"></span>
         </div>
         <div class="flex-col">           

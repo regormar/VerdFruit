@@ -11,9 +11,9 @@ import { UserServiceController } from "src/app/services/user.service";
 
 export class ResetPasswordComponent{
     
-    mensaje!:string;
-    error!:string;
-    email!:string;
+    mensaje:string;
+    error:string;
+    email:string;
 
     constructor(private _service:UserServiceController, private translate: TranslateService){}
 
@@ -32,10 +32,6 @@ export class ResetPasswordComponent{
                     }
                 );
                 this.email = "";
-                //TODO: Enviar correo
-
-
-
             },
             (error) => {
                 if(error.status == 400){

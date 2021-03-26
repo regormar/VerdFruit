@@ -38,10 +38,6 @@ h1{
     background-color: #b89544;
 }
 
-input.ng-dirty.ng-invalid{
-    border:solid 1px red;
-}
-
 /* REGISTRO USUARIOS */
 /*-----------------------------------------------------------------------------------------*/
 .panel{

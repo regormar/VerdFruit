@@ -42,3 +42,7 @@ a{
 form{
     width:100%;
 }
+
+input.ng-dirty.ng-invalid{
+    border:solid 1px red;
+}

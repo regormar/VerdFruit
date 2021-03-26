@@ -1,9 +1,10 @@
 import { Inject, Injectable } from "@angular/core";
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { TokenServiceController } from "./token.service";
 import { Particular } from "../model/particular";
 import { Empresa } from "../model/empresa";
+import { Usuario } from "../model/usuario";
 
 @Injectable()
 export class UserServiceController{
@@ -12,9 +13,9 @@ export class UserServiceController{
 
     constructor(private conexHttp:HttpClient, @Inject(TokenServiceController) private _tokenService: TokenServiceController) { }
 
-    getusuarioById(id:number):Observable<any>{
+    getusuarioById(id:number,token:string):Observable<any>{
         let url = this.ruta + "/secured/" + id;
-        return this.conexHttp.get(url, this._tokenService.generateHeaders());
+        return this.conexHttp.get(url, { headers: new HttpHeaders({ 'Authorization' : "Basic "+token+"=" }) });
     }
 
     postParticular(usuario:Particular):Observable<any>{
@@ -38,6 +39,10 @@ export class UserServiceController{
     getEmail(email:string):Observable<any>{
         let url = this.ruta + "?key=" + email;
         return this.conexHttp.get(url, this._tokenService.generateHeaders()); 
+    }
+
+    changePassword(usuario:Usuario):Observable<any>{
+        return this.conexHttp.put(this.ruta + "/password", usuario, this._tokenService.generateHeaders());
     }
 
 }

@@ -36,8 +36,7 @@ export class BannerComponent implements OnInit{
       }
     }
 
-    constructor(private translate: TranslateService,
-        private _service:UserServiceController, 
+    constructor(private translate: TranslateService, 
         private _cookiesService:CookiesServiceController){
       this.translate.setDefaultLang('es');
       //Al iniciar el componente recuperamos el idioma de las cookies y lo aplicamos.

@@ -34,6 +34,7 @@
     "USERADDED": "Usuari afegit correctament",
     "PASSREQUIREMENTS":"Ha de contenir una majúscula, una minúscula, un nombre o un caràcter especial i tenir una longitud de 8 o més caràcters.",
     "NOMBREFISCAL":"Nom fiscal",
-    "NOMBRECOMERCIAL":"Nom comercial"
+    "NOMBRECOMERCIAL":"Nom comercial",
+    "CHANGEPASSWORD":"Canviar contrasenya"
 
 }

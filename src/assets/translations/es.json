@@ -34,6 +34,7 @@
     "USERADDED":"Usuario añadido correctamente",
     "PASSREQUIREMENTS":"Debe contener una mayúscula, una minúscula, un número o un caracter especial y tener una longitud de 8 o más caracteres.",
     "NOMBREFISCAL":"Nombre fiscal",
-    "NOMBRECOMERCIAL":"Nombre comercial"
+    "NOMBRECOMERCIAL":"Nombre comercial",
+    "CHANGEPASSWORD":"Cambiar contraseña"
 
 }
