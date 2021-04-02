@@ -31,16 +31,18 @@ export class ChangePasswordComponent{
         )        
     }
 
-    changePassword(){
-        this._service.getusuarioById(parseInt(this.id), this.token)
+    changePassword(event){
+        this._service.getUsuarioById(parseInt(this.id), this.token)
         .subscribe(
             (res) => {
                 this.usuario = res;
                 this.usuario.pass = this.pass;
-                this._service.changePassword(this.usuario)
+                //TODO: Enviar por pathparam el token para validar si es del mismo usuario que queremos modificar.
+                this._service.changePassword(this.usuario, this.token)
                 .subscribe(
                     (res) => {
-                        console.log("Contraseña modificada correctamente.");
+                        event.target.reset();
+                        this._router.navigate(['/login']);
                     },
                     (err) => {
                         console.log(err)
