@@ -15,8 +15,8 @@ export class UserServiceController{
 
     getUsuarioById(id:number,token:string):Observable<any>{
         console.log(token);
-        let url = this.ruta + "/secured/" + id;
-        return this.conexHttp.get(url, { headers: new HttpHeaders({ 'Authorization' : "Basic "+token }) });
+        let url = this.ruta + "/secured/" + id + "/" + token;
+        return this.conexHttp.get(url, { headers: new HttpHeaders({ 'Authorization' : token }) });
     }
 
     postParticular(usuario:Particular):Observable<any>{
@@ -38,7 +38,7 @@ export class UserServiceController{
     }
 
     getEmail(email:string):Observable<any>{
-        let url = this.ruta + "?key=" + email;
+        let url = this.ruta + "/sendEmail/" + email;
         return this.conexHttp.get(url, this._tokenService.generateHeaders()); 
     }
 
