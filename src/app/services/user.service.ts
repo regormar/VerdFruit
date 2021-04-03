@@ -13,10 +13,9 @@ export class UserServiceController{
 
     constructor(private conexHttp:HttpClient, @Inject(TokenServiceController) private _tokenService: TokenServiceController) { }
 
-    getUsuarioById(id:number,token:string):Observable<any>{
-        console.log(token);
-        let url = this.ruta + "/secured/" + id + "/" + token;
-        return this.conexHttp.get(url, { headers: new HttpHeaders({ 'Authorization' : token }) });
+    getUsuarioById(id:string):Observable<any>{
+        let url = this.ruta + "/" + id;
+        return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }
 
     postParticular(usuario:Particular):Observable<any>{
@@ -42,8 +41,12 @@ export class UserServiceController{
         return this.conexHttp.get(url, this._tokenService.generateHeaders()); 
     }
 
-    changePassword(usuario:Usuario, token:string):Observable<any>{
-        return this.conexHttp.put(this.ruta + "/password/"+token, usuario, this._tokenService.generateHeaders());
+    putParticular(usuario:Particular):Observable<any>{
+        return this.conexHttp.put(this.ruta + "/particular", usuario, this._tokenService.generateHeaders());
+    }
+
+    putEmpresa(usuario:Empresa):Observable<any>{
+        return this.conexHttp.put(this.ruta + "/empresa", usuario, this._tokenService.generateHeaders());
     }
 
 }

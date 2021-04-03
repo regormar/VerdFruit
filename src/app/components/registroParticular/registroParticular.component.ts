@@ -20,7 +20,7 @@ export class RegistroParticularComponent implements OnInit{
     apellidos!:string;
     direccion!:string;
     telefono!:string;
-    tipo!:number;
+    tipo:number = 1;
     dni!:string;
     privacy!:boolean;
     resultado:string = "";

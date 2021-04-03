@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { TranslateService } from "@ngx-translate/core";
+import { Empresa } from "src/app/model/empresa";
+import { Particular } from "src/app/model/particular";
 import { Usuario } from "src/app/model/usuario";
 import { UserServiceController } from "src/app/services/user.service";
 
@@ -17,7 +19,8 @@ export class ChangePasswordComponent{
     verification:string;
     token:string;
     id:string;
-    usuario:Usuario;
+    particular:Particular;
+    empresa:Empresa;
 
     constructor(private _service:UserServiceController, private translate: TranslateService,
         private _router: Router, private _activRoute: ActivatedRoute){}
@@ -25,29 +28,44 @@ export class ChangePasswordComponent{
     ngOnInit(): void {
         this._activRoute.paramMap.subscribe(
             params => {
-            this.token = params.get("token");
             this.id = params.get("id");
             }
         )        
     }
 
     changePassword(event){
-        this._service.getUsuarioById(parseInt(this.id), this.token)
+        this._service.getUsuarioById(this.id)
         .subscribe(
             (res) => {
-                this.usuario = res;
-                this.usuario.pass = this.pass;
-                //TODO: Enviar por pathparam el token para validar si es del mismo usuario que queremos modificar.
-                this._service.changePassword(this.usuario, this.token)
-                .subscribe(
-                    (res) => {
-                        event.target.reset();
-                        this._router.navigate(['/login']);
-                    },
-                    (err) => {
-                        console.log(err)
-                    }
-                );              
+                if(res['tipo'] == 1){
+                    this.particular = res;
+                    this.particular.pass = this.pass;
+                    this._service.putParticular(this.particular)
+                    .subscribe(
+                        (res) => {
+                            event.target.reset();
+                            this._router.navigate(['/login']);
+                        },
+                        (err) => {
+                            console.log(err)
+                        }
+                    ); 
+                }
+                if(res['tipo'] == 2){
+                    this.empresa = res;
+                    this.empresa.pass = this.pass;
+                    this._service.putEmpresa(this.empresa)
+                    .subscribe(
+                        (res) => {
+                            event.target.reset();
+                            this._router.navigate(['/login']);
+                        },
+                        (err) => {
+                            console.log(err)
+                        }
+                    ); 
+
+                }         
             },
             (err) => {
                 console.log(err);

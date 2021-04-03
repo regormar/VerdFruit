@@ -20,7 +20,7 @@ export class RegistroEmpresaComponent implements OnInit{
     apellidos!:string;
     direccion!:string;
     telefono!:string;
-    tipo!:number;   
+    tipo:number = 2;   
     cif!:string;
     nombre_fiscal!:string;
     nombre_comercial!:string;
