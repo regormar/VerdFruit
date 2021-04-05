@@ -13,7 +13,7 @@
                         <div class="menuIcon" (click)="chargeMenu()">
                             <i class="fas fa-bars"></i>
                         </div>
-                        <ul class="menu" id="menu">  
+                        <ul class="menu" id="menu" (mouseleave)="closeMenu()">
                             <div class="borderMenu"><h4>{{'MENU'|translate}}</h4></div>             
                             <li class="espaciado"><a routerLink="/home" routerLinkActive="activo" (click)="closeMenu()">{{ 'HOME' | translate }}</a></li>
                             <li class="espaciado"><a routerLink="/productos" routerLinkActive="activo" (click)="closeMenu()">{{ 'PRODUCTS' | translate }}</a></li>
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="centrar" id="centrar">
-        <ul class="usuario" id="usuario"> 
+        <ul class="usuario" id="usuario" (mouseleave)="closeMenuOnOpen()"> 
             <div class="borderMenu menuOpen"><h4>{{'IDENTIFY'|translate}}</h4></div> 
             <li class="espaciadoActivo"><a class="identA" routerLink="/login" routerLinkActive="active" (click)="userMenu('none', false, '-1')">{{ 'LOGIN' | translate }}</a></li>
             <li class="espaciadoActivo"><a class="identA" routerLink="/registro" routerLinkActive="active" (click)="userMenu('none', false, '-1')">{{ 'SIGN IN' | translate }}</a></li>

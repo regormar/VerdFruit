@@ -35,6 +35,7 @@
     "PASSREQUIREMENTS":"It must contain an uppercase, lowercase, number or special character and be 8 or more characters long.",
     "NOMBREFISCAL":"Tax name",
     "NOMBRECOMERCIAL":"Trade name",
-    "CHANGEPASSWORD":"Change password"
+    "CHANGEPASSWORD":"Change password",
+    "RECOVERPASSWORD":"Recover password"
     
 }

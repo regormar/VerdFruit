@@ -84,3 +84,17 @@ input.ng-dirty.ng-invalid{
 .form-panel{
     padding-left: 15%;
 }
+
+@media (max-width:1236px){
+    .regImgParticular{
+        width:0;
+    }
+
+    .regImgEmpresa{
+        width:0;
+    }
+
+    form{
+        width: 100%;
+    }
+}

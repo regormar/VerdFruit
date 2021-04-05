@@ -35,6 +35,7 @@
     "PASSREQUIREMENTS":"Ha de contenir una majúscula, una minúscula, un nombre o un caràcter especial i tenir una longitud de 8 o més caràcters.",
     "NOMBREFISCAL":"Nom fiscal",
     "NOMBRECOMERCIAL":"Nom comercial",
-    "CHANGEPASSWORD":"Canviar contrasenya"
+    "CHANGEPASSWORD":"Canviar contrasenya",
+    "RECOVERPASSWORD":"Recuperar contrasenya"
 
 }

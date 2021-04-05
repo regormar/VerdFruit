@@ -6,7 +6,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #d9ebe0;
+    background: rgb(0,71,31);
+    background: linear-gradient(90deg, rgba(0,71,31,1) 0%, rgba(68,122,91,1) 0%, rgba(221,255,216,1) 22%, rgba(212,247,209,1) 72%, rgba(68,122,91,1) 100%, rgba(0,71,31,1) 100%);
 }
 
 h1,h2,h3,h4{
@@ -151,6 +152,5 @@ p{
     margin-bottom: 20px;
     font-size: 20px;
 }
-
 
 /* RESPONSIVE-------------------------------------------------------------------------------- */
