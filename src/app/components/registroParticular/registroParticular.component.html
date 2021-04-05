@@ -4,7 +4,7 @@
             <div class="flex-col">           
                 <p>{{ 'USERNAME' | translate }}: </p>  
                 <div class="imgInput">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user" data-title="No se permiten caracteres especiales y la longitud mínima es 8"></i>
                     <input #inputUsername="ngModel" type="text" [(ngModel)]="username" name="username" pattern="^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$" required/>
                 </div>
                 <span class="text-danger"></span>
@@ -36,8 +36,8 @@
             <div class="flex-col">
                 <p>{{ 'PASSWORD' | translate }}:</p>
                 <div class="imgInput">
-                    <i class="fas fa-key"></i>
-                    <input #inputPass="ngModel" type="password" [(ngModel)]="pass" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="{{'PASSREQUIREMENTS'|translate}}" required/>
+                    <i class="fas fa-key" data-title="{{'PASSREQUIREMENTS'|translate}}"></i>
+                    <input #inputPass="ngModel" type="password" [(ngModel)]="pass" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
                 </div>
                 <span class="text-danger"></span>
             </div>   
