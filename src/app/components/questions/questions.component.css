@@ -1,0 +1,45 @@
+
+.pregunta{
+    padding-top: 1%;
+    padding-left: 2%;
+    background-color: #00471F;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    transition: 0.5s;
+}
+
+.active, .pregunta:hover {
+    background-color:  #00471fd8;
+}
+
+.pregunta:before  {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 150%;
+}
+
+.active:before  {
+    content: "\2212";
+}
+
+.respuesta{
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+    justify-content: center;
+    background-color: #00471f98;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    
+}
+
+h2{
+    font-size: 150%;
+    color: white;
+}

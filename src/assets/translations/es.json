@@ -36,6 +36,37 @@
     "NOMBREFISCAL":"Nombre fiscal",
     "NOMBRECOMERCIAL":"Nombre comercial",
     "CHANGEPASSWORD":"Cambiar contraseña",
-    "RECOVERPASSWORD":"Recuperar contraseña"
+    "RECOVERPASSWORD":"Recuperar contraseña",
+
+    
+    "QUESTION1": "¿Cuál es el importe mínimo de un pedido?",
+    "ANSWER1.1": "El pedido mínimo en nuestra frutería es de 10€ (excluyendo gastos de envío).",
+    "QUESTION2": "¿Que metodos de pago están disponibles?",
+    "ANSWER2.1": "Para poder pagar los productos debes estar registrado.",
+    "ANSWER2.2": "Si no lo estás, en el momento de terminar la compra el sistema te pedirá que te registres.",
+    "ANSWER2.3": "Las formas de pago aceptadas son:",
+    "ANSWER2.4": "· Paypal",
+    "ANSWER2.5": "· Tarjetas de crédito (VISA, Master Card, American Express, ...)",
+    "ANSWER2.6": "· Transferenci bancaria",
+    "QUESTION3": "¿Puedo devolver mi pedido si algo no es correcto?",
+    "ANSWER3.1": "Valora si es motivo de devolución, o puedes llegar a un acuerdo con el productor. Muy probablemente el vendedor te compense en la próxima compra.",
+    "ANSWER3.2": "El usuario tiene derecho a devolución cuando concurren alguna de las siguientes circunstancias:",
+    "ANSWER3.3": "· La caja de entrega presenta serios daños: no la aceptes, devuélvela al transportista.",
+    "ANSWER3.4": "· El contenido de la entrega no se corresponde con el pedido: no la aceptes, devuélvela al transportista.",
+    "ANSWER3.5": "· La calidad o aspecto de los productos no aconsejan su consumo: no la aceptes, devuélvela al transportista.",
+    "ANSWER3.6": "Para otros casos, antes de devolverla llama a tu productor para llegar a un acuerdo si es posible.",
+    "ANSWER3.7": "Antes de formalizar una devolución es conveniente disponer de todos los documentos del pedido: pedido, comprobante de pago, albarán de entrega, fotografías del producto equivocado o embalaje en mal estado.",
+    "QUESTION4": "¿Cuándo llegará mi pedido?",
+    "ANSWER4.1": "Para entregar tu compra de fruta y verdura a domicilio y garantizar la mayor frescura del producto, los pedidos que se realicen:",
+    "ANSWER4.2": "· De lunes hasta miércoles antes de las 12:00 de la mañana a llegarán en un plazo máximo de 24h/48h desde que el pedido sale de nuestras instalaciones. (Recibirás un correo confirmando el envío)",
+    "ANSWER4.3": "· Los jueves antes de las 13:00 de la mañana llegarán en un plazo máximo de 24h/48h desde que el pedido sale de nuestras instalaciones. (Recibirás un correo confirmando el envío)",
+    "ANSWER4.4": "· Los pedidos que se realicen a partir del Jueves a las 13:00h hasta lunes a las 12:00h, se confeccionarán el lunes para entregarlos en un plazo máximo de 24h/48h.",
+    "QUESTION5": "No recuerdo mi contraseña",
+    "ANSWER5.1": "Dirígete a la parte superior derecha de la web y haz clic en “Iniciar sesión”. Se abrirá una página donde dice en color naranja “¿Has olvidado la contraseña?”, haz clic encima y se abrirá un campo donde incluir tu correo electrónico. Escríbelo y pulsa en el botón “Enviar”. Abre tu correo y sigue los pasos para regenerar tu nueva contraseña.",
+    "QUESTION6": "Otras dudas",
+    "ANSWER6.1": "¿Sigues teniendo dudas? Estamos encantados de atenderte:",
+    "ANSWER6.2": "Contacta por teléfono: 973 478 954",
+    "ANSWER6.3": "Contacta por WhatsApp: 635 752 630",
+    "ANSWER6.4": "Contacta por correo: verdfruit@gmail.com"
 
 }
