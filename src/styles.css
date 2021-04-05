@@ -6,6 +6,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #d9ebe0;
 }
 
 h1,h2,h3,h4{
@@ -37,6 +38,22 @@ button:disabled,
 button[disabled]{
     color:#3c7555;
     background-color: #b89544;
+}
+
+.imgInput{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.imgInput i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #FFB400;
+    width: 30px;
+    border: solid 1px black;
 }
 
 /* REGISTRO USUARIOS */
@@ -82,7 +99,7 @@ button[disabled]{
     width: 100%;
 }
 
-input[type=text],input[type=password]{
+input[type=text],input[type=password],input[type=email]{
     width: 100%;
     padding-left: 10px;
 

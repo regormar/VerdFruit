@@ -19,14 +19,14 @@ a:hover{
     color: #FFB400;
     background-color: #4e8064;
     border-bottom:solid 3px #00471F;
+    border-left: solid 2px #00471F;
+    border-right: solid 2px #00471F;
 }
 
 a{
     color: black;
     font-family: textile;
     border-top:solid 2px #fa9600;
-    border-left: solid 1px #fa9600;
-    border-right: solid 1px #fa9600;
 }
 
 .selected{
@@ -36,13 +36,51 @@ a{
 }
 
 .userType{
-    width: 70%;
+    width: 100%;
+    background-color: #ffdf94;
 }
 
 form{
-    width:100%;
+    width:50%;
 }
 
 input.ng-dirty.ng-invalid{
     border:solid 1px red;
+}
+
+.regImgEmpresa{
+    width: 50%;
+    height: 950px;
+}
+
+.regImgParticular{
+    width: 50%;
+    height: 800px;
+}
+
+.registro{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.policyButtonRegistro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width:80%;
+    padding-left: 15%;
+}
+
+.flex-col{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.form-panel{
+    padding-left: 15%;
 }

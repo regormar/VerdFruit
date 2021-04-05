@@ -7,7 +7,8 @@
                     <div>
                         <p>{{ 'USERNAME' | translate }} / {{ 'EMAIL' | translate }}</p>
                     </div>
-                    <div>
+                    <div class="imgInput">
+                        <i class="fas fa-user"></i>
                         <input #inputUsername="ngModel" type="text" [(ngModel)]="username" name="username" placeholder="{{ 'PHUSER' | translate}}" required/>
                     </div>
                 </div>
@@ -15,7 +16,8 @@
                     <div>
                         <p>{{ 'PASSWORD' | translate }}</p>
                     </div>
-                    <div>
+                    <div class="imgInput">
+                        <i class="fas fa-key"></i>
                         <input #inputPass="ngModel" type="password" [(ngModel)]="pass" name="pass" placeholder="{{ 'PHPASS' | translate}}" required/>
                     </div>
                 </div>     
