@@ -19,10 +19,10 @@ export class QuestionsComponent {
     ngOnInit(): void {
         var acc = document.getElementsByClassName("pregunta");
 
-        for (let i = 0; i < acc.length; i++) {        
-            let panel = <HTMLElement> acc[i].nextElementSibling;
-            panel.style.maxHeight = 100 + "%";
-        }
+        // for (let i = 0; i < acc.length; i++) {        
+        //     let panel = <HTMLElement> acc[i].nextElementSibling;
+        //     panel.style.maxHeight = 100 + "%";
+        // }
         for (let i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function() {
                 this.classList.toggle("active");

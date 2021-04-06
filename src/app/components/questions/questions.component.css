@@ -2,7 +2,7 @@
 .pregunta{
     padding-top: 1%;
     padding-left: 2%;
-    background-color: #00471F;
+    background-color:  #00471fd8;
     cursor: pointer;
     width: 100%;
     border: none;
@@ -11,7 +11,7 @@
 }
 
 .active, .pregunta:hover {
-    background-color:  #00471fd8;
+    background-color: #00471F;
 }
 
 .pregunta:before  {
