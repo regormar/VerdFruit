@@ -4,7 +4,6 @@ import { Observable } from "rxjs";
 import { TokenServiceController } from "./token.service";
 import { Particular } from "../model/particular";
 import { Empresa } from "../model/empresa";
-import { Usuario } from "../model/usuario";
 
 @Injectable()
 export class UserServiceController{

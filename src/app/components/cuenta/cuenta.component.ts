@@ -2,6 +2,7 @@
 import { Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { CookiesServiceController } from "src/app/services/cookies.service";
+import { LogoutServiceController } from "src/app/services/logout.service";
 import { UserServiceController } from "src/app/services/user.service";
 
 
@@ -9,12 +10,13 @@ import { UserServiceController } from "src/app/services/user.service";
     selector:'cuenta-component',
     templateUrl:'./cuenta.component.html',
     styleUrls:['./cuenta.component.css'],
-    providers:[UserServiceController, CookiesServiceController],
+    providers:[UserServiceController, CookiesServiceController, LogoutServiceController],
 })
 
 
 export class CuentaComponent {
-    constructor(private _service:UserServiceController, private translate: TranslateService){}
+    constructor(private _service:UserServiceController, private translate: TranslateService,
+        private _logoutService:LogoutServiceController){}
 
     opcion:string = "datos";
 
@@ -33,6 +35,10 @@ export class CuentaComponent {
             element?.classList.remove("selected");
             element2?.classList.add("selected");
         }
+    }
+
+    logout(){
+        this._logoutService.logout();
     }
     
 }

@@ -222,9 +222,23 @@ a:hover{
     color:#FFB400;
 }
 
+.fa-shopping-cart{
+    font-size:28px;
+    color:#00471F;
+    padding-top:10px;
+    padding-left: 20px;
+}
+.fa-shopping-cart:hover{
+    color:#FFB400;
+}
+
 @media (max-width:1236px){
     
     .fa-user{
+        padding-top:0;
+    }
+
+    .fa-shopping-cart{
         padding-top:0;
     }
 

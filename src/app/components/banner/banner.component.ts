@@ -17,6 +17,8 @@ export class BannerComponent implements OnInit{
     innerWidth:number;
     displayMenuReg:boolean = false;
     
+    menu:boolean = true; 
+    
     ngOnInit(): void {
     }
 
@@ -50,6 +52,14 @@ export class BannerComponent implements OnInit{
       this.langs = this.translate.getLangs();
       //Guardo el tamaño inicial de la ventana.
       this.innerWidth = window.innerWidth;
+
+      //Menu de usuario logeado
+      if(localStorage.getItem("token") == null){
+          this.menu = true;
+      } else{
+          this.menu = false
+      }
+
     }
   
     changeLang(lang:string){

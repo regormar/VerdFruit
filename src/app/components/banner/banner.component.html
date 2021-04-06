@@ -19,9 +19,13 @@
                             <li class="espaciado"><a routerLink="/productos" routerLinkActive="activo" (click)="closeMenu()">{{ 'PRODUCTS' | translate }}</a></li>
                             <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo" (click)="closeMenu()">{{ 'QUESTIONS' | translate }}</a></li>
                         </ul>  
-                    </div>  
+                    </div> 
+                    <div class="carro" *ngIf="menu == false">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
                     <div class="menuUsuario">
-                        <i class="fas fa-user" (click)="closeMenuOnOpen()"></i>                      
+                        <i *ngIf="menu == true" class="fas fa-user" (click)="closeMenuOnOpen()"></i>
+                        <a *ngIf="menu == false" routerLink="cuenta" routerLinkActive="activo"><i class="fas fa-user"></i></a>                 
                     </div>
                 </div>             
             </div>
