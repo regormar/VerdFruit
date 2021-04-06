@@ -1,0 +1,75 @@
+.menuCarro{
+    opacity: 1;
+    background-color: aliceblue;
+    width:400px;
+    height: 100vh;
+    z-index: 6;
+    border-bottom:solid 30px #00471F;
+    /* border-left: solid 3px #FFB400;
+    border-right: solid 3px #FFB400; */
+    position:fixed;
+    right: 0;
+    display:flex;
+    flex-direction: column;
+}
+
+.inactive{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.titleCarro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65px;
+    background-color: #00471F;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+.bottomCarro{
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width:100%;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr{
+    border: 1px solid #00471F;
+    width:90%;
+    margin:0;
+}
+
+.total{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top:20px;
+}
+
+.tramitar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+}
+
+.botonTramitar{
+    background-color: #FFB400;
+    padding-top:10px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius: 15px;
+}

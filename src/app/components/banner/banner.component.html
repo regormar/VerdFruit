@@ -1,3 +1,4 @@
+<carro-component *ngIf="menu == false"></carro-component>
 <div class="content">
     <div class="banner">
         <div class="banner-right">
@@ -20,8 +21,8 @@
                             <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo" (click)="closeMenu()">{{ 'QUESTIONS' | translate }}</a></li>
                         </ul>  
                     </div> 
-                    <div class="carro" *ngIf="menu == false">
-                        <i class="fas fa-shopping-cart"></i>
+                    <div *ngIf="menu == false">
+                        <i class="fas fa-shopping-cart" (click)="cartMenu()"></i>
                     </div>
                     <div class="menuUsuario">
                         <i *ngIf="menu == true" class="fas fa-user" (click)="closeMenuOnOpen()"></i>

@@ -2,12 +2,13 @@ import { Component, HostListener, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { CookiesServiceController } from "../../services/cookies.service";
 import { UserServiceController } from "../../services/user.service";
+import { CarroComponent } from "../carro/carro.component";
 
 @Component({
     selector:'banner-component',
     templateUrl:'./banner.component.html',
     styleUrls:['./banner.component.css'],
-    providers:[UserServiceController, CookiesServiceController],
+    providers:[UserServiceController, CookiesServiceController, CarroComponent],
 })
 
 export class BannerComponent implements OnInit{
@@ -39,7 +40,7 @@ export class BannerComponent implements OnInit{
     }
 
     constructor(private translate: TranslateService, 
-        private _cookiesService:CookiesServiceController){
+        private _cookiesService:CookiesServiceController, private carritoComponent:CarroComponent){
       this.translate.setDefaultLang('es');
       //Al iniciar el componente recuperamos el idioma de las cookies y lo aplicamos.
       this.lg = this._cookiesService.getCookie("lang");
@@ -113,6 +114,11 @@ export class BannerComponent implements OnInit{
       }else{
         this.userMenu("flex", true, "5");
       }
+    }
+
+    //Función que abre o cierra el menu del carrito.
+    cartMenu(){
+      this.carritoComponent.menuCarrito();
     }
 
 }

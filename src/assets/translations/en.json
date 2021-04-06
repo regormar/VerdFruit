@@ -66,6 +66,9 @@
     "ANSWER6.1": "Do you still have doubts? We are delighted to assist you:",
     "ANSWER6.2": "Contact by phone: 973 478 954",
     "ANSWER6.3": "Contact by WhatsApp: 635 752 630",
-    "ANSWER6.4": "Contact by mail: verdfruit@gmail.com"
-    
+    "ANSWER6.4": "Contact by mail: verdfruit@gmail.com",
+
+    "CART":"Cart",
+    "CARTTOTAL":"CART TOTAL",
+    "CHECKOUT":"Checkout"
 }

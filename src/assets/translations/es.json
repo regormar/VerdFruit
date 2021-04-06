@@ -67,6 +67,10 @@
     "ANSWER6.1": "¿Sigues teniendo dudas? Estamos encantados de atenderte:",
     "ANSWER6.2": "Contacta por teléfono: 973 478 954",
     "ANSWER6.3": "Contacta por WhatsApp: 635 752 630",
-    "ANSWER6.4": "Contacta por correo: verdfruit@gmail.com"
+    "ANSWER6.4": "Contacta por correo: verdfruit@gmail.com",
+
+    "CART":"Carrito",
+    "CARTTOTAL":"TOTAL DE LA CISTELLA",
+    "CHECKOUT":"Tramitar pedido"
 
 }

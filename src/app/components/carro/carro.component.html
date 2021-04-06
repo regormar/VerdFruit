@@ -1,0 +1,13 @@
+<div class="menuCarro inactive" id="cartMenu" (mouseleave)="menuCarrito()">
+    <div class="titleCarro"><h1>{{'CART'|translate}}</h1></div>
+    <div class="bottomCarro">
+        <div class="line"><hr></div>
+        <div class="total">
+            <div><h6>{{'CARTTOTAL'|translate}}:</h6></div>
+            <div><h6>{{total}}€</h6></div>
+        </div>
+        <div class="tramitar">
+            <button class="botonTramitar"><h4>{{'CHECKOUT'|translate}}</h4></button>
+        </div>
+    </div>
+</div>
