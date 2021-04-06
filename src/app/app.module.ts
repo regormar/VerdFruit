@@ -19,6 +19,7 @@ import { RegistroParticularComponent } from './components/registroParticular/reg
 import { RegistroEmpresaComponent } from './components/registroEmpresa/registroEmpresa.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { ChangePasswordComponent } from './components/changePassword/changePassword.component';
+import { CuentaComponent } from './components/cuenta/cuenta.component';
 import { UrlSerializer } from '@angular/router';
 
 export function createTranslateLoader(http: HttpClient){
@@ -39,6 +40,7 @@ export function createTranslateLoader(http: HttpClient){
     RegistroEmpresaComponent,
     QuestionsComponent,
     ChangePasswordComponent,
+    CuentaComponent,
   ],
   imports: [
     BrowserModule,
