@@ -85,6 +85,11 @@ input.ng-dirty.ng-invalid{
     padding-left: 15%;
 }
 
+.added{
+    width: 80%;
+    padding-left: 15%;
+}
+
 @media (max-width:1236px){
     .regImgParticular{
         width:0;

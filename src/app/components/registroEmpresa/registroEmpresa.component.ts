@@ -35,7 +35,7 @@ export class RegistroEmpresaComponent implements OnInit{
     registrarUsuario(){
         //Dvuelve que se ha insertado correctamente por el insert
         this._service.postEmpresa(new Empresa(0,this.username,this.pass,this.email,this.nombre,
-            this.apellidos,this.direccion,this.telefono,this.tipo,this.cif,this.nombre_fiscal,this.nombre_comercial))
+            this.apellidos,this.direccion,"",this.telefono,this.tipo,this.cif,this.nombre_fiscal,this.nombre_comercial))
         .subscribe(
             (result) => {  
                 this.translate.get('USERADDED')

@@ -22,11 +22,11 @@ export class RegistroUsuarioComponent implements OnInit{
         var element = document.getElementById("particular");
         var element2 = document.getElementById("business");
         if(opcion === "particular"){            
-            element?.classList.add("selected");
-            element2?.classList.remove("selected");
+            element.classList.add("selected");
+            element2.classList.remove("selected");
         }else{
-            element?.classList.remove("selected");
-            element2?.classList.add("selected");
+            element.classList.remove("selected");
+            element2.classList.add("selected");
         }
     }
 }
