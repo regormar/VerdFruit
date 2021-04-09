@@ -89,6 +89,7 @@ export class BannerComponent implements OnInit{
     }
 
     closeMenu(){
+      this.userMenu('none', false, '-1');
       //Si la ventana tine el tamaño en el que aparece el menú, lo oculta.
       if(this.innerWidth < 1236){
         this.show = true;

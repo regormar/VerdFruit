@@ -5,8 +5,6 @@
     height: 100vh;
     z-index: 6;
     border-bottom:solid 30px #00471F;
-    /* border-left: solid 3px #FFB400;
-    border-right: solid 3px #FFB400; */
     position:fixed;
     right: 0;
     display:flex;
