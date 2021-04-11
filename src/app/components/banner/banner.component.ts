@@ -21,6 +21,7 @@ export class BannerComponent implements OnInit{
     menu:boolean = true; 
     
     ngOnInit(): void {
+
     }
 
     langs:string[]=[];
@@ -29,6 +30,7 @@ export class BannerComponent implements OnInit{
     @HostListener('window:resize', ['$event'])
     onResize(event) {
       this.innerWidth = window.innerWidth;
+      let element = document.getElementById("menu");
       if(this.innerWidth > 1236){
         this.show = false;
         this.chargeMenu();
@@ -74,6 +76,7 @@ export class BannerComponent implements OnInit{
 
     //Función para mostrar el menú u ocultarlo.
     chargeMenu(){
+      this.closeCart();
       if(this.displayMenuReg === true){
         this.userMenu("none", false, "-1");
       }
@@ -89,11 +92,27 @@ export class BannerComponent implements OnInit{
     }
 
     closeMenu(){
+      this.closeCart();
       this.userMenu('none', false, '-1');
-      //Si la ventana tine el tamaño en el que aparece el menú, lo oculta.
-      if(this.innerWidth < 1236){
+      this.show = true;
+      this.chargeMenu();
+      
+    }
+    closeMenu2(){
+      if(this.innerWidth <= 1236){
+        this.closeCart();
+        this.userMenu('none', false, '-1');
         this.show = true;
         this.chargeMenu();
+      }
+    }
+
+    closeMenu3(){
+      this.closeCart();
+      this.userMenu('none', false, '-1');
+      if(this.innerWidth <= 1236){
+        document.getElementById("menu").style.display="none";
+        this.show = false;
       }
     }
 
@@ -108,7 +127,7 @@ export class BannerComponent implements OnInit{
     //Función que cierra o abre el menú de identificación y cierra el de navegación si esta abierto.
     closeMenuOnOpen(){
       if(this.show === true){
-        this.closeMenu();
+        this.closeMenu2();
       }
       if(this.displayMenuReg === true){
         this.userMenu("none", false, "-1");
@@ -119,7 +138,18 @@ export class BannerComponent implements OnInit{
 
     //Función que abre o cierra el menu del carrito.
     cartMenu(){
+      if(this.innerWidth<=1236){
+        document.getElementById("menu").style.display="none";
+        this.show = false;
+      }
       this.carritoComponent.menuCarrito();
+    }
+
+    closeCart(){
+      let show = sessionStorage.getItem('show');
+      if(show == "true"){
+        this.cartMenu();
+      }
     }
 
 }

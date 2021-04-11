@@ -1,4 +1,3 @@
-<carro-component *ngIf="menu == false"></carro-component>
 <div class="content">
     <div class="banner">
         <div class="banner-right">
@@ -14,19 +13,19 @@
                         <div class="menuIcon" (click)="chargeMenu()">
                             <i class="fas fa-bars"></i>
                         </div>
-                        <ul class="menu" id="menu" (mouseleave)="closeMenu()">
+                        <ul class="menu" id="menu" (mouseleave)="closeMenu2()">
                             <div class="borderMenu"><h4>{{'MENU'|translate}}</h4></div>             
-                            <li class="espaciado"><a routerLink="/home" routerLinkActive="activo" (click)="closeMenu()">{{ 'HOME' | translate }}</a></li>
-                            <li class="espaciado"><a routerLink="/productos" routerLinkActive="activo" (click)="closeMenu()">{{ 'PRODUCTS' | translate }}</a></li>
-                            <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo" (click)="closeMenu()">{{ 'QUESTIONS' | translate }}</a></li>
+                            <li class="espaciado"><a routerLink="/home" routerLinkActive="activo" (click)="closeMenu3()">{{ 'HOME' | translate }}</a></li>
+                            <li class="espaciado"><a routerLink="/productos" routerLinkActive="activo" (click)="closeMenu3()">{{ 'PRODUCTS' | translate }}</a></li>
+                            <li class="espaciado"><a routerLink="/questions" routerLinkActive="activo" (click)="closeMenu3()">{{ 'QUESTIONS' | translate }}</a></li>
                         </ul>  
                     </div> 
-                    <div *ngIf="menu == false">
-                        <i class="fas fa-shopping-cart" (click)="cartMenu()"></i>
-                    </div>
                     <div class="menuUsuario">
                         <i *ngIf="menu == true" class="fas fa-user" (click)="closeMenuOnOpen()"></i>
-                        <a *ngIf="menu == false" routerLink="cuenta" routerLinkActive="activo"><i class="fas fa-user"></i></a>                 
+                        <a *ngIf="menu == false" routerLink="cuenta" routerLinkActive="activo" (click)="closeCart()"><i class="fas fa-user"></i></a>                 
+                    </div>
+                    <div *ngIf="menu == false">
+                        <i class="fas fa-shopping-cart" (click)="cartMenu()"></i>
                     </div>
                 </div>             
             </div>
@@ -39,5 +38,9 @@
             <li class="espaciadoActivo"><a class="identA" routerLink="/registro" routerLinkActive="active" (click)="userMenu('none', true, '-1')">{{ 'SIGN IN' | translate }}</a></li>
         </ul>
     </div>
+    <div class="centrar2">
+        <carro-component *ngIf="menu == false"></carro-component>
+    </div>
+
 </div> 
 

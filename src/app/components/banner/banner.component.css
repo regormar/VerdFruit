@@ -12,10 +12,21 @@
     width: 70%;
     position:absolute;
     height: 216px;
-    margin-top:366px;
     z-index: -1;
     height: 0;
     margin-top: 581px;
+}
+
+.centrar2{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 70%;
+    position:absolute;
+    height: 216px;
+    z-index: 1;
+    height: 0;
+    margin-top: 149px;
 }
 
 ul{
@@ -228,10 +239,15 @@ a:hover{
     font-size:28px;
     color:#00471F;
     padding-top:10px;
-    padding-left: 20px;
+    padding-left: 8px;
+    padding-right: 15px;
 }
 .fa-shopping-cart:hover{
     color:#FFB400;
+}
+
+.shop{
+    display: inline-block;
 }
 
 @media (max-width:1236px){
