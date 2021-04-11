@@ -1,8 +1,8 @@
 .menuCarro{
     opacity: 1;
     background-color: aliceblue;
-    width:400px;
-    height: 650px;
+    width:500px;
+    height: 700px;
     z-index: 6;
     border-bottom:solid 30px #00471F;
     position:absolute;
@@ -55,7 +55,8 @@ hr{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top:20px;
+    margin-top:17px;
+    font-family: textile;
 }
 
 .tramitar{
@@ -71,4 +72,83 @@ hr{
     padding-left:20px;
     padding-right:20px;
     border-radius: 15px;
+}
+
+.content{
+    width: 100%;
+    height: 64%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    visibility: hidden;
+    width: 10px;    
+}
+::-webkit-scrollbar:hover {
+    visibility: visible;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #00471F; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffb300bb; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FFB400; 
+}
+
+.product{
+    width: 93%;
+    height: 130px;
+    background-color: #FEE098;
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.productImg{
+    height: 100%;
+    width:30%;
+    background-color: #00471F;
+}
+
+.info{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btnMoreLess{
+    background-color: #FFB400;
+    padding-right:14px;
+    padding-left: 14px;
+    border-radius: 15px;
+    margin-left: 5px;
+    font-size: 23px;
+}
+
+.ts13{
+    font-size: 13px;
+}
+
+.ts18{
+    font-size: 18px;
+}
+
+.line2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
