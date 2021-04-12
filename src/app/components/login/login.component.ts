@@ -65,9 +65,9 @@ export class LoginComponent implements OnInit{
     }
 
     login(result:any){
-        this.token = result; 
-        this._cookieService.setCookie("token",this.token.key);
-        localStorage.setItem("token", this.token.key);
+        this._cookieService.setCookie("token",result.token);
+        localStorage.setItem("token", result.token);
+        sessionStorage.setItem("_id", result.id);
         document.location.href = "/home";
     }
 }
