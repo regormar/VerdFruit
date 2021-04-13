@@ -2,14 +2,23 @@
     <div class="panel-content">
 
         <div class="menu">
-            <a class="seleccion" id="datos" (click)="changeDatos('datos')">{{ 'DATOS' | translate }}</a>
-            <a class="seleccion" id="pago" (click)="changeDatos('pago')">{{ 'PAGO' | translate }}</a>
-            <a class="seleccion" id="direcciones" (click)="changeDatos('direcciones')">{{ 'DIRECCIONES' | translate }}</a>
+            <a class="seleccion" id="datos" (click)="changeDatos('DATOS')">{{ 'DATOS' | translate }}</a>
+            <a class="seleccion" id="pago" (click)="changeDatos('PAGO')">{{ 'PAGO' | translate }}</a>
+            <a class="seleccion" id="direcciones" (click)="changeDatos('DIRECCIONES')">{{ 'DIRECCIONES' | translate }}</a>
             <a class="seleccion" id="cerrar" (click)="logout()">{{ 'CERRAR' | translate }}</a>
             <!-- <button (click)="changeDatos('datos')">{{ 'DATOS' | translate }}</button>             -->
         </div>
         <div class="datos">
-            <div class="titulo"><h1>{{ 'QUESTIONS' | translate }}</h1></div><br>
+            <div class="titulo"><h1>{{ opcion | translate }}</h1></div>
+            <div class="contenido">
+                <div class="usuario" *ngIf="opcion == 'DATOS'">
+                    <div ><h3>{{ 'NOMBRE' | translate }}</h3></div><br>
+                    
+                    <div><h3>{{ opcion | translate }}</h3></div><br>
+                    
+                    <div><h3>{{ opcion | translate }}</h3></div><br>
+                </div>
+            </div>
         </div>
 
     </div>
