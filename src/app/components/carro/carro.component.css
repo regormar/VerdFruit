@@ -119,7 +119,13 @@ hr{
 .productImg{
     height: 100%;
     width:30%;
-    background-color: #00471F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productImg img{
+    height: 95px;
 }
 
 .info{
