@@ -13,7 +13,6 @@ export class UserServiceController{
     constructor(private conexHttp:HttpClient, @Inject(TokenServiceController) private _tokenService: TokenServiceController) { }
 
     getUsuarioById(id:string):Observable<any>{
-        console.log(id);
         let url = this.ruta + "/" + id;
         return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }

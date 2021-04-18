@@ -11,6 +11,7 @@ import { CarroComponent } from "../carro/carro.component";
     providers:[UserServiceController, CookiesServiceController, CarroComponent],
 })
 
+//TODO: BUGG, AL HACER LA VENTANA PEQUEÑA CON INSPECCIONAR ELEMENTO MIENTRAS EL CARRITO ESTA ABIERTO SE ABRE EL MENU.
 export class BannerComponent implements OnInit{
 
     lg:string = "es";
@@ -36,8 +37,7 @@ export class BannerComponent implements OnInit{
         this.chargeMenu();
       }
       if(this.innerWidth<=1236){
-        this.show = true;
-        this.chargeMenu();
+        this.closeMenu2();
       }
     }
 
@@ -95,9 +95,9 @@ export class BannerComponent implements OnInit{
       this.closeCart();
       this.userMenu('none', false, '-1');
       this.show = true;
-      this.chargeMenu();
-      
+      this.chargeMenu(); 
     }
+
     closeMenu2(){
       if(this.innerWidth <= 1236){
         this.closeCart();

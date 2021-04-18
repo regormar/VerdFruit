@@ -28,6 +28,20 @@ export class RegistroParticularComponent implements OnInit{
     constructor(private _service:UserServiceController, private translate: TranslateService){}
 
     ngOnInit(): void {
+        let element = document.getElementById("password");
+        this.translate.get('PASSREQUIREMENTS')
+        .subscribe(
+            (res: string) =>{
+                element.setAttribute("data-title", res);
+            }
+        );
+        let element2 = document.getElementById("username");
+        this.translate.get('USERNAMEREQUIREMENTS')
+        .subscribe(
+            (res: string) =>{
+                element2.setAttribute("data-title", res);
+            }
+        );
     }
 
     registrarUsuario(){
@@ -36,7 +50,6 @@ export class RegistroParticularComponent implements OnInit{
             this.apellidos,this.direccion,"",this.telefono,this.tipo,this.dni))
         .subscribe(
             (result) => {  
-                console.log(result);
                 this.translate.get('USERADDED')
                 .subscribe(
                     (res: string) =>{

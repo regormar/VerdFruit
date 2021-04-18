@@ -6,6 +6,8 @@ import { Component, OnInit } from "@angular/core";
     styleUrls:['./registro.component.css']
 })
 
+
+//TODO: Pasar la traduccion del title de los registros por variables.
 export class RegistroUsuarioComponent implements OnInit{
 
     opcion:string = "particular";

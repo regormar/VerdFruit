@@ -320,3 +320,53 @@ a:hover{
         visibility: visible;
     }
 }
+
+/* RESPONSIVE PARA MOVIL */
+@media (max-width:600px){
+
+    .content{
+        margin-bottom: 100px;
+        margin-top: 25px;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .divLogo{
+        width: 100%;
+    }
+
+    .divLogo a{
+        width: 100%;
+    }
+
+    .banner-right{
+        flex-direction: column;
+    }
+
+    .banner-options{
+        flex-direction: row;
+        height: 0;
+    }
+
+    .allMenu{
+        width: 100%;
+    }
+
+    .lang{
+        margin-top: 15px;
+    }
+
+    .lang select{
+        height: 30px;
+        width: 45px;
+    }
+
+}
+
+@media (max-width:400){
+
+
+
+}

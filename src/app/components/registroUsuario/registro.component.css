@@ -90,7 +90,15 @@ input.ng-dirty.ng-invalid{
     padding-left: 15%;
 }
 
-@media (max-width:1236px){
+#username{
+    height: 100%;
+}
+
+#password{
+    height: 100%;
+}
+
+@media (max-width:1656px){
     .regImgParticular{
         width:0;
     }

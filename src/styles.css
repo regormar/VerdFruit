@@ -165,6 +165,7 @@ p{
     padding: 1px 5px 2px 5px;
     bottom: -1.6em;
     left: 100%;
+    top: 100%;
     white-space: nowrap;
     box-shadow: 1px 1px 3px #222222;
     opacity: 0;
@@ -175,5 +176,7 @@ p{
 }
 [data-title]{
     position: relative;
+    font-family: textile;
+    font-size:14px;
 }
 /* RESPONSIVE-------------------------------------------------------------------------------- */
