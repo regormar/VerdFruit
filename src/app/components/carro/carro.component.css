@@ -54,9 +54,21 @@ hr{
 .total{
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
     margin-top:17px;
     font-family: textile;
+    justify-content: space-between;
+    margin-left: 14px;
+    margin-right: 15px;
+}
+
+.total2{
+    display:flex;
+    flex-direction: row;
+    margin-top:17px;
+    font-family: textile;
+    justify-content: space-between;
+    margin-left: 14px;
+    margin-right: 15px;
 }
 
 .tramitar{
@@ -169,4 +181,66 @@ hr{
         width: 100%;
         height: 60%;
     }
+}
+
+@media (max-width:600px){
+
+    .menuCarro{
+        margin-top: 75px;
+    }
+
+    .moreLessBtnSection{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+    }
+
+    .btnMoreLess{
+        background-color: #FFB400;
+        padding-right: 14px;
+        padding-left: 10%;
+        border-radius: 11px;
+        margin-left: 5px;
+        font-size: 100%;
+    }
+
+    .total div{
+        font-size:90%;
+    }
+
+
+    .total h6{
+        margin-right: 12px;
+    }
+}
+
+@media (max-width:400px){
+
+    .total h6{
+        font-size:80%;
+    }
+
+    .total2 div{
+        font-size:70%;
+    }
+    
+    .total2{
+
+        margin-top: 10px;
+    }
+
+    .moreLessBtnSection{
+        margin-top:10px;
+    }
+
+    .product{
+        height: 96px;
+    }
+
+    .line2{
+        margin:0;
+    }
+
+
 }

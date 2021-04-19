@@ -321,7 +321,6 @@ a:hover{
     }
 }
 
-/* RESPONSIVE PARA MOVIL */
 @media (max-width:600px){
 
     .content{
@@ -361,6 +360,10 @@ a:hover{
     .lang select{
         height: 30px;
         width: 45px;
+    }
+
+    .menuCarro{
+        margin-top: 75px;
     }
 
 }
