@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from "@angular/core";
+import { AfterViewInit, Component, HostListener, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import { CookiesServiceController } from "../../services/cookies.service";
 import { UserServiceController } from "../../services/user.service";
@@ -20,25 +20,7 @@ export class BannerComponent implements OnInit{
     
     menu:boolean = true; 
     
-    ngOnInit(): void {
-
-    }
-
     langs:string[]=[];
-
-    //Evento que comprueba el tamaño de la ventana y oculta o muestra el menú.
-    @HostListener('window:resize', ['$event'])
-    onResize(event) {
-      this.innerWidth = window.innerWidth;
-      let element = document.getElementById("menu");
-      if(this.innerWidth > 1236){
-        this.show = false;
-        this.chargeMenu();
-      }
-      if(this.innerWidth<=1236){
-        this.closeMenu2();
-      }
-    }
 
     constructor(private translate: TranslateService, 
         private _cookiesService:CookiesServiceController, private carritoComponent:CarroComponent){
@@ -61,8 +43,33 @@ export class BannerComponent implements OnInit{
       } else{
           this.menu = false
       }
-
     }
+
+    ngOnInit(): void {
+        window.dispatchEvent(new Event('resize'));
+    }
+
+    //Evento que comprueba el tamaño de la ventana y oculta o muestra el menú.
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      this.innerWidth = window.innerWidth;
+      if(this.innerWidth > 1236){
+        this.show = false;
+        this.chargeMenu();
+      }
+      if(this.innerWidth<=1236){
+        this.closeMenu2();
+      }
+      if(this.innerWidth <= 600){
+        console.log("cambiando tamaño");
+        let centrar = document.getElementById("centrar");
+        //ERROR: AL INICIAR LA VENTANA NO MUESTRA EL VERDADERO clientHeight de "content"
+        let contentHeight = document.getElementById("content").clientHeight;
+        console.log(contentHeight);
+        centrar.style.marginTop = contentHeight + 430 + "px";
+      }
+    }
+
   
     changeLang(lang:string){
       this.translate.use(lang);

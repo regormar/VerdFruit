@@ -71,5 +71,7 @@
 
     "CART":"Cart",
     "CARTTOTAL":"CART TOTAL",
-    "CHECKOUT":"Checkout"
+    "CHECKOUT":"Checkout",
+
+    "DRETSRESERVATS":"ALL RIGHTS RESERVED"
 }
