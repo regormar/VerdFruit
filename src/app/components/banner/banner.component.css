@@ -13,7 +13,7 @@
     height: 216px;
     z-index: -1;
     height: 0;
-    /* margin-top: 590px; */
+    margin-top: 590px;
 }
 
 .centrar2{
@@ -25,7 +25,7 @@
     height: 216px;
     z-index: 1;
     height: 0;
-    margin-top: 149px;
+    margin-top: 158px;
 }
 
 ul{
@@ -86,7 +86,6 @@ h4{
     border-left: 1px solid #00471F;
     border-right: 1px solid #00471F;
     padding-bottom: 20px;
-    margin-left: 98px;
     margin-left: 222px;
 }
 
@@ -125,6 +124,7 @@ h4{
 .espaciado{
     margin-left:30px;
     display: flex;
+    text-align: center;
 }
 
 .espaciadoActivo{
@@ -318,7 +318,11 @@ a:hover{
     }
 
     .centrar{
-        /* margin-top: 567px; */
+        margin-top: 567px;
+    }
+
+    .centrar2{
+        margin-top: 135px;
     }
 }
 
@@ -326,6 +330,7 @@ a:hover{
 
     .menu{        
         margin-top: 37px;
+        width: 266px;
     }
 
     .logo{
@@ -373,13 +378,37 @@ a:hover{
         padding: 8px;
     }
 
+    .banner{
+        width: 100%;
+    }
+
+    .espaciado{
+        height: 45px;
+        margin-top: 12px;
+    }
+
+    .usuario{
+        width: 224px;
+    }
+
+    .centrar{
+        width:92%;
+    }
+
     .content{
-        background-color: #609272;
+        /* background-color: #609272; */
     }
 
 }
 
 @media (max-width:400px){
+    .menu{        
+        margin-top: 37px;
+        width: 175px;
+    }
+}
+
+@media (max-width:320px){
 
     .lang{
         width: 0;
