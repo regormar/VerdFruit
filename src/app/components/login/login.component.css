@@ -1,16 +1,14 @@
-
 .boton{
     display: flex;
     justify-content: flex-end;
 }
 
-.remember{
-    width: 50%;
+.logInf{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-family: textile;
-    font-size:13px;
+    width:100%;
+    justify-content: flex-end;
+    align-items:center;
 }
 
 .check{
@@ -22,7 +20,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: 100%;
 }
 
 .mensaje{
@@ -32,4 +30,21 @@
 
 input.ng-dirty.ng-invalid{
     border:solid 1px red;
+}
+
+.send{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width:600px){
+
+    .errorButton{
+        flex-direction: column;
+    }
+
+    .boton{
+        width: 100%;
+    }
+
 }

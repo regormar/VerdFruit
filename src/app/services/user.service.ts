@@ -1,5 +1,5 @@
 import { Inject, Injectable } from "@angular/core";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { TokenServiceController } from "./token.service";
 import { Particular } from "../model/particular";
@@ -13,7 +13,6 @@ export class UserServiceController{
     constructor(private conexHttp:HttpClient, @Inject(TokenServiceController) private _tokenService: TokenServiceController) { }
 
     getUsuarioById(id:string):Observable<any>{
-        console.log(id);
         let url = this.ruta + "/" + id;
         return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }

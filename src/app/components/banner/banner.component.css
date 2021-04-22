@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
 }
 
 .centrar{
@@ -14,7 +13,7 @@
     height: 216px;
     z-index: -1;
     height: 0;
-    margin-top: 581px;
+    margin-top: 590px;
 }
 
 .centrar2{
@@ -26,7 +25,7 @@
     height: 216px;
     z-index: 1;
     height: 0;
-    margin-top: 149px;
+    margin-top: 158px;
 }
 
 ul{
@@ -87,13 +86,11 @@ h4{
     border-left: 1px solid #00471F;
     border-right: 1px solid #00471F;
     padding-bottom: 20px;
-    margin-left: 98px;
-    margin-top: 45px;
     margin-left: 222px;
 }
 
 .menu{
-    height: 45px;
+    height: 43px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -127,6 +124,7 @@ h4{
 .espaciado{
     margin-left:30px;
     display: flex;
+    text-align: center;
 }
 
 .espaciadoActivo{
@@ -199,7 +197,6 @@ a:hover{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 115px;
 }
 
 .activo{
@@ -269,7 +266,7 @@ a:hover{
         width: 250px;
         height: 250px;
         padding-top: 20px;
-        margin-top: 45px;
+        margin-top: 35px;
         margin-left: 30.3%;
         align-items: center;
         padding: 0;
@@ -319,4 +316,104 @@ a:hover{
         height:50px;
         visibility: visible;
     }
+
+    .centrar{
+        margin-top: 567px;
+    }
+
+    .centrar2{
+        margin-top: 135px;
+    }
+}
+
+@media (max-width:600px){
+
+    .menu{        
+        margin-top: 37px;
+        width: 266px;
+    }
+
+    .logo{
+        width: 100%;
+    }
+
+    .divLogo{
+        width: 100%;
+    }
+
+    .divLogo a{
+        width: 100%;
+    }
+
+    .banner-right{
+        flex-direction: column;
+    }
+
+    .banner-options{
+        flex-direction: row;
+    }
+
+    .allMenu{
+        width: 100%;
+    }
+
+    .lang{
+        margin-top: 15px;
+    }
+
+    .lang select{
+        height: 30px;
+        width: 45px;
+    }
+
+    .menuCarro{
+        margin-top: 75px;
+    }
+
+    .centrar2{
+        width: 100%;
+    }
+
+    .content{
+        padding: 8px;
+    }
+
+    .banner{
+        width: 100%;
+    }
+
+    .espaciado{
+        height: 45px;
+        margin-top: 12px;
+    }
+
+    .usuario{
+        width: 224px;
+    }
+
+    .centrar{
+        width:92%;
+    }
+
+    .content{
+        /* background-color: #609272; */
+    }
+
+}
+
+@media (max-width:400px){
+    .menu{        
+        margin-top: 37px;
+        width: 175px;
+    }
+}
+
+@media (max-width:320px){
+
+    .lang{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
 }

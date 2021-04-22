@@ -1,10 +1,10 @@
-footer{
+.footer{
     position:relative;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    height: 260px;
+    height: 100%;
     background-color: #00471F;
     bottom: 0;
     margin-top:50px;
@@ -14,6 +14,7 @@ footer{
     margin-top:55px;
     width: 250px;
     padding-left: 20px;
+    padding-bottom: 55px;
 }
 
 .info{
@@ -39,4 +40,45 @@ h4{
 
 p,span{
     color:white;
+}
+
+.end{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #042211;
+    color: white;
+    position: relative;
+}
+
+.end p{
+    font-family: inherit;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:400px){
+
+    .footer{
+        flex-direction: column;
+    }
+    .info{
+        padding-left: 20px;
+    }
+
+    .enlaces{
+        padding-bottom: 0;
+    }
+
+    .info{
+        width: 95%;
+        margin-bottom: 40px;
+    }
+
 }

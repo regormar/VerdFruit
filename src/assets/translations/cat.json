@@ -32,7 +32,8 @@
     "BUSINESS":"Empresa",
     "ACCEPTTHEPRIVACYPOLICY":"He llegit i accepto la política de privacitat",
     "USERADDED": "Usuari afegit correctament",
-    "PASSREQUIREMENTS":"Ha de contenir una majúscula, una minúscula, un nombre o un caràcter especial i tenir una longitud de 8 o més caràcters.",
+    "PASSREQUIREMENTS":"Ha de contenir una majúscula, una minúscula, un número o un caràcter especial i tenir una longitud de 8 o més caràcters.",
+    "USERNAMEREQUIREMENTS":"No es permeten caràcters especials i el nombre mínim de caràcters és de 8.",
     "NOMBREFISCAL":"Nom fiscal",
     "NOMBRECOMERCIAL":"Nom comercial",
     "CHANGEPASSWORD":"Canviar contrasenya",
@@ -70,6 +71,8 @@
 
     "CART":"Cistella",
     "CARTTOTAL":"TOTAL DE LA CISTELLA",
-    "CHECKOUT":"Tramitar comanda"
+    "CHECKOUT":"Tramitar comanda",
+
+    "DRETSRESERVATS":"TOTS ELS DRETS RESERVATS"
 
 }
