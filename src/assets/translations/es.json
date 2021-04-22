@@ -75,11 +75,6 @@
     "CHECKOUT":"Tramitar pedido",
 
     "DATOS":"Datos personales",
-    "PAGO":"Métodos de pago",
-    "DIRECCIONES":"Direcciones",
-    "CERRAR":"Cerrar sesión",
-    "NOMBRE":"Nombre de usuario",
-    "DATOS":"Datos personales",
     "CONTACTO":"Datos de contacto ",
     "DIRECCIONES":"Direcciones",
     "CERRAR":"Cerrar sesión",
@@ -100,7 +95,5 @@
     "ELIMINAR":"ELIMINAR",
 
     "DRETSRESERVATS":"TODOS LOS DERECHOS RESERVADOS"
-
-
     
 }
