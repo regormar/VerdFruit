@@ -79,8 +79,28 @@
     "DIRECCIONES":"Direcciones",
     "CERRAR":"Cerrar sesión",
     "NOMBRE":"Nombre de usuario",
+    "DATOS":"Datos personales",
+    "CONTACTO":"Datos de contacto ",
+    "DIRECCIONES":"Direcciones",
+    "CERRAR":"Cerrar sesión",
+    "EDITAR":"EDITAR",
+    "NOMBRE_USU":"Nombre de usuario",
+    "NOMBRE":"Nombre",
+    "APELLIDOS":"Apellidos",
+    "CORREO":"Correo electrónico",
+    "CONTRASEÑA":"Contraseña",
+    "TELEFONO":"Telefono",
+    "DNI":"DNI",
+    "CIF":"CIF",
+    "N_FISCAL":"Nombre fiscal",
+    "N_COMERCIAL":"Nombre comercial",
+    "DIRECCION1":"Dirección 1",
+    "DIRECCION2":"Dirección 2",
+    "NUEVA_DIRECCION":"NUEVA DIRECCIÓN DE ENTREGA",
+    "ELIMINAR":"ELIMINAR",
 
     "DRETSRESERVATS":"TODOS LOS DERECHOS RESERVADOS"
+
 
     
 }
