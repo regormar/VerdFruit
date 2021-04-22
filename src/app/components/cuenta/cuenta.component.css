@@ -1,6 +1,7 @@
-.panel-content{
+.content{
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 h1{
@@ -16,19 +17,84 @@ h1{
     align-items: center;
     justify-content: center;
     background-color:  #9dceb1;
-    height: 430px;
+    height: auto;
+}
+
+.usuButton{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.usuDatos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.usuApartado{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.botonEditar{
+    background-color: #FFB400;
+    padding-top: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    width: 130px;
+    height: 50px;
+}
+
+.botonEliminar{
+    background-color: rgb(133, 0, 0);
+    color: white;
+    padding-top: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    width: 130px;
+    height: 50px;
+}
+
+.nuevaDireccion{
+    text-align: center;
+}
+
+.botonNuevaDireccion{
+    background-color: #FFB400;
+    padding-top: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 60%;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 110%;
+}
+
+h4{
+    color: #535955;
+}
+
+p{
+    font-size: 120%;
 }
 
 .usuario{
     width: 90%;
-    height: 400px;
+    height: auto;
 }
 
 .menu{
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: 500px;
     background-color:#FEE098;
 }
 
@@ -36,16 +102,21 @@ h1{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 500px;
+}
+
+i{
+    width: 10%;
+    font-size: 120%;
 }
 
 .seleccion{
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 10%;
+    height: 70px;
     background-color:#FEE098;
+    font-size: 130%;
+    padding-left: 20px;
 }
 
 a:hover{

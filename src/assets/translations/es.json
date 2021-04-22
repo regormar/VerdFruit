@@ -71,13 +71,7 @@
 
     "CART":"Carrito",
     "CARTTOTAL":"TOTAL DEL CARRITO",
-    "CHECKOUT":"Tramitar pedido",
-
-    "DATOS":"Datos personales",
-    "PAGO":"Métodos de pago",
-    "DIRECCIONES":"Direcciones",
-    "CERRAR":"Cerrar sesión",
-    "NOMBRE":"Nombre de usuario"
+    "CHECKOUT":"Tramitar pedido"
 
 
 }

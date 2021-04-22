@@ -1,25 +1,153 @@
 <div class="panel">
     <div class="panel-content">
+        <div class="content">
+            <div class="menu">
+                <a class="seleccion" id="datos" (click)="changeDatos('DATOS')"> <i class="fas fa-user"></i> {{ 'DATOS' | translate }}</a>
+                <a class="seleccion" id="pago" (click)="changeDatos('PAGO')"> <i class="fas fa-phone"></i> {{ 'CONTACTO' | translate }}</a>
+                <a class="seleccion" id="direcciones" (click)="changeDatos('DIRECCIONES')"> <i class="fas fa-map-marker-alt"></i> {{ 'DIRECCIONES' | translate }}</a>
+                <a class="seleccion" id="cerrar" (click)="logout()"> <i class="fas fa-sign-out-alt"></i> {{ 'CERRAR' | translate }}</a> 
+                <!-- <button (click)="changeDatos('datos')">{{ 'DATOS' | translate }}</button>             -->
+            </div>
+            <div class="datos">
+                <div class="titulo"><h1>{{ opcion | translate }}</h1></div>
+                <div class="contenido">
+                    <div class="usuario" *ngIf="opcion == 'DATOS' && usuario != null">
+                        <div class="usuApartado">
+                            <div class="usuDatos">
+                                <h3>{{ 'NOMBRE_USU' | translate }}</h3>
+                                <h4>{{usuario.username}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+    
+                        <div class="usuApartado">
+                            <div class="usuDatos">
+                                <h3>{{ 'NOMBRE' | translate }}</h3>
+                                <h4>{{usuario.nombre}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+    
+                        <div class="usuApartado">
+                            <div class="usuDatos">
+                                <h3>{{ 'APELLIDOS' | translate }}</h3>
+                                <h4>{{usuario.apellidos}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+    
+                        <div class="usuApartado">
+                            <div class="usuDatos">
+                                <h3>{{ 'CONTRASEÑA' | translate }}</h3>
+                                <h4>{{usuario.pass}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+                        
+                        <div class="usuApartado" *ngIf="usuario.tipo == 1">
+                            <div class="usuDatos">
+                                <h3>{{ 'DNI' | translate }}</h3>
+                                <h4>{{usuario.dni}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+    
+                        <div class="usuApartado" *ngIf="usuario.tipo == 2">
+                            <div class="usuDatos">
+                                <h3>{{ 'CIF' | translate }}</h3>
+                                <h4>{{usuario.cif}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+    
+                        <div class="usuApartado" *ngIf="usuario.tipo == 2">
+                            <div class="usuDatos">
+                                <h3>{{ 'N_FISCAL' | translate }}</h3>
+                                <h4>{{usuario.nombre_fiscal}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+    
+                        <div class="usuApartado" *ngIf="usuario.tipo == 2">
+                            <div class="usuDatos">
+                                <h3>{{ 'N_COMERCIAL' | translate }}</h3>
+                                <h4>{{usuario.nombre_comercial}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+                        
+                        <br><br>
+                    </div>
 
-        <div class="menu">
-            <a class="seleccion" id="datos" (click)="changeDatos('DATOS')">{{ 'DATOS' | translate }}</a>
-            <a class="seleccion" id="pago" (click)="changeDatos('PAGO')">{{ 'PAGO' | translate }}</a>
-            <a class="seleccion" id="direcciones" (click)="changeDatos('DIRECCIONES')">{{ 'DIRECCIONES' | translate }}</a>
-            <a class="seleccion" id="cerrar" (click)="logout()">{{ 'CERRAR' | translate }}</a>
-            <!-- <button (click)="changeDatos('datos')">{{ 'DATOS' | translate }}</button>             -->
-        </div>
-        <div class="datos">
-            <div class="titulo"><h1>{{ opcion | translate }}</h1></div>
-            <div class="contenido">
-                <div class="usuario" *ngIf="opcion == 'DATOS'">
-                    <div ><h3>{{ 'NOMBRE' | translate }}</h3></div><br>
-                    
-                    <div><h3>{{ opcion | translate }}</h3></div><br>
-                    
-                    <div><h3>{{ opcion | translate }}</h3></div><br>
+                    <div class="usuario" *ngIf="opcion == 'PAGO' && usuario != null">
+                        <div class="usuApartado">
+                            <div class="usuDatos">
+                                <h3>{{ 'CORREO' | translate }}</h3>
+                                <h4>{{usuario.email}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+
+                        <div class="usuApartado">
+                            <div class="usuDatos">
+                                <h3>{{ 'TELEFONO' | translate }}</h3>
+                                <h4>{{usuario.telefono}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+
+                    <div class="usuario" *ngIf="opcion == 'DIRECCIONES' && usuario != null">
+                        <div class="usuApartado">
+                            <div class="usuDatos" *ngIf="usuario.direccion != ''">
+                                <h3>{{ 'DIRECCION1' | translate }}</h3>
+                                <h4>{{usuario.direccion}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEliminar"><p>{{ 'ELIMINAR' | translate }}</p></button>
+                            </div>
+                        </div>
+
+                        <div class="usuApartado" *ngIf="usuario.direccion2 != ''">
+                            <div class="usuDatos">
+                                <h3>{{ 'DIRECCION2' | translate }}</h3>
+                                <h4>{{usuario.direccion2}}</h4> 
+                            </div>
+                            <div class="usuButton">
+                                <button class="botonEliminar"><p>{{ 'ELIMINAR' | translate }}</p></button>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="nuevaDireccion">
+                            <button class="botonNuevaDireccion"><p>{{ 'NUEVA_DIRECCION' | translate }}</p></button>
+                        </div>
+
+                        <br><br>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
