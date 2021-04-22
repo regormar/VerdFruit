@@ -33,7 +33,6 @@
     "ACCEPTTHEPRIVACYPOLICY":"He leído y acepto la política de privacidad",
     "USERADDED":"Usuario añadido correctamente",
     "PASSREQUIREMENTS":"Debe contener una mayúscula, una minúscula, un número o un caracter especial y tener una longitud de 8 o más caracteres.",
-    "USERNAMEREQUIREMENTS":"No se permiten caracteres especiales y el número mínimo de caracteres es 8.",
     "NOMBREFISCAL":"Nombre fiscal",
     "NOMBRECOMERCIAL":"Nombre comercial",
     "CHANGEPASSWORD":"Cambiar contraseña",
@@ -74,13 +73,5 @@
     "CARTTOTAL":"TOTAL DEL CARRITO",
     "CHECKOUT":"Tramitar pedido",
 
-    "DATOS":"Datos personales",
-    "PAGO":"Métodos de pago",
-    "DIRECCIONES":"Direcciones",
-    "CERRAR":"Cerrar sesión",
-    "NOMBRE":"Nombre de usuario",
 
-    "DRETSRESERVATS":"TODOS LOS DERECHOS RESERVADOS"
-
-    
 }
