@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector:'registro-component',
@@ -10,7 +11,10 @@ export class RegistroUsuarioComponent implements OnInit{
 
     opcion:string = "particular";
 
-    constructor(){     
+    constructor(private router:Router){    
+        if(localStorage.getItem("token") != null){
+            this.router.navigate(['/home']);
+        } 
     }
 
     ngOnInit(): void {

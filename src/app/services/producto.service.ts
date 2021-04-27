@@ -2,11 +2,12 @@ import { Inject, Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
 import { TokenServiceController } from "./token.service";
+import { Config } from "./global";
 
 @Injectable()
-export class UserServiceController{
+export class ProductServiceController{
 
-    ruta:string = "http://localhost:8080/VerdFruitAPI-0.0.1-SNAPSHOT/api/producto";
+    ruta:string = Config.BACKEND_URL + "/producto";
 
     constructor(private conexHttp:HttpClient, @Inject(TokenServiceController) private _tokenService: TokenServiceController) { }
 
@@ -15,7 +16,7 @@ export class UserServiceController{
         return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }
 
-    getProductoById(id:string):Observable<any>{
+    getProductoById(id:number):Observable<any>{
         let url = this.ruta + "/" + id;
         return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }

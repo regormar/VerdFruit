@@ -21,6 +21,8 @@ import { QuestionsComponent } from './components/questions/questions.component';
 import { ChangePasswordComponent } from './components/changePassword/changePassword.component';
 import { CuentaComponent } from './components/cuenta/cuenta.component';
 import { CarroComponent } from './components/carro/carro.component';
+import { OrderServiceController } from './services/pedido.service';
+import { ProductServiceController } from './services/producto.service';
 
 export function createTranslateLoader(http: HttpClient){
   return new TranslateHttpLoader(http, 'assets/translations/', '.json');
@@ -58,6 +60,8 @@ export function createTranslateLoader(http: HttpClient){
   ],
   providers: [
     TokenServiceController,
+    OrderServiceController,
+    ProductServiceController,
     { 
       provide: 'ORIGIN_URL', 
       useValue: location.origin 

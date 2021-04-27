@@ -73,6 +73,7 @@
     "CART":"Carrito",
     "CARTTOTAL":"TOTAL DEL CARRITO",
     "CHECKOUT":"Tramitar pedido",
+    "EMPTYCART":"Carrito vacío",
 
     "DATOS":"Datos personales",
     "CONTACTO":"Datos de contacto ",

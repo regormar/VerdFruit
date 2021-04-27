@@ -22,7 +22,11 @@ export class LoginComponent implements OnInit{
     mensaje:string = "";
 
     constructor(private _service:UserServiceController, private _cookieService:CookiesServiceController,
-        private translate: TranslateService, private router:Router){}
+        private translate: TranslateService, private router:Router){
+            if(localStorage.getItem("token") != null){
+                this.router.navigate(['/home']);
+            }
+        }
 
     ngOnInit(): void {}
 
@@ -67,7 +71,7 @@ export class LoginComponent implements OnInit{
     login(result:any){
         this._cookieService.setCookie("token",result.token);
         localStorage.setItem("token", result.token);
-        sessionStorage.setItem("_id", result.id);
+        localStorage.setItem("_id", result.id);
         document.location.href = "/home";
     }
 }

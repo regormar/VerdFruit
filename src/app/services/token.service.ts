@@ -7,7 +7,7 @@ export class TokenServiceController{
 
     generateHeaders() {
         if (localStorage.getItem("token") && localStorage.getItem("token")!="undefined") {
-        return { headers: new HttpHeaders({ 'Authorization' : <any>localStorage.getItem("token") }) };
+        return { headers: new HttpHeaders({ 'Authorization' : localStorage.getItem("token"),'Content-Type': 'application/json' }) };
         } else { return { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }; }
     }
 

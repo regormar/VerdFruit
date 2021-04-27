@@ -11,7 +11,7 @@ export class LogoutServiceController{
         this._cookiesService.delete_cookie("token");
         localStorage.removeItem("token");
         window.location.href = "/home";
-        sessionStorage.removeItem("_id");
+        localStorage.removeItem("_id");
         sessionStorage.removeItem("show");
     }
 

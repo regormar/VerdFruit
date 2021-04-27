@@ -46,7 +46,7 @@
                 <p>{{ 'VERIFICATION' | translate }}:</p>
                 <div class="imgInput">
                     <i class="fas fa-key"></i>
-                    <input #inputPass="ngModel" type="password" [(ngModel)]="verification" name="verification" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+                    <input #inputPass="ngModel" type="password" [(ngModel)]="verification" name="verification" required/>
                 </div>
                 <span class="text-danger"></span>
             </div>  
@@ -70,7 +70,7 @@
                 <p>CIF:</p>
                 <div class="imgInput">
                     <i class="fas fa-id-card"></i>
-                    <input #inputDni="ngModel" type="text" [(ngModel)]="cif" name="cif" pattern="[A-Za-z]{1}[0-9]{8}" required/>
+                    <input #inputCif="ngModel" type="text" [(ngModel)]="cif" name="cif" pattern="[A-Za-z]{1}[0-9]{8}" required/>
                 </div>
                 <span class="text-danger"></span>
             </div> 
