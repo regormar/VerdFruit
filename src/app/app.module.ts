@@ -23,6 +23,7 @@ import { CuentaComponent } from './components/cuenta/cuenta.component';
 import { CarroComponent } from './components/carro/carro.component';
 import { OrderServiceController } from './services/pedido.service';
 import { ProductServiceController } from './services/producto.service';
+import { ProductosComponent } from './components/productos/productos.component';
 
 export function createTranslateLoader(http: HttpClient){
   return new TranslateHttpLoader(http, 'assets/translations/', '.json');
@@ -44,6 +45,7 @@ export function createTranslateLoader(http: HttpClient){
     ChangePasswordComponent,
     CuentaComponent,
     CarroComponent,
+    ProductosComponent,
   ],
   imports: [
     BrowserModule,

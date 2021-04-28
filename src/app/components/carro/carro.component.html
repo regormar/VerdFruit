@@ -1,6 +1,6 @@
 <div class="menuCarro inactive" id="cartMenu">
     <div class="titleCarro"><h1>{{'CART'|translate}}</h1></div>
-    <div class="content" *ngIf="carro != null">
+    <div *ngIf="carro != null" class="content">
         <div *ngFor="let product of carro.listaProductos;index as i" class="product">
            
             <ng-container *ngFor="let prod of productos">
@@ -30,8 +30,8 @@
             </ng-container>
         </div>
     </div>
-    <div *ngIf="productos.length === 0" class="emptyCart"><h4>{{'EMPTYCART'|translate}}</h4></div>
-    <div class="bottomCarro">
+    <div *ngIf="carro == null" class="emptyCart"><h4>{{'EMPTYCART'|translate}}</h4></div>
+    <div *ngIf="carro != null" class="bottomCarro">
         <div class="line"><hr></div>
         <div class="total">
             <div><h6>{{'CARTTOTAL'|translate}}:</h6></div>
