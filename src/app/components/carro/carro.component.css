@@ -72,21 +72,6 @@ hr{
     margin-right: 15px;
 }
 
-.tramitar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 95px;
-}
-
-.botonTramitar{
-    background-color: #FFB400;
-    padding-top:10px;
-    padding-left:20px;
-    padding-right:20px;
-    border-radius: 15px;
-}
-
 .content{
     width: 100%;
     height: 420px;

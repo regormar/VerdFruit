@@ -74,6 +74,12 @@
     "CHECKOUT":"Tramitar comanda",
     "EMPTYCART":"Cistella buida",
 
-    "DRETSRESERVATS":"TOTS ELS DRETS RESERVATS"
+    "DRETSRESERVATS":"TOTS ELS DRETS RESERVATS",
+
+    "FRUTERIAONLINE":"Fruiteria Online",
+    "TUFRUTAYVERDURA":"La teva Fruita i Verdura a Domicili",
+    "MASVENDIDO":"Més Venuts",
+    "NUEVOS":"Nous Productes",
+    "MASINFO":"Més informació"
 
 }

@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: textile;
     src: url(assets/fonts/Textile.ttf) format("truetype");
@@ -10,7 +11,7 @@ body {
     background: linear-gradient(90deg, rgba(0,71,31,1) 0%, rgba(68,122,91,1) 0%, rgba(221,255,216,1) 22%, rgba(212,247,209,1) 72%, rgba(68,122,91,1) 100%, rgba(0,71,31,1) 100%);
 }
 
-h1,h2,h3,h4{
+h1,h2,h3,h4,h5,h6{
     font-family: textile;
 }
 
@@ -54,6 +55,23 @@ button[disabled]{
     background-color: #FFB400;
     width: 30px;
     border: solid 1px black;
+}
+
+/* INICIO Y CARRITO */
+/*-----------------------------------------------------------------------------------------*/
+.tramitar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+}
+
+.botonTramitar{
+    background-color: #FFB400;
+    padding-top:10px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius: 15px;
 }
 
 /* REGISTRO USUARIOS */

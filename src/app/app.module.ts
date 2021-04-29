@@ -24,6 +24,11 @@ import { CarroComponent } from './components/carro/carro.component';
 import { OrderServiceController } from './services/pedido.service';
 import { ProductServiceController } from './services/producto.service';
 import { ProductosComponent } from './components/productos/productos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NuevosComponent } from './components/home/nuevos/nuevos.component';
+import { MasVendidosComponent } from './components/home/masVendidos/masVendidos.component';
+
 
 export function createTranslateLoader(http: HttpClient){
   return new TranslateHttpLoader(http, 'assets/translations/', '.json');
@@ -46,6 +51,8 @@ export function createTranslateLoader(http: HttpClient){
     CuentaComponent,
     CarroComponent,
     ProductosComponent,
+    NuevosComponent,
+    MasVendidosComponent,
   ],
   imports: [
     BrowserModule,

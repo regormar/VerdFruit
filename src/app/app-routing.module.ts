@@ -10,7 +10,7 @@ import { CuentaComponent } from './components/cuenta/cuenta.component';
 import { ProductosComponent } from './components/productos/productos.component';
 
 const routes: Routes = [
-  // {path:'',component:HomeComponent},
+  {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'registro',component:RegistroUsuarioComponent},

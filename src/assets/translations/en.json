@@ -74,5 +74,11 @@
     "CHECKOUT":"Checkout",
     "EMPTYCART":"Empty cart",
 
-    "DRETSRESERVATS":"ALL RIGHTS RESERVED"
+    "DRETSRESERVATS":"ALL RIGHTS RESERVED",
+
+    "FRUTERIAONLINE":"Fruit Shop Online",
+    "TUFRUTAYVERDURA":"Your Fruit and Vegetables at Home",
+    "MASVENDIDO":"Best Sellers",
+    "NUEVOS":"New Products",
+    "MASINFO":"More information"
 }
