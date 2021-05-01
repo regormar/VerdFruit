@@ -49,7 +49,7 @@ h1,h3{
 }
 
 .nuevosCarousel{
-    width: 100%;
+    width: 90%;
     margin-top:20px;
     margin-bottom:20px;
 }
@@ -58,17 +58,19 @@ h1,h3{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
 }
 .imgProducto img{
-    width: 30%;
+    width: 60%;
 }
 
 .producto{
-    width: 70%;
+    width: 100%;
     /* background-color: #9dceb1; */
     background-color: #FEE098;
-    border-left: 2px solid #00471F;
-    border-right: 2px solid #00471F;
+    display: flex;
+    flex-direction: column;
+    z-index:0;
 }
 
 .carousel-control-prev-icon,
@@ -80,15 +82,17 @@ h1,h3{
   background-image: none;
 }
 
+.carousel-control-next, .carousel-control-prev{
+    z-index:0 !important;
+}
+
 .carousel-control-next-icon:after
 {
-  content: '>';
   font-size: 55px;
   color: #00471F;
 }
 
 .carousel-control-prev-icon:after {
-  content: '<';
   font-size: 55px;
   color: #00471F;
 }
@@ -104,12 +108,13 @@ h1,h3{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 
 .nombrePrecio{
-    width:50%;
+    width:83%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
@@ -118,9 +123,27 @@ h1,h3{
     font-size: 40px;
 }
 
+.carousel-control-prev{
+    transform: rotate(320deg);
+}
+.carousel-control-next{
+    transform: rotate(40deg);
+}
+
+.panel-content{
+    background-color: #f7f3cf;
+}
+
+.botonTramitar{
+    width:85%;
+}
+
 @media (max-width:1100px){
     .topText2 h3{
         font-size: 2vw;
+    }
+    .imgProducto img{
+        width: 80%;
     }
 }
 
@@ -135,3 +158,5 @@ h1,h3{
     }
 
 }
+
+

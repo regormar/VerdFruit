@@ -24,10 +24,10 @@ import { CarroComponent } from './components/carro/carro.component';
 import { OrderServiceController } from './services/pedido.service';
 import { ProductServiceController } from './services/producto.service';
 import { ProductosComponent } from './components/productos/productos.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NuevosComponent } from './components/home/nuevos/nuevos.component';
 import { MasVendidosComponent } from './components/home/masVendidos/masVendidos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 export function createTranslateLoader(http: HttpClient){
@@ -59,6 +59,8 @@ export function createTranslateLoader(http: HttpClient){
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    CarouselModule,
+    BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

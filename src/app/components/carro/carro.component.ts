@@ -37,7 +37,6 @@ export class CarroComponent{
                             this._productService.getProductoById(this.carro.listaProductos[i].id_producto)
                             .subscribe(
                                 (res2) => {
-                                    console.log(res2);
                                     this.producto = new Producto(res2['id_producto'],res2['descripcion'],res2['origen'],res2['familia'],res2['marca'],res2['precio'],
                                     res2['tipo_producto'],res2['stock'],res2['img'],res2['mas_vendido'],res2['nuevo'],res2['nombre_producto'],);
                                     this.productos.push(this.producto);
