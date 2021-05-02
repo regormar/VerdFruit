@@ -42,6 +42,40 @@ h1{
     padding-top: 20px;
 }
 
+.formDireccion{
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
+
+.registrarDireccion{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 20px;
+    background-color: #9dceb1;
+}
+
+input{
+    background-color: #9dceb1;
+    width: 95%;
+    margin-bottom: 10px;
+    border: 0px;
+    margin-left: -10px;
+}
+
+.botonRegistar{
+    background-color: rgb(25, 194, 81);
+    padding-top: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    width: 250px;
+    height: 50px;
+}
+
 .botonEditar{
     background-color: #FFB400;
     padding-top: 9px;
@@ -122,6 +156,7 @@ i{
 a:hover{
     color: #FEE098;
     background-color: #4e8064;
+    border-top:solid 3px #00471F;
     border-bottom:solid 3px #00471F;
     border-left: solid 2px #00471F;
     border-right: solid 2px #00471F;

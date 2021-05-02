@@ -26,7 +26,10 @@ export class CuentaComponent {
     opcion:string = "DATOS";
     idUsuario:string = "";
     usuario:Usuario = null;
-    
+    nuevaDir:boolean = false;
+    isDisabled:boolean = true;
+    botonEditar:string = "EDITAR";
+
     ngOnInit(): void {
         this.changeDatos(this.opcion);
         this.idUsuario = sessionStorage.getItem("_id");
@@ -62,5 +65,22 @@ export class CuentaComponent {
     logout(){
         this._logoutService.logout();
     }
+
+    editarUsername(){
+        if(this.botonEditar === "EDITAR"){
+            this.isDisabled = false;
+            this.botonEditar  = "GUARDAR";
+            
+
+        }
+        else if(this.botonEditar == "GUARDAR"){
+            this.isDisabled = true;
+            this.botonEditar  = "EDITAR";
+
+        }
+    }
     
+    eliminarDireccion(){
+        
+    }
 }
