@@ -1,0 +1,57 @@
+<!-- <div id="carouselNuevosProductos" class="carousel slide" data-bs-ride="carousel" *ngIf="productos.length != 0">
+    <div class="carousel-inner">
+        <ng-container *ngFor="let prod of productos; let i = index">
+            <div [ngClass]="{'active': i == 0}" class="carousel-item" data-bs-interval="2000">
+                <div class="producto">
+                    <div class="imgProducto">
+                        <img [src]="'assets/img/productos/' + prod.img" alt="">
+                    </div> 
+                    <div class="info">
+                        <div class="nombrePrecio">
+                            <div><h6>{{prod.nombre_producto}}</h6></div>
+                            <div><h6>{{prod.precio}}€</h6></div>
+                        </div>
+                    </div>
+                    <div class="tramitar">
+                        <button class="botonTramitar"><h5>{{'MASINFO'|translate}}</h5></button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselNuevosProductos" data-bs-slide="prev">
+        <span class="fas fa-leaf fa-flip-horizontal" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselNuevosProductos" data-bs-slide="next">
+        <span class="fas fa-leaf" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div> -->
+
+
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let prod of productos">
+      <ng-template carouselSlide [id]="prod.id_producto">
+        <div class="producto">
+            <div class="imgProducto">
+                <img [src]="'assets/img/productos/' + prod.img" alt="">
+            </div> 
+            <div class="info">
+                <div class="nombrePrecio">
+                    <div><h6>{{prod.nombre_producto}}</h6></div>
+                    <div><h6>{{prod.precio}}€</h6></div>
+                </div>
+            </div>
+            <div class="tramitar">
+                <button class="botonTramitar"><h6>{{'MASINFO'|translate}}</h6></button>
+            </div>
+        </div>
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+
+
+

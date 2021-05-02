@@ -18,7 +18,7 @@ import { UserServiceController } from "src/app/services/user.service";
 export class CuentaComponent {
     constructor(private _service:UserServiceController, private translate: TranslateService,
         private _router: Router, private _logoutService:LogoutServiceController){
-            if(sessionStorage.getItem("_id") == null){
+            if(localStorage.getItem("_id") == null){
                 this._router.navigate(['/login']);
             }
         }
@@ -32,18 +32,18 @@ export class CuentaComponent {
 
     ngOnInit(): void {
         this.changeDatos(this.opcion);
-        this.idUsuario = sessionStorage.getItem("_id");
-        console.log(sessionStorage.getItem("_id"));
+        this.idUsuario = localStorage.getItem("_id");
+        console.log(localStorage.getItem("_id"));
     }
 
     changeDatos(opcion:string){
         this.opcion = opcion;
         if(opcion === "DATOS"){   
             
-            console.log(sessionStorage.getItem("_id"));
-            let id = sessionStorage.getItem("_id");
+            console.log(localStorage.getItem("_id"));
+            let id = localStorage.getItem("_id");
             console.log(id);
-            this._service.getUsuarioById(sessionStorage.getItem("_id"))
+            this._service.getUsuarioById(localStorage.getItem("_id"))
             .subscribe(
                 (result) => {
                     if(result == null){

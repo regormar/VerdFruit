@@ -4,11 +4,12 @@ import { Observable } from "rxjs";
 import { TokenServiceController } from "./token.service";
 import { Particular } from "../model/particular";
 import { Empresa } from "../model/empresa";
+import { Config } from "./global";
 
 @Injectable()
 export class UserServiceController{
 
-    ruta:string = "http://localhost:8080/VerdFruitAPI-0.0.1-SNAPSHOT/api/usuario";
+    ruta:string = Config.BACKEND_URL + "/usuario";
 
     constructor(private conexHttp:HttpClient, @Inject(TokenServiceController) private _tokenService: TokenServiceController) { }
 
@@ -41,11 +42,11 @@ export class UserServiceController{
     }
 
     putParticular(usuario:Particular):Observable<any>{
-        return this.conexHttp.put(this.ruta + "/particular", usuario, this._tokenService.generateHeaders());
+        return this.conexHttp.put(this.ruta + "/secured/particular", usuario, this._tokenService.generateHeaders());
     }
 
     putEmpresa(usuario:Empresa):Observable<any>{
-        return this.conexHttp.put(this.ruta + "/empresa", usuario, this._tokenService.generateHeaders());
+        return this.conexHttp.put(this.ruta + "/secured/empresa", usuario, this._tokenService.generateHeaders());
     }
 
 }

@@ -1,0 +1,86 @@
+<html>
+
+<head></head>
+
+<body>
+    <div>
+        <div
+            style='margin:0;padding:0;width:600px;display:flex;justify-content:center;align-items:center;height:100px;background: rgb(0,71,31);background: linear-gradient(90deg, rgba(0,71,31,1) 0%, rgba(68,122,91,1) 0%, rgba(221,255,216,1) 22%, rgba(212,247,209,1) 72%, rgba(68,122,91,1) 100%, rgba(0,71,31,1) 100%);'>
+            <img src='https://verdfruit.com/assets/img/logoVF.png' style='height:90px;margin-left: 198px;'> </div>
+        <table border='0' cellpadding='2' cellspacing='2' width='600'
+            style='margin-top:30px; width:500px;font-size: 16px;color: #666666;'>
+            <tr>
+                <td style="color:#FFB400;font-size:20px">Hola, "+ u.getNombre() +":<br>
+                    <hr style="border-top: 1px solid rgb(0,71,31);">
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>Gracias por tu pedido en VerdFruit.com, tu plataforma de venta de fruta y verdura de
+                    confianza.</td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td style="color:#FFB400;font-size:20px">Detalles del pedido:
+                    <hr style="border-top: 1px solid rgb(0,71,31);">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="width: 100%;display:flex;flex-direction: column;">
+                        <div style="border: solid 1px rgb(0,71,31);margin-bottom: 1px;display: flex;flex-direction: row;">
+                            <div style="width: 30%;display: flex;align-items: center;justify-content: center;">
+                                <img src='https://verdfruit.com/assets/img/productos/"+ imagenProducto +"' style='width: 90%;'>
+                            </div>
+                            <div style="width: 70%;padding: 10px; padding-top:20px;padding-bottom:20px;display: flex;flex-direction: column;">
+                                <div style="display: flex;flex-direction: row; justify-content: space-between;">
+                                    <div style="font-size: 15px;"><b>"+ nombreProducto +"</b></div>
+                                    <div style="font-size: 15px;"><b>EUR "+ precioProducto +"</b></div>
+                                </div><br>
+                                <div style="font-size: 14px;">"+ origenProducto +"</div>
+                                <div style="font-size: 14px;">"+ marcaProducto +"</div>
+
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: flex-end;">
+                            <div>
+                                <p>Importe total antes de impuestos:	EUR "+ importeAntesDeImpuestos +"</p>
+                                <p>IVA:	EUR "+ iva +"</p>
+                                <p><b>Total de este pedido:	EUR "+ total +"</b></p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>Para más información puedes llamarnos al <a href='tel:666840209'>+34 66 684 02 09</a>, estaremos encantados de
+                    contarte más.</td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>Saludos,<br> Equipo VerdFruit.com</td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td align='center'>
+                    <form method='get' action='http://localhost:4200/changePassword/"+u.getId()+"'> <button
+                            style='color:rgb(0,71,31);background-color: #FFB400;padding-left:20px;padding-right:20px;border-radius: 15px;font-size:20px;'>
+                            <p>Continuar</p>
+                        </button> </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

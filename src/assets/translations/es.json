@@ -73,6 +73,7 @@
     "CART":"Carrito",
     "CARTTOTAL":"TOTAL DEL CARRITO",
     "CHECKOUT":"Tramitar pedido",
+    "EMPTYCART":"Carrito vacío",
 
     "DATOS":"Datos personales",
     "CONTACTO":"Datos de contacto ",
@@ -94,6 +95,12 @@
     "NUEVA_DIRECCION":"NUEVA DIRECCIÓN DE ENTREGA",
     "ELIMINAR":"ELIMINAR",
 
-    "DRETSRESERVATS":"TODOS LOS DERECHOS RESERVADOS"
+    "DRETSRESERVATS":"TODOS LOS DERECHOS RESERVADOS",
+
+    "FRUTERIAONLINE":"Frutería Online",
+    "TUFRUTAYVERDURA":"Tu Fruta y Verdura a Domicilio",
+    "MASVENDIDO":"Más Vendidos",
+    "NUEVOS":"Nuevos Productos",
+    "MASINFO":"Más información"
     
 }
