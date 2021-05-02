@@ -109,8 +109,9 @@ export class CarroComponent{
     }
 
     eliminarProducto(id_producto:number, precio:number, i:number){
-        //Reducir precio total y eliminar producto del array.
+        //Reducir precio total, cantidad y eliminar producto del array.
         this.carro.precio_final -= precio
+        this.carro.cantidad_productos--;
         this.carro.listaProductos.splice(i,1);
         //Elminar producto de la lista en la base de datos.
         this._orderService.deleteProductFromOrder(this.carro.id_listaproducto, id_producto)
