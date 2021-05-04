@@ -45,7 +45,6 @@ export class RegistroParticularComponent implements OnInit{
     }
 
     registrarUsuario(){
-        //Dvuelve que se ha insertado correctamente por el insert
         this._service.postParticular(new Particular(0,this.username,this.pass,this.email,this.nombre,
             this.apellidos,this.direccion,"",this.telefono,this.tipo,this.dni))
         .subscribe(

@@ -31,9 +31,9 @@ export class MasVendidosComponent implements OnInit{
   }
 
   customOptions: OwlOptions = {
-    // autoplay:true,
-    // autoplayTimeout:5000,
-    // autoplayHoverPause:true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    autoplayHoverPause:true,
     loop: true,
     mouseDrag: true,
     touchDrag: false,
@@ -41,23 +41,21 @@ export class MasVendidosComponent implements OnInit{
     dots: false,
     margin:10,
     navSpeed: 700,
-    navText: [
-      "<i class='fa fa-caret-left'></i>",
-      "<i class='fa fa-caret-right'></i>"
-    ],
+    navText: ["",""],
     responsive: {
       0: {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
-      740: {
+      850: {
         items: 3
       },
       940: {
-        items: 3
-      }
+        items: 4
+      },
+
     },
     nav: false
   }

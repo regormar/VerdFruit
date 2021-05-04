@@ -29,6 +29,7 @@ export class ResetPasswordComponent{
                     (res: string) =>{
                         this.error = "";
                         this.mensaje = res;
+                        window.alert(this.mensaje);
                     }
                 );
                 this.email = "";

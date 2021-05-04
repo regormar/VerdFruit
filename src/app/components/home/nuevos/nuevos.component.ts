@@ -35,14 +35,11 @@ export class NuevosComponent implements OnInit{
     loop: true,
     mouseDrag: true,
     touchDrag: false,
-    pullDrag: true,
+    pullDrag: false,
     dots: false,
     margin:10,
     navSpeed: 700,
-    navText: [
-      "<i class='fa fa-caret-left'></i>",
-      "<i class='fa fa-caret-right'></i>"
-    ],
+    navText: ["",""],
     responsive: {
       0: {
         items: 1
@@ -50,12 +47,13 @@ export class NuevosComponent implements OnInit{
       400: {
         items: 1
       },
-      740: {
-        items: 3
+      850: {
+        items: 1
       },
       940: {
-        items: 3
-      }
+        items: 4
+      },
+
     },
     nav: false
   }
