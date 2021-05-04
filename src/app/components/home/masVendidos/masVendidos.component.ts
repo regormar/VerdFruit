@@ -15,12 +15,14 @@ export class MasVendidosComponent implements OnInit{
   constructor(private _serviceProductos:ProductServiceController){}
 
   productos:Array<any>=[];
+  charged:boolean = false;
 
   ngOnInit(): void {
     this._serviceProductos.getProductosMasVendidos()
     .subscribe(
       (res:any[])=>{
         this.productos = res;
+        this.charged = true;
       },
       (err) =>{
         console.log(err);
@@ -29,9 +31,9 @@ export class MasVendidosComponent implements OnInit{
   }
 
   customOptions: OwlOptions = {
-    autoplay:true,
-    autoplayTimeout:5000,
-    autoplayHoverPause:true,
+    // autoplay:true,
+    // autoplayTimeout:5000,
+    // autoplayHoverPause:true,
     loop: true,
     mouseDrag: true,
     touchDrag: false,
@@ -48,7 +50,7 @@ export class MasVendidosComponent implements OnInit{
         items: 1
       },
       400: {
-        items: 1
+        items: 2
       },
       740: {
         items: 3
