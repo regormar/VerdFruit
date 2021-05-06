@@ -48,12 +48,11 @@ export class NuevosComponent implements OnInit{
         items: 1
       },
       850: {
-        items: 1
+        items: 3
       },
       940: {
         items: 4
       },
-
     },
     nav: false
   }

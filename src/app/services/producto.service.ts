@@ -46,4 +46,9 @@ export class ProductServiceController{
         return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }
 
+    getProductosByTipo(tipo:number):Observable<any>{
+        let url = this.ruta + "/tipo/" + tipo;
+        return this.conexHttp.get(url, this._tokenService.generateHeaders());
+    }
+
 }

@@ -55,7 +55,6 @@ export class MasVendidosComponent implements OnInit{
       940: {
         items: 4
       },
-
     },
     nav: false
   }

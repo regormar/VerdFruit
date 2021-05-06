@@ -1,3 +1,7 @@
+h4{
+    margin-bottom: 20px !important;
+}
+
 .footer{
     position:relative;
     display: flex;
@@ -12,7 +16,7 @@
 
 .enlaces{
     margin-top:55px;
-    width: 310px;
+    width: 350px;
     padding-left: 20px;
     padding-bottom: 55px;
     height: 100%;
@@ -20,7 +24,7 @@
 
 .info{
     margin-top:55px;
-    width: 310px;
+    width: 350px;
     padding-right: 20px;
     height: 100%;
 }
@@ -65,7 +69,15 @@ p,span{
     flex-direction: column;
 }
 
-@media (max-width:400px){
+.fas{
+    font-size:20px;
+    margin-right: 15px;
+}
+span p{
+    margin-left: 30px;
+}
+
+@media (max-width:500px){
 
     .footer{
         flex-direction: column;
