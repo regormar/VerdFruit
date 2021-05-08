@@ -1,0 +1,30 @@
+<div class="panel">
+    <div class="panel-content">
+        <div class="titulo" *ngIf="producto.tipo_producto == 1"><h1>{{'FRUTA'|translate}}</h1></div>
+        <div class="titulo" *ngIf="producto.tipo_producto == 2"><h1>{{'VERDURA'|translate}}</h1></div>
+        <div class="content">
+            <div class="producto">
+                <div class="imgProducto">
+                    <img [src]="'assets/img/productos/' + producto.img" alt="">
+                </div> 
+                <div class="info">
+                    <h2>{{producto.nombre_producto}}</h2>
+                    <h2>{{producto.precio}}</h2>
+                    <h2>{{'MARCA'|translate}} : {{producto.marca}}</h2>
+                    <h2>{{'ORIGEN'|translate}} : {{producto.origen}}</h2>
+                    <h2>{{'FAMILIA'|translate}} : {{producto.familia}}</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="titulo2"><h1>{{'DESCRIPCION'|translate}}</h1></div>
+        <div class="descripcion">{{producto.descripcion}}</div>
+        <div class="titulo2"><h1>{{'PRODUCTOS RELACIONADOS'|translate}}</h1></div>
+        <div class="relacionados">
+            <div class="nuevosCarousel"><vendido-component></vendido-component></div>
+        </div>
+        
+
+
+    </div>
+  </div>

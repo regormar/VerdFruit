@@ -8,6 +8,7 @@ import { QuestionsComponent } from './components/questions/questions.component';
 import { ChangePasswordComponent } from './components/changePassword/changePassword.component';
 import { CuentaComponent } from './components/cuenta/cuenta.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { ProductoComponent } from './components/producto/producto.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'changePassword/:id',component:ChangePasswordComponent},
   {path:'cuenta',component:CuentaComponent},
   {path:'productos',component:ProductosComponent},
+  {path:'producto/:idProducto',component:ProductoComponent},
 ];
 
 @NgModule({

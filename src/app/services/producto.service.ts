@@ -22,17 +22,17 @@ export class ProductServiceController{
     }
 
     getProductosByOrigen(origen:string):Observable<any>{
-        let url = this.ruta + "/origen" + origen;
+        let url = this.ruta + "/origen/" + origen;
         return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }
 
     getProductosByFamilia(familia:string):Observable<any>{
-        let url = this.ruta + "/familia" + familia;
+        let url = this.ruta + "/familia/" + familia;
         return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }
 
     getProductosByMarca(marca:string):Observable<any>{
-        let url = this.ruta + "/marca" + marca;
+        let url = this.ruta + "/marca/" + marca;
         return this.conexHttp.get(url, this._tokenService.generateHeaders());
     }
 

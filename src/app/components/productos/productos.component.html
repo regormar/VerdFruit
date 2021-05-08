@@ -1,1 +1,46 @@
-<div>PRODUCTOS</div>
+<div class="panel">
+    <div class="panel-content">
+        <div class="content">
+            <div class="menu">
+                <div class="tipo">
+                    <select name="tipo" (change)="busquedaCategoria(tipo.value)" #tipo>
+                        <option value="value" hidden selected disabled> - Sin filtro - </option>
+                        <option value="1"> Fruta</option>
+                        <option value="Semilla"> - Semilla</option>
+                        <option value="Cítricos"> - Cítricos</option>
+                        <option value="Fruta tropical"> - Tropical</option>
+                        <option value="Fruta(Rosacea)"> - Rosacea</option>
+                        <option disabled> </option>
+                        <option value="2"> Verdura</option>
+                        <option value="Verdura(Esparraguera"> - Esparraguera</option>
+                        <option value="Verdura(Cucurbita)"> - Cucurbita</option>
+                        <option value="Planta(Ortaliza)"> - Planta (Ortaliza)</option>
+                    </select>
+                </div>
+                <div class="buscador">
+                    <h6><input  type="text"  name="buscador" placeholder="Búsqueda de productos" aria-label="Search" (keyup)="busquedaProductos(buscador.value)" #buscador/></h6>
+                </div>
+            </div>
+
+            <div class="productos" >
+                <div class="producto" *ngFor="let pro of productos">
+                    <div class="imgProducto">
+                        <img [src]="'assets/img/productos/' + pro.img" alt="">
+                    </div> 
+                    <div class="info">
+                        <div class="nombrePrecio">
+                            <div><h6>{{pro.nombre_producto}}</h6></div>
+                            <div><h6>{{pro.precio}}€</h6></div>
+                        </div>
+                    </div>
+                    <div class="tramitar">
+                        <button class="botonTramitar" routerLink="/producto/{{pro.id_producto}}"><h6>{{'MASINFO'|translate}}</h6></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+  </div>
