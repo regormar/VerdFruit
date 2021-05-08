@@ -15,12 +15,14 @@ export class MasVendidosComponent implements OnInit{
   constructor(private _serviceProductos:ProductServiceController){}
 
   productos:Array<any>=[];
+  charged:boolean = false;
 
   ngOnInit(): void {
     this._serviceProductos.getProductosMasVendidos()
     .subscribe(
       (res:any[])=>{
         this.productos = res;
+        this.charged = true;
       },
       (err) =>{
         console.log(err);
@@ -39,10 +41,7 @@ export class MasVendidosComponent implements OnInit{
     dots: false,
     margin:10,
     navSpeed: 700,
-    navText: [
-      "<i class='fa fa-caret-left'></i>",
-      "<i class='fa fa-caret-right'></i>"
-    ],
+    navText: ["",""],
     responsive: {
       0: {
         items: 1
@@ -50,12 +49,12 @@ export class MasVendidosComponent implements OnInit{
       400: {
         items: 1
       },
-      740: {
+      850: {
         items: 3
       },
       940: {
-        items: 3
-      }
+        items: 4
+      },
     },
     nav: false
   }

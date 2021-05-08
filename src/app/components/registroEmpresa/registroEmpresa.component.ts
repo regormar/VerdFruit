@@ -30,6 +30,21 @@ export class RegistroEmpresaComponent implements OnInit{
     constructor(private _service:UserServiceController, private translate: TranslateService){}
 
     ngOnInit(): void {
+        let element = document.getElementById("password");
+        console.log(element);
+        this.translate.get('PASSREQUIREMENTS')
+        .subscribe(
+            (res: string) =>{
+                element.setAttribute("data-title", res);
+            }
+        );
+        let element2 = document.getElementById("username");
+        this.translate.get('USERNAMEREQUIREMENTS')
+        .subscribe(
+            (res: string) =>{
+                element2.setAttribute("data-title", res);
+            }
+        );
     }
 
     registrarUsuario(){

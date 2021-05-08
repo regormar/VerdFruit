@@ -8,4 +8,13 @@ import { Component, OnInit } from "@angular/core";
 
 export class FooterComponent {
 
+    menu:boolean = false;
+
+    constructor(){
+      if(localStorage.getItem("token") == null){
+          this.menu = true;
+      } else{
+          this.menu = false
+      }
+    }
 }

@@ -2,7 +2,7 @@
     <form #formRegistroUsuario="ngForm" (ngSubmit)="registrarUsuario();">
         <div class="form-panel">
             <div class="flex-col">           
-                <p>{{ 'USERNAME' | translate }}: </p>  
+                <p>{{ 'USERNAME' | translate }}* </p>  
                 <div class="imgInput">
                     <div id="username"><i class="fas fa-user"></i></div>
                     <input #inputUsername="ngModel" type="text" [(ngModel)]="username" name="username" pattern="^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$" required/>
@@ -10,7 +10,7 @@
                 <span class="text-danger"></span>
             </div>
             <div class="flex-col">           
-                <p>{{ 'NAME' | translate }}:</p>   
+                <p>{{ 'NAME' | translate }}*</p>   
                 <div class="imgInput">
                     <i class="fas fa-user"></i>         
                     <input #inputNombre="ngModel" type="text" [(ngModel)]="nombre" name="nombre" required/>
@@ -18,7 +18,7 @@
                 <span class="text-danger"></span>
             </div>  
             <div class="flex-col">         
-                <p>{{ 'SURNAMES' | translate }}:</p>
+                <p>{{ 'SURNAMES' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-user"></i>
                     <input #inputApellidos="ngModel" type="text" [(ngModel)]="apellidos" name="apellidos" required/>
@@ -26,7 +26,7 @@
                 <span class="text-danger"></span>
             </div>  
             <div class="flex-col">
-                <p>{{ 'EMAIL' | translate }}:</p>
+                <p>{{ 'EMAIL' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-envelope"></i>
                     <input #inputEmail="ngModel" type="email" [(ngModel)]="email" name="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required/>
@@ -34,7 +34,7 @@
                 <span class="text-danger"></span>
             </div>
             <div class="flex-col">
-                <p>{{ 'PASSWORD' | translate }}:</p>
+                <p>{{ 'PASSWORD' | translate }}*</p>
                 <div class="imgInput">
                     <div id="password"><i class="fas fa-key"></i></div>
                     <input #inputPass="ngModel" type="password" [(ngModel)]="pass" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
@@ -42,7 +42,7 @@
                 <span class="text-danger"></span>
             </div>   
             <div class="flex-col">
-                <p>{{ 'VERIFICATION' | translate }}:</p>
+                <p>{{ 'VERIFICATION' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-key"></i>
                     <input #inputVerification="ngModel" type="password" [(ngModel)]="verification" name="verification" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
@@ -50,7 +50,7 @@
                 <span class="text-danger"></span>
             </div>  
             <div class="flex-col">
-                <p>{{ 'ADDRESS' | translate }}:</p>
+                <p>{{ 'ADDRESS' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-map-marker-alt"></i>
                     <input #inputDireccion="ngModel" type="text" [(ngModel)]="direccion" name="direccion" pattern="" required/>
@@ -58,7 +58,7 @@
                 <span class="text-danger"></span>
             </div>  
             <div class="flex-col">
-                <p>{{ 'PHONE' | translate }}:</p>
+                <p>{{ 'PHONE' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-phone"></i>
                     <input #inputTelefono="ngModel" type="text" [(ngModel)]="telefono" name="telefono" pattern="[0-9]{9}" required/>
@@ -66,7 +66,7 @@
                 <span class="text-danger"></span>            
             </div>  
             <div class="flex-col">
-                <p>DNI:</p>
+                <p>DNI*</p>
                 <div class="imgInput">
                     <i class="fas fa-id-card"></i>
                     <input #inputDni="ngModel" type="text" [(ngModel)]="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}" required/>
