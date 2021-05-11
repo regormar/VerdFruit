@@ -52,7 +52,7 @@ export class CarroComponent{
                     console.log(err);
                 }
             );
-        }   
+        }  
     }
 
     menuCarrito(){
@@ -130,6 +130,19 @@ export class CarroComponent{
     encogerMenu(){
         let element = document.getElementById("cartMenu");
         element.style.height = "300px";
+    }
+
+    comprar(){
+        console.log("comprando");
+        this._orderService.realizarPedido(localStorage.getItem("_id"),this.carro.id_listaproducto)
+        .subscribe(
+            (response)=>{
+                window.location.reload();
+            },
+            (err)=>{
+                console.log(err);
+            }
+        );
     }
 
 }

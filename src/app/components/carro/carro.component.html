@@ -38,7 +38,7 @@
             <div *ngIf="carro != null"><h6>{{carro.precio_final | number : '1.2-2'}}€</h6></div>
         </div>
         <div class="tramitar">
-            <button class="botonTramitar"><h4>{{'CHECKOUT'|translate}}</h4></button>
+            <button class="botonTramitar" (click)="comprar()"><h4>{{'CHECKOUT'|translate}}</h4></button>
         </div>
     </div>
 </div>
