@@ -30,14 +30,14 @@ export class OrderServiceController{
         return this.conexHttp.put(this.ruta, pedido, this._tokenService.generateHeaders());      
     }
 
-    realizarPedido(id_usuario:string, id_listaproducto:string):Observable<any>{
-        let url = this.ruta + "/" + id_usuario + "/" + id_listaproducto;
-        return this.conexHttp.put(url, this._tokenService.generateHeaders());      
-    }
-
     deleteProductFromOrder(id_listaproducto:string, id_producto:number):Observable<any>{
         let url = this.ruta + "/lista/" + id_listaproducto + "/" + id_producto;
         return this.conexHttp.delete(url, this._tokenService.generateHeaders());      
+    }
+
+    realizarPedido(id_usuario:string, id_listaproducto:string):Observable<any>{
+        let url = this.ruta + "/realizarPedido/" + id_usuario + "/" + id_listaproducto;
+        return this.conexHttp.get(url, this._tokenService.generateHeaders());      
     }
 
 }
