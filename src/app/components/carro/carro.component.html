@@ -1,44 +1,51 @@
 <div class="menuCarro inactive" id="cartMenu">
     <div class="titleCarro"><h1>{{'CART'|translate}}</h1></div>
-    <div *ngIf="carro != null" class="content">
-        <div *ngFor="let product of carro.listaProductos;index as i" class="product">
-           
-            <ng-container *ngFor="let prod of productos">
-                <div *ngIf="product.id_producto == prod.id_producto" class="prod">
-                    <div class="productImg" ><img [src]="'assets/img/productos/' + prod.img"  alt=""></div>
-                    <div class="info">
-                        <div class="total">
-                            <div><h6>{{prod.nombre_producto}}:</h6></div>
-                            <div><h6>{{product.precio | number : '1.2-2'}}€</h6></div>                          
+    <ng-container *ngIf="!cargado">
+        <div class="loadingio-spinner-spinner-eisrfab08z5"><div class="ldio-psmvmn9klxg confHeight">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="cargado">
+        <div *ngIf="carro != null" class="content">
+            <div *ngFor="let product of carro.listaProductos;index as i" class="product">
+            
+                <ng-container *ngFor="let prod of productos">
+                    <div *ngIf="product.id_producto == prod.id_producto" class="prod">
+                        <div class="productImg" ><img [src]="'assets/img/productos/' + prod.img"  alt=""></div>
+                        <div class="info">
+                            <div class="total">
+                                <div><h6>{{prod.nombre_producto}}:</h6></div>
+                                <div><h6>{{product.precio | number : '1.2-2'}}€</h6></div>                          
+                            </div>
+                            <div class="line2"><hr></div>
+                            <div class="total2">
+                                <div>
+                                    <div class="ts13">En carro:</div>
+                                    <div class="ts18">{{product.cantidad}}ud.</div>
+                                </div>
+                                <div class="moreLessBtnSection">
+                                    <button id="less" class="btnMoreLess" (click)="changeProductUnits('-',product.id_producto,$event)">-</button>
+                                    <button class="btnMoreLess" (click)="changeProductUnits('+',product.id_producto,$event)">+</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="line2"><hr></div>
-                        <div class="total2">
-                            <div>
-                                <div class="ts13">En carro:</div>
-                                <div class="ts18">{{product.cantidad}}ud.</div>
-                            </div>
-                            <div class="moreLessBtnSection">
-                                <button id="less" class="btnMoreLess" (click)="changeProductUnits('-',product.id_producto,$event)">-</button>
-                                <button class="btnMoreLess" (click)="changeProductUnits('+',product.id_producto,$event)">+</button>
-                            </div>
+                        <div class="top-product">
+                            <a href="javascript:void(0)" class="cross" (click)="eliminarProducto(product.id_producto,product.precio, i)">x</a>
                         </div>
                     </div>
-                    <div class="top-product">
-                        <a href="javascript:void(0)" class="cross" (click)="eliminarProducto(product.id_producto,product.precio, i)">x</a>
-                    </div>
-                </div>
-            </ng-container>
+                </ng-container>
+            </div>
         </div>
-    </div>
-    <div *ngIf="carro == null" class="emptyCart"><h4>{{'EMPTYCART'|translate}}</h4></div>
-    <div *ngIf="carro != null" class="bottomCarro">
-        <div class="line"><hr></div>
-        <div class="total">
-            <div><h6>{{'CARTTOTAL'|translate}}:</h6></div>
-            <div *ngIf="carro != null"><h6>{{carro.precio_final | number : '1.2-2'}}€</h6></div>
+        <div *ngIf="carro == null" class="emptyCart"><h4>{{'EMPTYCART'|translate}}</h4></div>
+        <div *ngIf="carro != null" class="bottomCarro">
+            <div class="line"><hr></div>
+            <div class="total">
+                <div><h6>{{'CARTTOTAL'|translate}}:</h6></div>
+                <div *ngIf="carro != null"><h6>{{carro.precio_final | number : '1.2-2'}}€</h6></div>
+            </div>
+            <div class="tramitar">
+                <button class="botonTramitar" (click)="comprar()"><h4>{{'CHECKOUT'|translate}}</h4></button>
+            </div>
         </div>
-        <div class="tramitar">
-            <button class="botonTramitar" (click)="comprar()"><h4>{{'CHECKOUT'|translate}}</h4></button>
-        </div>
-    </div>
+    </ng-container>
 </div>
