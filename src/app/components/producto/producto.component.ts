@@ -19,11 +19,14 @@ import { ListaProductos } from "src/app/model/listaProductos";
 
 export class ProductoComponent implements OnInit{ 
 
+    usuLogin:boolean = true; 
+
     idUsuario:string = "";
     idProducto:number;
-    producto:Producto;
+    producto:Producto  = null;
     productCarro:Producto;
 
+    datosCarga:boolean = false; 
     estaCarrito:boolean = false; 
     existePedido:boolean = false;
     precioTotalProducto:number = 0;
@@ -42,7 +45,11 @@ export class ProductoComponent implements OnInit{
 
 
     constructor(private _serviceProductos:ProductServiceController,  private translate: TranslateService,
-    private _orderService:OrderServiceController, private _router: Router, private _activRoute: ActivatedRoute){}
+        private _orderService:OrderServiceController, private _router: Router, private _activRoute: ActivatedRoute){
+            if(localStorage.getItem("_id") == null){
+                this.usuLogin = false;
+            }
+        }
     
 
     ngOnInit(): void {
@@ -64,10 +71,11 @@ export class ProductoComponent implements OnInit{
         );
 
         this.idUsuario = localStorage.getItem("_id");
-        if(this.idUsuario != ""){
+        if(this.idUsuario != null){
             this._orderService.getPedidosByStatus(this.idUsuario, -1)
             .subscribe(
                 (res) => {
+                    this.datosCarga = true;
                     if(res.length != 0){
                         this.existePedido = true;
                         this.carro = res[0];

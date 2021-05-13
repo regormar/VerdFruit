@@ -28,6 +28,7 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NuevosComponent } from './components/home/nuevos/nuevos.component';
 import { MasVendidosComponent } from './components/home/masVendidos/masVendidos.component';
+import { RelacionadosComponent } from './components/producto/relacionados/relacionados.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -55,6 +56,7 @@ export function createTranslateLoader(http: HttpClient){
     ProductoComponent,
     NuevosComponent,
     MasVendidosComponent,
+    RelacionadosComponent,
   ],
   imports: [
     BrowserModule,
