@@ -1,4 +1,6 @@
+import { DOCUMENT } from "@angular/common";
 import { Component, Inject, Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 import { ListaProductos } from "src/app/model/listaProductos";
 import { Pedido } from "src/app/model/pedido";
 import { Producto } from "src/app/model/producto";
@@ -22,7 +24,8 @@ export class CarroComponent{
     cargado:boolean = false;
 
     constructor(private _orderService:OrderServiceController,
-        private _productService:ProductServiceController){
+        private _productService:ProductServiceController,
+        private _router: Router){
             sessionStorage.setItem('show', "false");
     }
 
@@ -80,7 +83,7 @@ export class CarroComponent{
         );
     }
 
-    changeProductUnits(type:string, id_producto:number, event){
+    changeProductUnits(type:string, id_producto:number){
         let listaProductos = this.carro.listaProductos;
         for(let i  = 0; i < listaProductos.length; i++){
             if(listaProductos[i].id_producto == id_producto){
@@ -94,16 +97,10 @@ export class CarroComponent{
                     listaProductos[i].cantidad++;         
                     this.carro.precio_final += precioUnidad;
                     listaProductos[i].precio += precioUnidad;
-                    if(listaProductos[i].cantidad == 2){
-                        event.target.previousSibling.disabled = false;
-                    }
                 }else{
                     listaProductos[i].cantidad--;
                     this.carro.precio_final -= precioUnidad;
                     listaProductos[i].precio -= precioUnidad;
-                    if(listaProductos[i].cantidad == 1){
-                        event.target.disabled = true;
-                    }
                 }
             }
         } 

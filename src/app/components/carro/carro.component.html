@@ -14,7 +14,7 @@
                         <div class="productImg" ><img [src]="'assets/img/productos/' + prod.img"  alt=""></div>
                         <div class="info">
                             <div class="total">
-                                <div><h6>{{prod.nombre_producto}}:</h6></div>
+                                <div><a href="javascript:void(0)" routerLink="/producto/{{prod.id_producto}}"><h6>{{prod.nombre_producto}}:</h6></a></div>
                                 <div><h6>{{product.precio | number : '1.2-2'}}€</h6></div>                          
                             </div>
                             <div class="line2"><hr></div>
@@ -24,7 +24,7 @@
                                     <div class="ts18">{{product.cantidad}}ud.</div>
                                 </div>
                                 <div class="moreLessBtnSection">
-                                    <button id="less" class="btnMoreLess" (click)="changeProductUnits('-',product.id_producto,$event)">-</button>
+                                    <button [disabled]="product.cantidad == 1" class="btnMoreLess" (click)="changeProductUnits('-',product.id_producto,$event)">-</button>
                                     <button class="btnMoreLess" (click)="changeProductUnits('+',product.id_producto,$event)">+</button>
                                 </div>
                             </div>

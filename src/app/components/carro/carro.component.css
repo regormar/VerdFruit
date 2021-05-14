@@ -191,6 +191,10 @@ hr{
     margin-bottom:30px;
 }
 
+a{
+    color: #00471F;
+}
+
 @media (max-width:730px){
 
     .menuCarro{
