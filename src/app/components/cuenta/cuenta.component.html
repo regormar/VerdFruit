@@ -15,31 +15,39 @@
                         <div class="usuApartado">
                             <div class="usuDatos">
                                 <h3>{{ 'NOMBRE_USU' | translate }}</h3>
-                                <h4>{{usuario.username}}</h4> 
-                                <h4><input #inputDireccion="ngModel" type="text" [(ngModel)]="username" name="username" placeholder="{{usuario.username}}" [disabled]="isDisabled"/></h4>
+                                <h4><input #inputDireccion="ngModel" type="text" id="inputUsu" [(ngModel)]="username" name="username" placeholder="{{usuario.username}}" [disabled]="isDisabledUsu"/></h4>
                             </div>
-                            <div class="usuButton">
-                                <button class="botonEditar" (click)="editarUsername()"><p>{{ botonEditar | translate }}</p></button>
+                            <div class="usuButton" *ngIf="editarUsu == false">
+                                <button class="botonEditar" (click)="editarUsername()"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                            <div class="usuButton" *ngIf="editarUsu == true">
+                                <button class="botonGuardar" (click)="guardarUsername()"><p>{{ 'GUARDAR' | translate }}</p></button>
                             </div>
                         </div>
-    
+
                         <div class="usuApartado">
                             <div class="usuDatos">
                                 <h3>{{ 'NOMBRE' | translate }}</h3>
-                                <h4>{{usuario.nombre}}</h4> 
+                                <h4><input #inputDireccion="ngModel" type="text" id="inputNombre" [(ngModel)]="nombre" name="nombre" placeholder="{{usuario.nombre}}" [disabled]="isDisabledNombre"/></h4>
                             </div>
-                            <div class="usuButton">
-                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            <div class="usuButton" *ngIf="editarNombre == false">
+                                <button class="botonEditar" (click)="editarUsuNombre()"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                            <div class="usuButton" *ngIf="editarNombre == true">
+                                <button class="botonGuardar" (click)="guardarUsuNombre()"><p>{{ 'GUARDAR' | translate }}</p></button>
                             </div>
                         </div>
-    
+
                         <div class="usuApartado">
                             <div class="usuDatos">
                                 <h3>{{ 'APELLIDOS' | translate }}</h3>
-                                <h4>{{usuario.apellidos}}</h4> 
+                                <h4><input #inputDireccion="ngModel" type="text" id="inputApellidos" [(ngModel)]="apellidos" name="apellidos" placeholder="{{usuario.apellidos}}" [disabled]="isDisabledApellidos"/></h4>
                             </div>
-                            <div class="usuButton">
-                                <button class="botonEditar"><p>{{ 'EDITAR' | translate }}</p></button>
+                            <div class="usuButton" *ngIf="editarApellidos == false">
+                                <button class="botonEditar" (click)="editarUsuApellidos()"><p>{{ 'EDITAR' | translate }}</p></button>
+                            </div>
+                            <div class="usuButton" *ngIf="editarApellidos == true">
+                                <button class="botonGuardar" (click)="guardarUsuApellidos()"><p>{{ 'GUARDAR' | translate }}</p></button>
                             </div>
                         </div>
     

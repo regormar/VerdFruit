@@ -3,7 +3,7 @@
         <div class="titulo" *ngIf="producto.tipo_producto == 1"><h1>{{'FRUTA'|translate}}</h1></div>
         <div class="titulo" *ngIf="producto.tipo_producto == 2"><h1>{{'VERDURA'|translate}}</h1></div>
         
-        <div class="producto" >
+        <div class="producto">
             <ng-container *ngIf="datosCarga == false">
                 <div class="loadingio-spinner-spinner-eisrfab08z5"><div class="ldio-psmvmn9klxg confHeight">
                     <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -20,9 +20,9 @@
                 <div *ngIf="producto.familia != null"><h3>{{'FAMILIA'|translate}} : {{producto.familia}}</h3></div>
                 <br>
                 <div class="moreLessBtnSection" *ngIf="usuLogin == true">
-                    <h3><button id="less" class="btnMoreLess" (click)="changeProductUnits('-',$event)">-</button>
+                    <h3><button id="less" class="btnMoreLess"  [disabled]="isDisabled" (click)="changeProductUnits('-')">-</button>
                     {{cantidadProducto}}
-                    <button class="btnMoreLess" (click)="changeProductUnits('+',$event)">+</button></h3>
+                    <button class="btnMoreLess" (click)="changeProductUnits('+')">+</button></h3>
                 </div>
 
                 <div class="anyadir" *ngIf="usuLogin == true">

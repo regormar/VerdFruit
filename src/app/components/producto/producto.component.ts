@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ProductServiceController } from "src/app/services/producto.service";
 import { TranslateService } from "@ngx-translate/core";
@@ -41,7 +41,7 @@ export class ProductoComponent implements OnInit{
     listaProductos:ListaProductos[] = Array<ListaProductos>();
     cantidadProducto:number = 1;
 
-
+    isDisabled: boolean = true;
 
 
     constructor(private _serviceProductos:ProductServiceController,  private translate: TranslateService,
@@ -53,6 +53,7 @@ export class ProductoComponent implements OnInit{
     
 
     ngOnInit(): void {
+        this.datosCarga = false;
         this._activRoute.paramMap.subscribe(
             (params) => {
                 this.idProducto = +params.get("idProducto");
@@ -84,6 +85,9 @@ export class ProductoComponent implements OnInit{
                             if(this.idProducto == this.carro.listaProductos[i].id_producto){
                                 this.estaCarrito = true;
                                 this.cantidadProducto = this.carro.listaProductos[i].cantidad;
+                                if(this.carro.listaProductos[i].cantidad > 1){
+                                    this.isDisabled = false;
+                                }
                             }
                         }                          
                     }else{
@@ -99,7 +103,7 @@ export class ProductoComponent implements OnInit{
 
     }
     
-    changeProductUnits(type:string, event){
+    changeProductUnits(type:string){
         if(this.existePedido == true){
             let listaProductos = this.carro.listaProductos;
             if(this.estaCarrito != false){
@@ -111,8 +115,8 @@ export class ProductoComponent implements OnInit{
                             this.cantidadProducto++;        
                             this.carro.precio_final += precioUnidad;
                             listaProductos[i].precio += precioUnidad;
-                            if(listaProductos[i].cantidad == 2){
-                                event.target.previousSibling.disabled = false;
+                            if(listaProductos[i].cantidad > 1){
+                                this.isDisabled = false;
                             }
                         }else{
                             listaProductos[i].cantidad--;
@@ -120,7 +124,7 @@ export class ProductoComponent implements OnInit{
                             this.carro.precio_final -= precioUnidad;
                             listaProductos[i].precio -= precioUnidad;
                             if(listaProductos[i].cantidad == 1){
-                                event.target.disabled = true;
+                                this.isDisabled = true;
                             }
                         }
                     }
@@ -130,14 +134,14 @@ export class ProductoComponent implements OnInit{
                 if(type == "+"){
                     this.cantidadProducto++; 
                     this.precioTotalProducto += this.producto.precio; 
-                    if(this.cantidadProducto == 2){
-                        event.target.previousSibling.disabled = false;
+                    if(this.cantidadProducto > 1){
+                        this.isDisabled = false;
                     }
                 }else{
                     this.cantidadProducto--;
                     this.precioTotalProducto -= this.producto.precio; 
                     if(this.cantidadProducto == 1){
-                        event.target.disabled = true;
+                        this.isDisabled = true;
                     }
                 }
             }
@@ -146,14 +150,14 @@ export class ProductoComponent implements OnInit{
             if(type == "+"){
                 this.cantidadProducto++; 
                 this.precioTotalProducto += this.producto.precio; 
-                if(this.cantidadProducto == 2){
-                    event.target.previousSibling.disabled = false;
+                if(this.cantidadProducto > 1){
+                    this.isDisabled = false;
                 }
             }else{
                 this.cantidadProducto--;
                 this.precioTotalProducto -= this.producto.precio; 
                 if(this.cantidadProducto == 1){
-                    event.target.disabled = true;
+                    this.isDisabled = true;
                 }
             }
             
