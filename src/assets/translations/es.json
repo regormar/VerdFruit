@@ -38,7 +38,11 @@
     "NOMBRECOMERCIAL":"Nombre comercial",
     "CHANGEPASSWORD":"Cambiar contraseña",
     "RECOVERPASSWORD":"Recuperar contraseña",
-
+    
+    "EMAILEXISTS":"Ya existe un usuario con este correo",
+    "DNIEXISTS":"Ya existe un usuario con este DNI",
+    "USERNAMEXISTS":"Este nombre de usuario ya está en uso",
+    "CIFEXISTS":"Ya existe un usuario con este CIF",
     
     "QUESTION1": "¿Cuál es el importe mínimo de un pedido?",
     "ANSWER1.1": "El pedido mínimo en nuestra frutería es de 10€ (excluyendo gastos de envío).",

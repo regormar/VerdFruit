@@ -6,72 +6,72 @@
                 <div class="imgInput">
                     <div id="username"><i class="fas fa-user"></i></div>
                     <input #inputUsername="ngModel" type="text" [(ngModel)]="username" name="username" pattern="^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$" required/>
+                    <span *ngIf="inputUsername.invalid" [hidden]="inputUsername.pristine" class="text-danger incorrect">!</span>
                 </div>
-                <span class="text-danger"></span>
             </div>
             <div class="flex-col">           
                 <p>{{ 'NAME' | translate }}*</p>   
                 <div class="imgInput">
                     <i class="fas fa-user"></i>         
                     <input #inputNombre="ngModel" type="text" [(ngModel)]="nombre" name="nombre" required/>
+                    <span *ngIf="inputNombre.invalid" [hidden]="inputNombre.pristine" class="text-danger incorrect">!</span>
                 </div>
-                <span class="text-danger"></span>
             </div>  
             <div class="flex-col">         
                 <p>{{ 'SURNAMES' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-user"></i>
                     <input #inputApellidos="ngModel" type="text" [(ngModel)]="apellidos" name="apellidos" required/>
+                    <span *ngIf="inputApellidos.invalid" [hidden]="inputApellidos.pristine" class="text-danger incorrect">!</span>
                 </div>
-                <span class="text-danger"></span>
             </div>  
             <div class="flex-col">
                 <p>{{ 'EMAIL' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-envelope"></i>
                     <input #inputEmail="ngModel" type="email" [(ngModel)]="email" name="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required/>
+                    <span *ngIf="inputEmail.invalid" [hidden]="inputEmail.pristine" class="text-danger incorrect">!</span>
                 </div>
-                <span class="text-danger"></span>
             </div>
             <div class="flex-col">
                 <p>{{ 'PASSWORD' | translate }}*</p>
                 <div class="imgInput">
                     <div id="password"><i class="fas fa-key"></i></div>
-                    <input #inputPass="ngModel" type="password" [(ngModel)]="pass" name="pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+                    <input #inputPass="ngModel" type="password" [(ngModel)]="pass" name="pass" [ngClass]="{'ng-invalid' : pass != verification}" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+                    <span *ngIf="inputPass.invali || pass != verification" [hidden]="inputPass.pristine" class="text-danger incorrect">!</span>
                 </div>
-                <span class="text-danger"></span>
             </div>   
             <div class="flex-col">
                 <p>{{ 'VERIFICATION' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-key"></i>
-                    <input #inputVerification="ngModel" type="password" [(ngModel)]="verification" name="verification" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
-                </div>
-                <span class="text-danger"></span>
+                    <input #inputVerification="ngModel" type="password" [(ngModel)]="verification" name="verification" [ngClass]="{'ng-invalid' : pass != verification}" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+                    <span *ngIf="inputVerification.invalid || pass != verification" [hidden]="inputVerification.pristine" class="text-danger incorrect">!</span>
+                </div>               
             </div>  
             <div class="flex-col">
                 <p>{{ 'ADDRESS' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-map-marker-alt"></i>
                     <input #inputDireccion="ngModel" type="text" [(ngModel)]="direccion" name="direccion" pattern="" required/>
+                    <span *ngIf="inputDireccion.invalid" [hidden]="inputDireccion.pristine" class="text-danger incorrect">!</span>
                 </div>
-                <span class="text-danger"></span>
             </div>  
             <div class="flex-col">
                 <p>{{ 'PHONE' | translate }}*</p>
                 <div class="imgInput">
                     <i class="fas fa-phone"></i>
                     <input #inputTelefono="ngModel" type="text" [(ngModel)]="telefono" name="telefono" pattern="[0-9]{9}" required/>
-                </div>
-                <span class="text-danger"></span>            
+                    <span *ngIf="inputTelefono.invalid" [hidden]="inputTelefono.pristine" class="text-danger incorrect">!</span>
+                </div>         
             </div>  
             <div class="flex-col">
                 <p>DNI*</p>
                 <div class="imgInput">
                     <i class="fas fa-id-card"></i>
                     <input #inputDni="ngModel" type="text" [(ngModel)]="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}" required/>
-                </div>
-                <span class="text-danger"></span>
+                    <span *ngIf="inputDni.invalid" [hidden]="inputDni.pristine" class="text-danger incorrect">!</span>
+                </div>                  
             </div> 
         </div>
         <div class="policyButtonRegistro">
@@ -83,9 +83,10 @@
                     <p> {{'ACCEPTTHEPRIVACYPOLICY'|translate}}</p>
                 </div>
             </div>
-            <button class="send" type="submit" [disabled]="!formRegistroUsuario.form.valid">Enviar</button>
-        </div> 
-        <div class="added">{{resultado}}</div>                       
+            <button class="send" type="submit" [disabled]="!formRegistroUsuario.form.valid || pass != verification">Enviar</button>  
+        </div>  
+        <div class="added">{{resultado}}</div> 
+        <div class="errorMsg">{{errorMsg}}</div>                  
     </form>
     <img class="regImgParticular" src="assets/img/registroParticular.jpg">
 </div>

@@ -38,6 +38,11 @@
     "NOMBRECOMERCIAL":"Nom comercial",
     "CHANGEPASSWORD":"Canviar contrasenya",
     "RECOVERPASSWORD":"Recuperar contrasenya",
+    
+    "EMAILEXISTS":"Ja existeix un usuari amb aquest correu",
+    "DNIEXISTS":"Ja existeix un usuari amb aquest DNI",
+    "USERNAMEXISTS":"Aquest nom d'usuari ja està en ús",
+    "CIFEXISTS":"Ja existeix un usuari amb aquest CIF",
 
     "QUESTION1": "¿Quin és l'import mínim d'una comanda?",
     "ANSWER1.1": "La comanda mínima en la nostra fruiteria és de 10€ (excloent despeses d'enviament).",

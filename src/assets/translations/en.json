@@ -38,6 +38,11 @@
     "NOMBRECOMERCIAL":"Trade name",
     "CHANGEPASSWORD":"Change password",
     "RECOVERPASSWORD":"Recover password",
+        
+    "EMAILEXISTS":"There is already a user with this email",
+    "DNIEXISTS":"There is already a user with this DNI",
+    "USERNAMEXISTS":"This username is already in use",
+    "CIFEXISTS":"There is already a user with this CIF",
 
     "QUESTION1": "What is the minimum order amount? ",
     "ANSWER1.1": "The minimum order in our greengrocer is € 10 (excluding shipping costs).",
