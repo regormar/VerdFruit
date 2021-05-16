@@ -21,11 +21,15 @@ export class RelacionadosComponent implements OnInit{
   charged:boolean = false;
 
   ngOnInit(): void {
-    this._serviceProductos.getProductosByTipo(this.tipoProducto)
+    this.chargeProductByType(this.idProducto, this.tipoProducto);
+  }
+
+  chargeProductByType(idProducto:number, tipoProducto:number){
+    this._serviceProductos.getProductosByTipo(tipoProducto)
     .subscribe(
       (res:any[])=>{
         for(let i=0; i < res.length; i++){
-          if(this.idProducto != res[i].id_producto){
+          if(idProducto != res[i].id_producto){
             this.productos.push(res[i]);
           }
         }

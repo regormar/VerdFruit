@@ -1,10 +1,8 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 import { ProductServiceController } from "src/app/services/producto.service";
 import { TranslateService } from "@ngx-translate/core";
 import { OrderServiceController } from "src/app/services/pedido.service";
-import { UserServiceController } from "src/app/services/user.service";
-import { ProductosComponent } from "../productos/productos.component";
 import { Producto } from "src/app/model/producto";
 import { Pedido } from "src/app/model/pedido";
 import { ListaProductos } from "src/app/model/listaProductos";
@@ -43,14 +41,30 @@ export class ProductoComponent implements OnInit{
 
     isDisabled: boolean = true;
 
+    mySubscription: any;
 
     constructor(private _serviceProductos:ProductServiceController,  private translate: TranslateService,
-        private _orderService:OrderServiceController, private _router: Router, private _activRoute: ActivatedRoute){
-            if(localStorage.getItem("_id") == null){
-                this.usuLogin = false;
+        private _orderService:OrderServiceController, private _router: Router, private _activRoute: ActivatedRoute,
+        private router:Router){
+        this.router.routeReuseStrategy.shouldReuseRoute = function () {
+            return false;
+            };
+            this.mySubscription = this.router.events.subscribe((event) => {
+            if (event instanceof NavigationEnd) {
+                // Modificamos el Router para que crea que no ha visitado el ultimo link y recargue el componente aunque nos encontremos en el.
+                this.router.navigated = false;
             }
+        });
+        if(localStorage.getItem("_id") == null){
+            this.usuLogin = false;
         }
+    }
     
+    ngOnDestroy() {
+        if (this.mySubscription) {
+          this.mySubscription.unsubscribe();
+        }
+    }
 
     ngOnInit(): void {
         this.datosCarga = false;
