@@ -46,6 +46,7 @@ export class UserServiceController{
     }
 
     putEmpresa(usuario:Empresa):Observable<any>{
+        console.log(usuario);
         return this.conexHttp.put(this.ruta + "/secured/empresa", usuario, this._tokenService.generateHeaders());
     }
 
