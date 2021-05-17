@@ -24,6 +24,7 @@ export class RegistroParticularComponent implements OnInit{
     dni!:string;
     privacy!:boolean;
     resultado:string = "";
+    errorMsg:string = "";
 
     constructor(private _service:UserServiceController, private translate: TranslateService){}
 
@@ -52,11 +53,32 @@ export class RegistroParticularComponent implements OnInit{
                 this.translate.get('USERADDED')
                 .subscribe(
                     (res: string) =>{
-                        this.resultado = result['key']; ;
+                        this.resultado = res;
                     }
                 );      
             },
-            (error) => { console.log(error); }
+            (error) => { 
+                var errorMsg = "";
+                switch(error.error){
+                    case "< Ya existe un usuario con este correo >":
+                        errorMsg = "EMAILEXISTS"
+                        break;
+                    case "< Ya existe un usuario con este DNI >":
+                        errorMsg = "DNIEXISTS";
+                        break;
+                    case "< Este nombre de usuario ya existe >":
+                        errorMsg = "USERNAMEXISTS";
+                        break;
+                    default:
+                        errorMsg = "ERROR";
+                }
+                this.translate.get(errorMsg)
+                .subscribe(
+                    (res: string) =>{
+                        this.errorMsg = res;
+                    }
+                );  
+            }
         );       
     }
 }

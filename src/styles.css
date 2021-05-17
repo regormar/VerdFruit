@@ -166,12 +166,6 @@ p{
     margin-left:5px;
 }
 
-.added{
-    color:green;
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
 [data-title]:hover:after {
     opacity: 1;
     transition: all 0.1s ease 0.5s;
