@@ -57,6 +57,7 @@ export class ProductoComponent implements OnInit{
         });
         if(localStorage.getItem("_id") == null){
             this.usuLogin = false;
+            this.datosCarga = true;
         }
     }
     
@@ -68,6 +69,9 @@ export class ProductoComponent implements OnInit{
 
     ngOnInit(): void {
         this.datosCarga = false;
+        if(localStorage.getItem("_id") == null){
+            this.datosCarga = true;
+        }
         this._activRoute.paramMap.subscribe(
             (params) => {
                 this.idProducto = +params.get("idProducto");

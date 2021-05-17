@@ -34,8 +34,6 @@ export class CuentaComponent {
     usuarioE:Empresa = null;
     nuevaDir:boolean = false;
 
-
-
     isDisabledUsu:boolean = true;
     editarUsu:boolean = false;
     resultadoUsu:string = "";
@@ -143,74 +141,6 @@ export class CuentaComponent {
         }
         
     }
-
-    /*
-    editarDatos(variable:string){
-        console.log(variable);
-        if(variable == "username"){
-            console.log("hola");
-            this.editarUsu = true;
-            this.isDisabledUsu = false;
-            var inputUsu = document.getElementById('inputUsername');
-            console.log("hola 2");
-        }else if(variable == "nombre"){
-
-        }else if(variable == "apellidos"){
-
-        }
-        inputUsu.style.borderBottom = "3px solid #989e9a";
-        inputUsu.style.color = "#7e807e";
-    }
-    
-    guardarDatos(variable:string){
-        var variableCambios, variableCambios2;
-        if(variable == "username"){
-            console.log("hola3");
-            this.editarUsu = false;
-            this.isDisabledUsu = true;
-            var inputUsu = (<HTMLInputElement>document.getElementById('inputUsername'));
-            variableCambios = this.usuario.username;
-            console.log(variableCambios);
-            if(this.usuario.tipo == 1){
-                variableCambios2 = this.usuarioP.username;
-            }else if(this.usuario.tipo == 2){
-                variableCambios2 = this.usuarioE.username;
-            }
-            console.log("hola 4");
-        }else if(variable == "nombre"){
-            
-        }else if(variable == "apellidos"){
-
-        }
-        inputUsu.style.border = null;
-        inputUsu.style.color = null;
-        if(inputUsu.value != ""){
-            variableCambios = inputUsu.value;
-            variableCambios2 = inputUsu.value;
-            console.log(variableCambios);
-            console.log(variableCambios2);
-            inputUsu.placeholder = inputUsu.value;
-            
-            if(variable == "username"){
-                if(this.usuario.tipo == 1){
-                    this.usuarioP.username = variableCambios2;
-                }else if(this.usuario.tipo == 2){
-                    this.usuarioE.username = variableCambios2;
-                }
-            }else if(variable == "nombre"){
-                if(this.usuario.tipo == 1){
-                    this.usuarioP.nombre = variableCambios2;
-                }else if(this.usuario.tipo == 2){
-                    this.usuarioE.nombre = variableCambios2;
-                }
-            }
-
-            console.log(this.usuarioP);
-            this.putUsuario();
-            console.log("hola 5");
-        }
-    }
-    */
 
     editarUsername(){
         this.editarUsu = true;
