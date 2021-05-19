@@ -199,7 +199,7 @@ export class ProductoComponent implements OnInit{
             this.carro = new Pedido(this.idUsuario,this.id_listaproducto,this.date,-1,this.cantidadCarrito,this.precioTotalProducto,this.listaProductos);
             this.postPedido();
         }
-        window.location.reload();
+        this.datosCarga = false;
     }
 
     quitarCarrito(){
@@ -220,6 +220,7 @@ export class ProductoComponent implements OnInit{
         this._orderService.putPedido(this.carro)
         .subscribe(
             (res) => {
+                window.location.reload();
             },
             (err) => {
                 console.log(err);
@@ -231,6 +232,7 @@ export class ProductoComponent implements OnInit{
         this._orderService.postPedido(this.carro)
         .subscribe(
             (res) => {
+                window.location.reload();
             },
             (err) => {
                 console.log(err);

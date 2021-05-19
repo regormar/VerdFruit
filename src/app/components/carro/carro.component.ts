@@ -1,12 +1,9 @@
-import { DOCUMENT } from "@angular/common";
-import { Component, Inject, Injectable } from "@angular/core";
+import { Component, Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { ListaProductos } from "src/app/model/listaProductos";
 import { Pedido } from "src/app/model/pedido";
 import { Producto } from "src/app/model/producto";
 import { OrderServiceController } from "src/app/services/pedido.service";
 import { ProductServiceController } from "src/app/services/producto.service";
-import { UserServiceController } from "src/app/services/user.service";
 
 @Component({
     selector:'carro-component',
@@ -136,7 +133,9 @@ export class CarroComponent{
         this._orderService.realizarPedido(localStorage.getItem("_id"),this.carro.id_listaproducto)
         .subscribe(
             (response)=>{
-                window.location.reload();
+                this.productos = Array<Producto>();
+                this.carro = null;
+                window.alert("Correo con al información de pago enviado");
             },
             (err)=>{
                 console.log(err);
