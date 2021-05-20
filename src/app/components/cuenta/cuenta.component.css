@@ -229,6 +229,7 @@ a{
 }
 
 @media(max-width:450px){
+    
     .usuApartado{
         flex-direction: column;
         padding-bottom: 20px;
@@ -242,4 +243,5 @@ a{
     .botonEditar{
         width: 230px;
     }
+
 }

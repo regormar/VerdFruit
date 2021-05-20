@@ -131,3 +131,46 @@ h1{
     border-radius: 15px;
     width: 70%;
 }
+
+@media (max-width:1200px){
+
+    .producto{
+        flex-direction: column;
+    }
+
+    .imgProducto{
+        width: 100%;
+    }
+
+    .info{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .buttons{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nombrePrecio{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:500px){
+    .botonAnyadir{
+        width:90%;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 19px;
+    }
+}

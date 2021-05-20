@@ -4,31 +4,35 @@
         <div class="titulo" *ngIf="producto.tipo_producto == 2"><h1>{{'VERDURA'|translate}}</h1></div>
         
         <div class="producto">
-            <ng-container *ngIf="datosCarga == false">
+            <!--<ng-container *ngIf="datosCarga == false">
                 <div class="loadingio-spinner-spinner-eisrfab08z5"><div class="ldio-psmvmn9klxg confHeight">
                     <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
             </ng-container>
-            <div class="imgProducto" *ngIf="datosCarga != false">
+            <div class="imgProducto" *ngIf="datosCarga != false">-->
+            <div class="imgProducto">
                 <img [src]="'assets/img/productos/' + producto.img" alt="">
             </div> 
-            <div class="info" *ngIf="datosCarga != false">
-                <div><h2>{{producto.nombre_producto}}</h2></div>
-                <div><h3>{{producto.precio}} €/Kg</h3></div><br>
-                <div *ngIf="producto.marca != null"><h3>{{'MARCA'|translate}} : {{producto.marca}}</h3></div>
-                <div *ngIf="producto.origen != null"><h3>{{'ORIGEN'|translate}} : {{producto.origen}}</h3></div>
-                <div *ngIf="producto.familia != null"><h3>{{'FAMILIA'|translate}} : {{producto.familia}}</h3></div>
-                <br>
-                <div class="moreLessBtnSection" *ngIf="usuLogin == true">
-                    <h3><button id="less" class="btnMoreLess"  [disabled]="isDisabled" (click)="changeProductUnits('-')">-</button>
-                    {{cantidadProducto}}
-                    <button class="btnMoreLess" (click)="changeProductUnits('+')">+</button></h3>
-                </div>
-
-                <div class="anyadir" *ngIf="usuLogin == true">
-                    <button class="botonAnyadir" *ngIf="estaCarrito == false" (click)="anyadirProductoCarrito()"><h4>{{'AÑADIR AL CARRITO'|translate}}</h4></button>
-                    <button class="botonEliminar" *ngIf="estaCarrito == true" (click)="quitarCarrito()"><h4>{{'ELIMINAR'|translate}}</h4></button>
-                </div>
+            <!--<div class="info" *ngIf="datosCarga != false">-->
+            <div class="info">
+                <div class="nombrePrecio"><h2>{{producto.nombre_producto}}</h2></div>
+                <div class="nombrePrecio"><h3>{{producto.precio}} €/Kg</h3></div>          
+                <div class="nombrePrecio" *ngIf="producto.marca != null"><h3>{{'MARCA'|translate}} : {{producto.marca}}</h3></div>
+                <div class="nombrePrecio" *ngIf="producto.origen != null"><h3>{{'ORIGEN'|translate}} : {{producto.origen}}</h3></div>
+                <div class="nombrePrecio" *ngIf="producto.familia != null"><h3>{{'FAMILIA'|translate}} : {{producto.familia}}</h3></div>
+                <br>              
+                <div class="buttons">
+                    <div class="moreLessBtnSection" *ngIf="usuLogin == true">
+                        <h3><button id="less" class="btnMoreLess"  [disabled]="isDisabled" (click)="changeProductUnits('-')">-</button>
+                        {{cantidadProducto}}
+                        <button class="btnMoreLess" (click)="changeProductUnits('+')">+</button></h3>
+                    </div>
+    
+                    <div class="anyadir" *ngIf="usuLogin == true">
+                        <button class="botonAnyadir" *ngIf="estaCarrito == false" (click)="anyadirProductoCarrito()"><h4>{{'AÑADIR AL CARRITO'|translate}}</h4></button>
+                        <button class="botonEliminar" *ngIf="estaCarrito == true" (click)="quitarCarrito()"><h4>{{'ELIMINAR'|translate}}</h4></button>
+                    </div>
+                </div>               
             </div>
         </div>
         
