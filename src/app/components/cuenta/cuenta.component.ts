@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { TranslateService } from "@ngx-translate/core";
 import { Empresa } from "src/app/model/empresa";
@@ -23,6 +23,7 @@ export class CuentaComponent {
             if(localStorage.getItem("_id") == null){
                 this._router.navigate(['/login']);
             }
+            this.innerWidth = window.innerWidth;
         }
 
     opcion:string = "DATOS";
@@ -71,6 +72,13 @@ export class CuentaComponent {
     isDisabledTelefono:boolean = true;
     editarTelefono:boolean = false;
     resultadoTelefono:string = "";
+
+    innerWidth:any;
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+        this.innerWidth = window.innerWidth;   
+    }
 
     ngOnInit(): void {
         this.changeDatos(this.opcion);

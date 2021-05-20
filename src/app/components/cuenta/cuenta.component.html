@@ -2,10 +2,10 @@
     <div class="panel-content">
         <div class="content">
             <div class="menu">
-                <a class="seleccion" id="datos" (click)="changeDatos('DATOS')"> <i class="fas fa-user"></i> {{ 'DATOS' | translate }}</a>
-                <a class="seleccion" id="pago" (click)="changeDatos('CONTACTO')"> <i class="fas fa-phone"></i> {{ 'CONTACTO' | translate }}</a>
-                <a class="seleccion" id="direcciones" (click)="changeDatos('DIRECCIONES')"> <i class="fas fa-map-marker-alt"></i> {{ 'DIRECCIONES' | translate }}</a>
-                <a class="seleccion" id="cerrar" (click)="logout()"> <i class="fas fa-sign-out-alt"></i> {{ 'CERRAR' | translate }}</a> 
+                <a class="seleccion" id="datos" (click)="changeDatos('DATOS')"><i class="fas fa-user"></i><div class="menuText" *ngIf="innerWidth > 1236">{{ 'DATOS' | translate }}</div></a>
+                <a class="seleccion phone" id="pago" (click)="changeDatos('CONTACTO')"><i class="fas fa-phone"></i> <div class="menuText" *ngIf="innerWidth > 1236">{{ 'CONTACTO' | translate }}</div></a>
+                <a class="seleccion" id="direcciones" (click)="changeDatos('DIRECCIONES')"><i class="fas fa-map-marker-alt"></i> <div class="menuText" *ngIf="innerWidth > 1236">{{ 'DIRECCIONES' | translate }}</div></a>
+                <a class="seleccion" id="cerrar" (click)="logout()"><i class="fas fa-sign-out-alt"></i><div class="menuText" *ngIf="innerWidth > 1236">{{ 'CERRAR' | translate }}</div></a> 
                 <!-- <button (click)="changeDatos('datos')">{{ 'DATOS' | translate }}</button>             -->
             </div>
             <div class="datos">

@@ -205,3 +205,41 @@ a{
     width: 100%;
     background-color: #ffdf94;
 }
+
+@media(max-width:1600px){
+    .menuText{
+        font-size:17px;
+        margin-left:10%;
+    }
+}
+
+@media(max-width:1236px){
+    .menu{
+        width: 9%;
+    }
+    .phone{
+        padding-left:17px;
+    }
+}
+
+@media(max-width:1236px){
+    .menu{
+        width: 70px;
+    }
+}
+
+@media(max-width:450px){
+    .usuApartado{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .usuButton{
+        padding-top: 0;
+        justify-content: center;
+    }
+
+    .botonEditar{
+        width: 230px;
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 import { ProductServiceController } from "src/app/services/producto.service";
 import { TranslateService } from "@ngx-translate/core";
@@ -177,10 +177,8 @@ export class ProductoComponent implements OnInit{
                 if(this.cantidadProducto == 1){
                     this.isDisabled = true;
                 }
-            }
-            
-        }
-        
+            }           
+        }        
     }
 
     anyadirProductoCarrito(){
