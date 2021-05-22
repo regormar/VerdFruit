@@ -2,8 +2,8 @@
     <div class="panel-content">
         <div class="titulo"><h1>{{ 'SIGN IN' | translate }}</h1></div>
         <div class="menu">
-            <a class="tipoRegistro" id="particular" (click)="changeRegister('particular')">{{ 'PARTICULAR' | translate }}</a>
-            <a class="tipoRegistro" id="business" (click)="changeRegister('business')">{{ 'BUSINESS' | translate }}</a>
+            <a href="javascript:void(0)" class="tipoRegistro" id="particular" (click)="changeRegister('particular')">{{ 'PARTICULAR' | translate }}</a>
+            <a href="javascript:void(0)" class="tipoRegistro" id="business" (click)="changeRegister('business')">{{ 'BUSINESS' | translate }}</a>
             <!-- <button (click)="changeRegister('particular')">{{ 'PARTICULAR' | translate }}</button>             -->
         </div>
         <div *ngIf="opcion=='particular'" class="userType">
