@@ -114,6 +114,7 @@ input.ng-dirty.ng-invalid{
     align-items: center;
     border-radius: 50%;
     width: 5%;
+    min-width: 28px;
     height: 100%;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 2px 10px #CE5937;
     border: solid 1px red;

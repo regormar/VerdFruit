@@ -260,12 +260,19 @@ a{
     }
 
     .product{
-        height: 96px;
+        height: 147px;
     }
 
     .line2{
         margin:0;
     }
 
+    .productImg{
+        width: 50%;
+    }
+
+    .botonTramitar{
+        width: 100%;
+    }
 
 }

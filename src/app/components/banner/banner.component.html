@@ -10,8 +10,8 @@
                 </div>
                 <div class="allMenu">
                     <div class="responsiveMenu">
-                        <div class="menuIcon" (click)="chargeMenu()">
-                            <i class="fas fa-bars"></i>
+                        <div class="menuIcon">
+                            <a href="javascript:void(0)" (click)="chargeMenu()"><i class="fas fa-bars"></i></a>
                         </div>
                         <ul class="menu" id="menu" (mouseleave)="closeMenu2()">
                             <div class="borderMenu"><h4>{{'MENU'|translate}}</h4></div>             
@@ -21,11 +21,11 @@
                         </ul>  
                     </div> 
                     <div class="menuUsuario">
-                        <i *ngIf="menu == true" class="fas fa-user" (click)="closeMenuOnOpen()"></i>
+                        <a href="javascript:void(0)" (click)="closeMenuOnOpen()"><i *ngIf="menu == true" class="fas fa-user"></i></a>
                         <a *ngIf="menu == false" routerLink="cuenta" routerLinkActive="activo" (click)="closeCart()"><i class="fas fa-user"></i></a>                 
                     </div>
                     <div *ngIf="menu == false">
-                        <i class="fas fa-shopping-cart" (click)="cartMenu()"></i>
+                        <a href="javascript:void(0)" (click)="cartMenu()"><i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>             
             </div>

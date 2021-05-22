@@ -4,17 +4,15 @@
         <div class="titulo" *ngIf="producto.tipo_producto == 2"><h1>{{'VERDURA'|translate}}</h1></div>
         
         <div class="producto">
-            <!--<ng-container *ngIf="datosCarga == false">
+            <ng-container *ngIf="datosCarga == false">
                 <div class="loadingio-spinner-spinner-eisrfab08z5"><div class="ldio-psmvmn9klxg confHeight">
                     <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
             </ng-container>
-            <div class="imgProducto" *ngIf="datosCarga != false">-->
-            <div class="imgProducto">
+            <div class="imgProducto" *ngIf="datosCarga != false">
                 <img [src]="'assets/img/productos/' + producto.img" alt="">
             </div> 
-            <!--<div class="info" *ngIf="datosCarga != false">-->
-            <div class="info">
+            <div class="info" *ngIf="datosCarga != false">
                 <div class="nombrePrecio"><h2>{{producto.nombre_producto}}</h2></div>
                 <div class="nombrePrecio"><h3>{{producto.precio}} €/Kg</h3></div>          
                 <div class="nombrePrecio" *ngIf="producto.marca != null"><h3>{{'MARCA'|translate}} : {{producto.marca}}</h3></div>
