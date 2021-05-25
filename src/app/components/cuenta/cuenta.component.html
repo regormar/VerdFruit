@@ -161,44 +161,42 @@
                     </div>
 
                     <div class="usuario" *ngIf="opcion == 'DIRECCIONES' && usuario != null">
-                        <div class="usuApartado">
-                            <div class="usuDatos" *ngIf="usuario.direccion != ''">
+                        <div class="usuApartado" *ngIf="usuario.direccion != null">
+                            <div class="usuDatos" >
                                 <h3>{{ 'DIRECCION1' | translate }}</h3>
                                 <h4>{{usuario.direccion}}</h4> 
+                                <div class="resultado">{{ resultadoDir1 | translate }}</div> 
                             </div>
                             <div class="usuButton">
-                                <button class="botonEliminar"><p>{{ 'ELIMINAR' | translate }}</p></button>
+                                <button class="botonEliminar" (click)="eliminarDireccion('dir1')"><p>{{ 'ELIMINAR' | translate }}</p></button>
                             </div>
                         </div>
 
-                        <div class="usuApartado" *ngIf="usuario.direccion2 != ''">
+                        <div class="usuApartado" *ngIf="usuario.direccion2 != null">
                             <div class="usuDatos">
                                 <h3>{{ 'DIRECCION2' | translate }}</h3>
                                 <h4>{{usuario.direccion2}}</h4> 
                             </div>
                             <div class="usuButton">
-                                <button class="botonEliminar"><p>{{ 'ELIMINAR' | translate }}</p></button>
+                                <button class="botonEliminar" (click)="eliminarDireccion('dir2')"><p>{{ 'ELIMINAR' | translate }}</p></button>
                             </div>
                         </div>
                         <br>
 
-                        <div class="nuevaDireccion" *ngIf="usuario.direccion2 == '' || usuario.direccion1 == ''">
-                            <button class="botonNuevaDireccion" (click)="nuevaDir = true"><p>{{ 'NUEVA_DIRECCION' | translate }}</p></button>
+                        <div class="nuevaDireccion" *ngIf="usuario.direccion2 == null || usuario.direccion == null">
+                            <button class="botonNuevaDireccion" (click)="nuevaDirec()"><p>{{ 'NUEVA_DIRECCION' | translate }}</p></button>
                         </div>
 
-                        
-                        <form class="formDireccion" *ngIf="nuevaDir == true" #formRegistarDireccion="ngForm" (ngSubmit)="checkLogin();" >
-                            <div class="registrarDireccion" >
-                                <div class="usuDatos">
-                                    <h3>{{ 'DIRECCION' | translate }}</h3>
-                                    <h4><input #inputDireccion="ngModel" type="text" [(ngModel)]="nuevaDireccion" name="nuevaDireccion" placeholder="{{ 'ESCRIBE_DIRECCION' | translate}}"  required/></h4>
-                                </div>
-                                <div class="usuButton">
-                                    <button class="botonRegistar" (click)="nuevaDir = false"><p>{{ 'REGISTRAR_DIRECCION' | translate }}</p></button>
-                                </div>
+                        <div class="registrarDireccion" *ngIf="nuevaDir == true">
+                            <div class="usuDatos">
+                                <h3>{{ 'DIRECCION' | translate }}</h3>
+                                <h4><input #inputDireccion="ngModel" type="text" id="inputDireccion" [(ngModel)]="nuevaDireccion" name="nuevaDireccion" placeholder="{{ 'ESCRIBE_DIRECCION' | translate }}"/></h4>
+                                <div class="resultado">{{ resultadoNuevaDir | translate }}</div>
                             </div>
-                        </form>
-
+                            <div class="usuButton">
+                                <button class="botonRegistar" (click)="guardarDireccion()"><p>{{ 'REGISTRAR_DIRECCION' | translate }}</p></button>
+                            </div>
+                        </div>
                         <br><br>
                     </div>
                 </div>

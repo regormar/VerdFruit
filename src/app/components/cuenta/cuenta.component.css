@@ -64,6 +64,11 @@ h1{
     background-color: #9dceb1;
 }
 
+#inputDireccion{
+    color: #7e807e;
+    border-bottom: 3px solid #989e9a;
+}
+
 input{
     background-color: #9dceb1;
     width: 95%;

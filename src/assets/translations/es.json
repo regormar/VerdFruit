@@ -39,10 +39,13 @@
     "NOMBRECOMERCIAL":"Nombre comercial",
     "CHANGEPASSWORD":"Cambiar contraseña",
     "RECOVERPASSWORD":"Recuperar contraseña",
+    
     "DNI_INVALIDO":"DNI invalido.",
     "CIF_INVALIDO":"CIF invalido.",
     "EMAILINVALIDO":"Email invalido.",
     "TELEFONOINVALIDO":"Numero de telefono invalido.",
+    "DIRECCIONINVALIDA":"No puedes borrar tu ultima dirección.",
+    "DIRECCIONEXISTE":"Esta dirección ya la tienes guardada.",
 
     
     "PASSREQUIREMENTS1":"Contraseña Actual: Debe contener una mayúscula, una minúscula, un número o un caracter especial y tener una longitud de 8 o más caracteres.",

@@ -33,7 +33,6 @@ export class CuentaComponent {
     usuario:Usuario = null;
     usuarioP:Particular = null;
     usuarioE:Empresa = null;
-    nuevaDir:boolean = false;
 
     isDisabledUsu:boolean = true;
     editarUsu:boolean = false;
@@ -72,6 +71,11 @@ export class CuentaComponent {
     isDisabledTelefono:boolean = true;
     editarTelefono:boolean = false;
     resultadoTelefono:string = "";
+
+    dir:string = "dir1";
+    nuevaDir:boolean = false;
+    resultadoDir1:string = "";
+    resultadoNuevaDir:string = "";
 
     innerWidth:any;
 
@@ -524,8 +528,61 @@ export class CuentaComponent {
         this.isDisabledTelefono = true;
     }
     
-    eliminarDireccion(){
-        
+    eliminarDireccion(dir:string){
+        if(dir == "dir1"){
+            if(this.usuario.direccion2 != null){
+                this.usuario.direccion = this.usuario.direccion2;
+                if(this.usuario.tipo == 1){
+                    this.usuarioP.direccion = this.usuario.direccion2;
+                }else if(this.usuario.tipo == 2){
+                    this.usuarioE.direccion = this.usuario.direccion2;
+                }
+            }else{
+                this.resultadoDir1 = "DIRECCIONINVALIDA";
+                setTimeout(() => {
+                    this.resultadoDir1 = "";
+                }, 3000);
+            }
+        }
+        this.usuario.direccion2 = null;
+        if(this.usuario.tipo == 1){
+            this.usuarioP.direccion2 = null;
+        }else if(this.usuario.tipo == 2){
+            this.usuarioE.direccion2 = null;
+        }
+        this.putUsuario();
+    }
+
+    nuevaDirec(){
+        if(this.nuevaDir == true){
+            this.nuevaDir = false;
+        }else{
+            this.nuevaDir = true;
+        }
+    }
+
+    guardarDireccion(){
+        this.resultadoNuevaDir = "";
+        var inputDireccion = (<HTMLInputElement>document.getElementById('inputDireccion'));
+        if(inputDireccion.value != ""){
+            if(inputDireccion.value != this.usuario.direccion){
+                this.usuario.direccion2 = inputDireccion.value;
+                if(this.usuario.tipo == 1){
+                    this.usuarioP.direccion2 = inputDireccion.value;
+                }else if(this.usuario.tipo == 2){
+                    this.usuarioE.direccion2 = inputDireccion.value;
+                }
+                inputDireccion.placeholder = "";
+                this.putUsuario();
+                this.nuevaDir = false;
+            }else{
+                this.resultadoNuevaDir = "DIRECCIONEXISTE";
+                setTimeout(() => {
+                    this.resultadoNuevaDir = "";
+                }, 3000);
+            }
+            inputDireccion.value = "";
+        }
     }
 
     checkLogin(){
