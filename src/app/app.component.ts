@@ -9,20 +9,17 @@ import { CookiesServiceController } from './services/cookies.service';
 })
 export class AppComponent{
 
-  // constructor(private _cookiesService:CookiesServiceController){}
+  constructor(private _cookiesService:CookiesServiceController){}
 
-  // ngOnInit(): void {
-  //     //Check if token exists.
-  //     let rememberMe = this._cookiesService.getCookie("rememberMe");
-  //     if(rememberMe != ""){
-  //       let id = this._cookiesService.getCookie("id");
-  //       if(id == ""){
+  accepted:boolean = false;
 
-  //       }
-  //     }
-  //     //If exists check if it's valid
+  ngOnInit(): void {
+    let acceptedCookies = this._cookiesService.getCookie("acceptedCookies");
+    if(acceptedCookies != ""){
+      this.accepted = true;
+    }
+  }
 
-  // }
   title = 'VerdFruit';
 
 }

@@ -15,6 +15,7 @@ export class CookiesComponent implements OnInit{
     }
 
     checks:boolean = true;
+    accepted:boolean = false;
 
     ngOnInit(): void {
         if(this._cookiesService.getCookie("configured") == "true"){
@@ -26,9 +27,10 @@ export class CookiesComponent implements OnInit{
     }
 
     acceptCookies(){ //Funcion que añade las cookies.
-
+        this.accepted = true;
         this.deleteCookieMenu();  
         this._cookiesService.setCookie("configured","true"); 
+        this._cookiesService.setCookie("acceptedCookies","true"); 
     }
 
     deleteCookieMenu(){ //Elimina el menú de cookies
@@ -58,11 +60,5 @@ export class CookiesComponent implements OnInit{
             this._cookiesService.setCookie("configured","true"); 
         }  
     }
-
-    // deleteCookiesDeTerceros(){ //Elimina todas las cookies.
-    //     document.cookie.split(";").forEach(function(c) {
-    //         document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
-    //     });
-    // }
 
 }

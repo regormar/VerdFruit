@@ -30,6 +30,7 @@ import { NuevosComponent } from './components/home/nuevos/nuevos.component';
 import { MasVendidosComponent } from './components/home/masVendidos/masVendidos.component';
 import { RelacionadosComponent } from './components/producto/relacionados/relacionados.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Mugan86GoogleAnalyticsModule } from 'mugan86-ng-google-analytics';
 
 
 export function createTranslateLoader(http: HttpClient){
@@ -72,6 +73,12 @@ export function createTranslateLoader(http: HttpClient){
         deps: [HttpClient]
       }
     }),
+    Mugan86GoogleAnalyticsModule.forRoot(
+      {
+        analyticsId: 'G-HXL8269N1R',
+        showLog: true
+      }
+    )
   ],
   providers: [
     TokenServiceController,
